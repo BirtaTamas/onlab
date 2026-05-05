@@ -1,0 +1,98 @@
+{
+  "sampling": {
+    "include_partial_csvs": false,
+    "sample_csv_ratio": 0.3,
+    "row_stride": 2
+  },
+  "splits": [
+    {
+      "split": "train",
+      "match_count": 877,
+      "row_count": 3734887,
+      "map_rows": {
+        "inferno": 714619,
+        "mirage": 589271,
+        "nuke": 565291,
+        "ancient": 500061,
+        "dust2": 645642,
+        "overpass": 190063,
+        "train": 289647,
+        "anubis": 240293
+      }
+    },
+    {
+      "split": "valid",
+      "match_count": 226,
+      "row_count": 799029,
+      "map_rows": {
+        "overpass": 40692,
+        "dust2": 137661,
+        "nuke": 120933,
+        "inferno": 152824,
+        "anubis": 51406,
+        "mirage": 126537,
+        "ancient": 107087,
+        "train": 61889
+      }
+    },
+    {
+      "split": "test",
+      "match_count": 265,
+      "row_count": 801393,
+      "map_rows": {
+        "nuke": 120891,
+        "inferno": 152653,
+        "ancient": 107229,
+        "dust2": 138157,
+        "mirage": 126780,
+        "overpass": 40818,
+        "anubis": 51827,
+        "train": 63038
+      }
+    }
+  ],
+  "sampled_splits": [
+    {
+      "split": "train",
+      "csv_count": 263,
+      "map_csv_counts": {
+        "ancient": 38,
+        "anubis": 18,
+        "dust2": 46,
+        "inferno": 45,
+        "mirage": 42,
+        "nuke": 40,
+        "overpass": 13,
+        "train": 21
+      }
+    },
+    {
+      "split": "valid",
+      "csv_count": 69,
+      "map_csv_counts": {
+        "ancient": 10,
+        "anubis": 4,
+        "dust2": 11,
+        "inferno": 13,
+        "mirage": 11,
+        "nuke": 11,
+        "overpass": 3,
+        "train": 6
+      }
+    },
+    {
+      "split": "test",
+      "csv_count": 79,
+      "map_csv_counts": {
+        "ancient": 12,
+        "anubis": 5,
+        "dust2": 14,
+        "inferno": 15,
+        "mirage": 13,
+        "nuke": 11,
+        "overpass": 3,
+        "train": 6
+      }
+    }
+  ]
+}
