@@ -1,0 +1,11 @@
+{
+  "split": "test",
+  "threshold": 0.45,
+  "utility_columns": "all",
+  "disagreement_rows": 5733,
+  "with_utility_correct_no_utility_wrong": 2668,
+  "no_utility_correct_with_utility_wrong": 3065,
+  "both_wrong": 0,
+  "mean_abs_delta_on_disagreements": 0.01733002711731415,
+  "output_csv": "onlab\\artifacts\\modellfutasok\\delta_with_vs_no_utility_100pct_test\\prediction_disagreements_all_utility_thr045\\prediction_disagreements.csv"
+}

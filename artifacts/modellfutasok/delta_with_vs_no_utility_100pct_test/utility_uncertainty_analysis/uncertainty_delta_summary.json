@@ -1,0 +1,73 @@
+{
+  "split": "test",
+  "threshold": 0.5,
+  "rows": 801393,
+  "uncertain_rows_margin_le_0_05": 156833,
+  "summary": [
+    {
+      "uncertainty_bin": "very_uncertain_0_02",
+      "rows": 71551,
+      "mean_abs_delta": 0.007136761210858822,
+      "p95_abs_delta": 0.01956978440284729,
+      "mean_delta": 0.0011085575679317117,
+      "good_direction_rate": 0.516205224245643,
+      "mean_logloss_improvement": 0.00020001223364845465,
+      "positive_logloss_improvement_rate": 0.516205224245643,
+      "class_flip_rate": 0.18249919637740913,
+      "with_correct_rate": 0.5189724811672792,
+      "no_correct_rate": 0.5174071641206971
+    },
+    {
+      "uncertainty_bin": "uncertain_0_05",
+      "rows": 85282,
+      "mean_abs_delta": 0.007795276120305061,
+      "p95_abs_delta": 0.020928144454956055,
+      "mean_delta": 0.0009521655738353729,
+      "good_direction_rate": 0.5035646443563706,
+      "mean_logloss_improvement": 0.00013814936678672535,
+      "positive_logloss_improvement_rate": 0.5035646443563706,
+      "class_flip_rate": 0.00840740132736099,
+      "with_correct_rate": 0.5384020074576112,
+      "no_correct_rate": 0.5383199268309843
+    },
+    {
+      "uncertainty_bin": "mild_uncertain_0_10",
+      "rows": 86893,
+      "mean_abs_delta": 0.008315532468259335,
+      "p95_abs_delta": 0.022850620746612527,
+      "mean_delta": -0.00014174787793308496,
+      "good_direction_rate": 0.4980723418457183,
+      "mean_logloss_improvement": -0.00042277089466456584,
+      "positive_logloss_improvement_rate": 0.4980723418457183,
+      "class_flip_rate": 6.905044134740427e-05,
+      "with_correct_rate": 0.5986903432957775,
+      "no_correct_rate": 0.598667326481995
+    },
+    {
+      "uncertainty_bin": "medium_0_20",
+      "rows": 114086,
+      "mean_abs_delta": 0.009107365272939205,
+      "p95_abs_delta": 0.025446631014347076,
+      "mean_delta": -0.0006639033672399819,
+      "good_direction_rate": 0.5067317637571657,
+      "mean_logloss_improvement": 0.0010332115415231694,
+      "positive_logloss_improvement_rate": 0.5067317637571657,
+      "class_flip_rate": 0.0,
+      "with_correct_rate": 0.688235190996266,
+      "no_correct_rate": 0.688235190996266
+    },
+    {
+      "uncertainty_bin": "confident_gt_0_20",
+      "rows": 443581,
+      "mean_abs_delta": 0.004530108533799648,
+      "p95_abs_delta": 0.01588362455368042,
+      "mean_delta": -0.00014641555026173592,
+      "good_direction_rate": 0.34538900448847,
+      "mean_logloss_improvement": -0.0008450853054178408,
+      "positive_logloss_improvement_rate": 0.34538900448847,
+      "class_flip_rate": 0.0,
+      "with_correct_rate": 0.8965600420216375,
+      "no_correct_rate": 0.8965600420216375
+    }
+  ]
+}
