@@ -58,6 +58,10 @@ def infer_data_root(run_dir: Path) -> Path:
     return run_dir.parents[2] / "processed_full"
 
 
+def normalize_rel_csv_path(rel_csv: str) -> Path:
+    return Path(rel_csv.replace("\\", "/"))
+
+
 def manifest_paths(run_dir: Path, split: str, max_csvs: int | None) -> List[Tuple[str, Path]]:
     manifest_path = run_dir / "sampled_split_manifest.csv"
     data_root = infer_data_root(run_dir)
@@ -68,7 +72,7 @@ def manifest_paths(run_dir: Path, split: str, max_csvs: int | None) -> List[Tupl
             if split != "all" and row["split"] != split:
                 continue
             rel_csv = row["csv_path"]
-            rows.append((rel_csv, data_root.parent / rel_csv))
+            rows.append((rel_csv, data_root.parent / normalize_rel_csv_path(rel_csv)))
             if max_csvs is not None and len(rows) >= max_csvs:
                 break
     return rows
