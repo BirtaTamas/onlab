@@ -263,3 +263,11 @@ A mostani eredmenyek alapjan a legjobb kovetkezo iranyok:
 - `random search`, hogy a regularizalt parameterterben ne kezzel csak egy pontot nezzunk meg
 - nagyobb minta vagy teljes adat, hogy kideruljon a utility feature-ok elonye stabilizalodik-e
 - kesobb akar blokkos utility ablation, ha azt akarjuk megerteni, melyik utility-csoport hoz tenyleges hasznot
+
+
+neurhalo lstm gru - idoalapu 
+feature explainability
+neurhalo tud 
+a) expalinability neurhalo sok adaton aztan 1 rpundon kielemzes meirt ezt mondta amit mit predictel 
+es ugynaz legyen egy feature explainability ridge regression 
+nem local hanem destillalom xgboost

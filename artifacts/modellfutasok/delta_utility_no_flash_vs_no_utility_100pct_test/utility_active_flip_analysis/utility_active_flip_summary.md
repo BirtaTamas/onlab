@@ -6,7 +6,6 @@ A csoportok azt mutatjak, hogy milyen utility jel volt jelen az adott atbillenes
 | csoport | sorok | utility jo | no-utility jo | kulonbseg | utility win rate | mean abs delta | mean delta | CT win rate |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | `all_flips` | 14855 | 7822 | 7033 | 789 | 52.66% | 0.014133 | 0.000626 | 50.04% |
-| `any_utility_nonzero` | 14855 | 7822 | 7033 | 789 | 52.66% | 0.014133 | 0.000626 | 50.04% |
 | `active_or_recent_utility` | 10548 | 5579 | 4969 | 610 | 52.89% | 0.014416 | 0.000866 | 49.91% |
 | `strong_utility_action` | 10244 | 5426 | 4818 | 608 | 52.97% | 0.014538 | 0.000809 | 50.07% |
 | `utility_damage` | 1537 | 798 | 739 | 59 | 51.92% | 0.015189 | 0.001101 | 49.32% |
