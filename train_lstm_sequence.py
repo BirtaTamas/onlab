@@ -1,4 +1,5 @@
 import argparse
+import csv
 import itertools
 import json
 import math
@@ -19,13 +20,21 @@ from train_xgboost import (
     build_split_manifest,
     choose_feature_columns,
     collect_csv_metadata,
-    infer_schema_overrides,
     sample_manifest_rows,
     save_evaluation_plots,
     summarize_manifest_rows,
     summarize_split,
     validate_sampling_args,
     validate_split_ratios,
+)
+
+
+STRING_COLUMN_SUFFIXES = (
+    "_name",
+    "_steamid",
+    "_place",
+    "_primary_weapon",
+    "_secondary_weapon",
 )
 
 
@@ -65,6 +74,12 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-trials", type=int, default=8)
     parser.add_argument("--epochs", type=int, default=20)
     parser.add_argument("--patience", type=int, default=4)
+    parser.add_argument(
+        "--device",
+        choices=["auto", "cpu", "cuda"],
+        default="auto",
+        help="PyTorch eszkoz. auto: CUDA, ha elerheto, kulonben CPU.",
+    )
     parser.add_argument(
         "--run-eagerly",
         action="store_true",
@@ -108,6 +123,38 @@ def log_progress(message: str) -> None:
     print(f"[{now}] {message}", flush=True)
 
 
+def resolve_torch_device(requested_device: str):
+    import torch
+
+    if requested_device == "cuda":
+        if not torch.cuda.is_available():
+            raise RuntimeError(
+                "A --device cuda lett megadva, de a PyTorch nem lat CUDA GPU-t. "
+                "Ellenorizd az NVIDIA drivert es a CUDA-s PyTorch telepitest."
+            )
+        return torch.device("cuda")
+    if requested_device == "cpu":
+        return torch.device("cpu")
+    return torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+def describe_torch_device(device) -> Dict[str, object]:
+    import torch
+
+    info = {
+        "requested": str(device),
+        "selected": str(device),
+        "torch_version": torch.__version__,
+        "cuda_available": bool(torch.cuda.is_available()),
+        "cuda_version": torch.version.cuda,
+        "cudnn_version": torch.backends.cudnn.version(),
+        "gpu_name": None,
+    }
+    if device.type == "cuda":
+        info["gpu_name"] = torch.cuda.get_device_name(device)
+    return info
+
+
 def load_manifest_from_path(manifest_path: Path) -> List[Dict[str, object]]:
     manifest_df = pd.read_csv(manifest_path)
     required = {"split", "csv_path"}
@@ -143,6 +190,20 @@ def normalize_csv_path(raw_path: str, data_root: Path) -> Path:
         return root_join_candidate
 
     return candidate
+
+
+def read_csv_header(csv_path: Path) -> List[str]:
+    with csv_path.open("r", encoding="utf-8", errors="replace", newline="") as handle:
+        reader = csv.reader(handle)
+        return next(reader)
+
+
+def infer_lstm_schema_overrides(csv_path: Path) -> Dict[str, pl.DataType]:
+    return {
+        col_name: pl.Utf8
+        for col_name in read_csv_header(csv_path)
+        if col_name.endswith(STRING_COLUMN_SUFFIXES)
+    }
 
 
 def build_or_load_manifest(args: argparse.Namespace) -> Tuple[List[Dict[str, object]], List[Dict], List[Dict]]:
@@ -184,7 +245,7 @@ def build_or_load_manifest(args: argparse.Namespace) -> Tuple[List[Dict[str, obj
 def read_single_csv(csv_path: Path, row_stride: int) -> pl.DataFrame:
     df = pl.read_csv(
         str(csv_path),
-        schema_overrides=infer_schema_overrides(csv_path),
+        schema_overrides=infer_lstm_schema_overrides(csv_path),
         infer_schema_length=10000,
     )
     if row_stride > 1:
@@ -412,7 +473,7 @@ def build_feature_names_from_headers(
 ) -> Tuple[List[str], List[str]]:
     union_columns: Dict[str, pl.DataType] = {"ct_win": pl.Int8}
     for csv_path in csv_paths:
-        schema_overrides = infer_schema_overrides(csv_path)
+        schema_overrides = infer_lstm_schema_overrides(csv_path)
         sample_df = pl.read_csv(
             str(csv_path),
             n_rows=256,
@@ -871,11 +932,11 @@ def train_torch_lstm_model(
     trial: Dict[str, float],
     epochs: int,
     patience: int,
+    device,
 ) -> Tuple[object, Dict[str, List[float]]]:
     import copy
     import torch
 
-    device = torch.device("cpu")
     model = model.to(device)
     optimizer = torch.optim.Adam(model.parameters(), lr=trial["learning_rate"])
     criterion = torch.nn.BCEWithLogitsLoss()
@@ -959,10 +1020,10 @@ def predict_split_streaming_torch(
     row_stride: int,
     scaler_mean: np.ndarray,
     scaler_std: np.ndarray,
+    device,
 ) -> Tuple[np.ndarray, np.ndarray, pd.DataFrame]:
     import torch
 
-    device = torch.device("cpu")
     model = model.to(device)
     model.eval()
 
@@ -1137,81 +1198,6 @@ def write_local_round_reports(
     }
 
 
-def train_best_ridge_surrogate(
-    x_train_flat: np.ndarray,
-    teacher_train_prob: np.ndarray,
-    x_valid_flat: np.ndarray,
-    teacher_valid_prob: np.ndarray,
-    alphas: Iterable[float],
-) -> Tuple[Ridge, Dict[str, object]]:
-    best_model = None
-    best_result = None
-    for alpha in alphas:
-        model = Ridge(alpha=float(alpha), random_state=42)
-        model.fit(x_train_flat, teacher_train_prob)
-        valid_pred = np.clip(model.predict(x_valid_flat), 0.0, 1.0)
-        fidelity = probability_fidelity(teacher_valid_prob, valid_pred)
-        result = {"alpha": float(alpha), "valid_fidelity": fidelity}
-        if best_result is None or fidelity["rmse"] < best_result["valid_fidelity"]["rmse"]:
-            best_model = model
-            best_result = result
-    if best_model is None or best_result is None:
-        raise ValueError("Nem sikerult ridge surrogate modellt tanitani.")
-    return best_model, best_result
-
-
-def write_surrogate_reports(output_dir: Path, ridge_model: Ridge, flat_feature_names: Sequence[str]) -> Dict[str, str]:
-    coef_df = pd.DataFrame(
-        {
-            "feature": list(flat_feature_names),
-            "coefficient": ridge_model.coef_.astype(float),
-            "abs_coefficient": np.abs(ridge_model.coef_.astype(float)),
-        }
-    ).sort_values("abs_coefficient", ascending=False)
-    coef_path = output_dir / "ridge_feature_coefficients.csv"
-    coef_df.to_csv(coef_path, index=False)
-
-    by_base: Dict[str, float] = {}
-    by_lag: Dict[str, float] = {}
-    for feature_name, coefficient in zip(flat_feature_names, ridge_model.coef_):
-        lag_name, base_name = feature_name.split("__", maxsplit=1)
-        abs_coef = float(abs(coefficient))
-        by_base[base_name] = by_base.get(base_name, 0.0) + abs_coef
-        by_lag[lag_name] = by_lag.get(lag_name, 0.0) + abs_coef
-
-    base_path = output_dir / "ridge_feature_importance_by_base_feature.csv"
-    lag_path = output_dir / "ridge_feature_importance_by_lag.csv"
-    pd.DataFrame(
-        [{"feature": key, "abs_coefficient_sum": value} for key, value in sorted(by_base.items(), key=lambda item: item[1], reverse=True)]
-    ).to_csv(base_path, index=False)
-    pd.DataFrame(
-        [{"lag": key, "abs_coefficient_sum": value} for key, value in sorted(by_lag.items(), key=lambda item: item[1], reverse=True)]
-    ).to_csv(lag_path, index=False)
-
-    summary_path = output_dir / "ridge_surrogate_summary.md"
-    lines = [
-        "# Ridge Surrogate Explainability",
-        "",
-        "A ridge surrogate az LSTM probability kimenetet kozeliti.",
-        "Ez kozelito, fidelity-alapu magyarazat, nem kozvetlen LSTM interpretacio.",
-        "",
-        "## Top 15 idobeli feature",
-        "",
-    ]
-    for _, row in coef_df.head(15).iterrows():
-        lines.append(
-            f"- `{row['feature']}`: coefficient `{row['coefficient']:.6f}`, |coef| `{row['abs_coefficient']:.6f}`"
-        )
-    summary_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
-
-    return {
-        "ridge_feature_coefficients": str(coef_path),
-        "ridge_feature_importance_by_base_feature": str(base_path),
-        "ridge_feature_importance_by_lag": str(lag_path),
-        "ridge_surrogate_summary": str(summary_path),
-    }
-
-
 def main() -> None:
     overall_start = time.time()
     args = parse_args()
@@ -1222,6 +1208,13 @@ def main() -> None:
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     log_progress("LSTM pipeline indult")
+    device = resolve_torch_device(args.device)
+    device_info = describe_torch_device(device)
+    log_progress(
+        "PyTorch eszkoz: "
+        f"{device_info['selected']}, cuda_available={device_info['cuda_available']}, "
+        f"gpu={device_info['gpu_name']}"
+    )
 
     stage_start = time.time()
     sampled_manifest_rows, split_summaries, sampled_split_summaries = build_or_load_manifest(args)
@@ -1313,6 +1306,7 @@ def main() -> None:
             trial=trial,
             epochs=args.epochs,
             patience=args.patience,
+            device=device,
         )
         log_progress(
             f"Trial {trial_idx} tanitas kesz {time.time() - trial_start:.1f}s alatt, "
@@ -1326,6 +1320,7 @@ def main() -> None:
             args.row_stride,
             scaler_mean,
             scaler_std,
+            device,
         )
         valid_prob, y_valid, valid_metadata = predict_split_streaming_torch(
             model,
@@ -1335,6 +1330,7 @@ def main() -> None:
             args.row_stride,
             scaler_mean,
             scaler_std,
+            device,
         )
         test_prob, y_test, test_metadata = predict_split_streaming_torch(
             model,
@@ -1344,6 +1340,7 @@ def main() -> None:
             args.row_stride,
             scaler_mean,
             scaler_std,
+            device,
         )
         result = {
             "trial_index": trial_idx,
@@ -1397,6 +1394,7 @@ def main() -> None:
         "valid": {"y": best["valid_y"], "metadata": best["valid_metadata"], "prob": best["valid_prob"]},
         "test": {"y": best["test_y"], "metadata": best["test_metadata"], "prob": best["test_prob"]},
     }
+
     local_payload = split_payloads[args.local_explain_split]
     local_round_df, local_round_info = pick_local_round(
         metadata_df=local_payload["metadata"],
@@ -1458,6 +1456,7 @@ def main() -> None:
 
     metrics = {
         "model_type": "lstm_sequence_classifier",
+        "device": device_info,
         "sequence_length": args.sequence_length,
         "trial_results": trial_results,
         "best_trial": best["result"],

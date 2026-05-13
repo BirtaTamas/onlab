@@ -1,5 +1,0 @@
-csv_path,round_num,tick,seconds_in_round,bomb_planted,lstm_probability,ridge_probability,delta_from_prev,ridge_delta_from_prev
-processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-legacy-vs-b8-bo3--nzkpOWiS4qFgkFOwM8Hun/legacy-vs-b8-m2-ancient.csv,10,60258,31.0,0,0.23194755613803864,0.23194829,0.0,0.0
-processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-legacy-vs-b8-bo3--nzkpOWiS4qFgkFOwM8Hun/legacy-vs-b8-m2-ancient.csv,10,61026,43.0,0,0.2125733494758606,0.21257585,-0.01937420666217804,-0.019372433
-processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-legacy-vs-b8-bo3--nzkpOWiS4qFgkFOwM8Hun/legacy-vs-b8-m2-ancient.csv,10,62754,70.0,0,0.07103516161441803,0.071044266,-0.14153818786144257,-0.14153159
-processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-legacy-vs-b8-bo3--nzkpOWiS4qFgkFOwM8Hun/legacy-vs-b8-m2-ancient.csv,10,64290,94.0,0,0.9374119639396667,0.9373997,0.8663768023252487,0.8663554

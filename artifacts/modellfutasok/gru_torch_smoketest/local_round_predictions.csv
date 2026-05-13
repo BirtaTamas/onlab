@@ -1,3 +1,0 @@
-csv_path,round_num,tick,seconds_in_round,bomb_planted,lstm_probability,ridge_probability,delta_from_prev,ridge_delta_from_prev
-processed_full/esl_pro_league_season_21/esl-pro-league-season-21-mouz-vs-liquid-bo3-9v1WXdmzbeO2q7iD5Nu_mP/mouz-vs-liquid-m2-nuke.csv,2,8503,19.0,0,0.4325622022151947,0.4325657,0.0,0.0
-processed_full/esl_pro_league_season_21/esl-pro-league-season-21-mouz-vs-liquid-bo3-9v1WXdmzbeO2q7iD5Nu_mP/mouz-vs-liquid-m2-nuke.csv,2,11063,59.0,1,0.8224802613258362,0.82247674,0.3899180591106415,0.38991106

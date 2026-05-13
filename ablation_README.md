@@ -309,7 +309,7 @@ calibration curve
 
 accurac ynincs nagy elteeres kulonbsegmeres mashogy (osszehasonlitas ket podell predictelt win probalilityjeit) Delta win probability)
 
-filter mikor aktivak
+filter mikor aktivak utilityk
 mikor jo a 
 
-ott nagyobb delta ahol 
+ott nagyobb delta ahol

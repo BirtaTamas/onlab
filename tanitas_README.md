@@ -265,7 +265,7 @@ A mostani eredmenyek alapjan a legjobb kovetkezo iranyok:
 - kesobb akar blokkos utility ablation, ha azt akarjuk megerteni, melyik utility-csoport hoz tenyleges hasznot
 
 
-neurhalo lstm gru - idoalapu 
+neurhalo lstm - idoalapu 
 feature explainability
 neurhalo tud 
 a) expalinability neurhalo sok adaton aztan 1 rpundon kielemzes meirt ezt mondta amit mit predictel 
