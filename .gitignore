@@ -1,0 +1,10 @@
+
+.conda-lstm-clean/
+.conda-pkgs-clean/
+__pycache__/
+*.pyc
+
+.conda-lstm-clean/
+.conda-pkgs-clean/
+__pycache__/
+*.pyc
