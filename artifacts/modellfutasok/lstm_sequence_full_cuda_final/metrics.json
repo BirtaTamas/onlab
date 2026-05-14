@@ -1,0 +1,1696 @@
+{
+  "model_type": "lstm_sequence_classifier",
+  "device": {
+    "requested": "cuda",
+    "selected": "cuda",
+    "torch_version": "2.11.0+cu128",
+    "cuda_available": true,
+    "cuda_version": "12.8",
+    "cudnn_version": 91900,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Ti"
+  },
+  "sequence_length": 16,
+  "trial_results": [
+    {
+      "trial_index": 1,
+      "params": {
+        "batch_size": 256,
+        "lstm_units": 128,
+        "dense_units": 32,
+        "dropout": 0.2,
+        "learning_rate": 0.0005
+      },
+      "epochs_ran": 5,
+      "best_val_loss": 0.464738907491478,
+      "train": {
+        "accuracy": 0.7549101217787847,
+        "precision": 0.7229992686079032,
+        "recall": 0.7845908590491513,
+        "f1_score": 0.7525369221282436,
+        "brier_score": 0.15215134308649456,
+        "logloss": 0.4511540939647718,
+        "threshold": 0.5,
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              1427661,
+              533253
+            ],
+            [
+              382130,
+              1391843
+            ]
+          ],
+          "tn": 1427661,
+          "fp": 533253,
+          "fn": 382130,
+          "tp": 1391843
+        },
+        "calibration_curve": {
+          "n_bins": 10,
+          "strategy": "uniform",
+          "bins": [
+            {
+              "bin_index": 0,
+              "bin_start": 0.0,
+              "bin_end": 0.1,
+              "count": 852845,
+              "mean_predicted_probability": 0.02040105323805496,
+              "fraction_of_positives": 0.03895784110829049
+            },
+            {
+              "bin_index": 1,
+              "bin_start": 0.1,
+              "bin_end": 0.2,
+              "count": 187303,
+              "mean_predicted_probability": 0.1489996864141422,
+              "fraction_of_positives": 0.21550108647485625
+            },
+            {
+              "bin_index": 2,
+              "bin_start": 0.2,
+              "bin_end": 0.30000000000000004,
+              "count": 173656,
+              "mean_predicted_probability": 0.24992295229101205,
+              "fraction_of_positives": 0.2970067259409407
+            },
+            {
+              "bin_index": 3,
+              "bin_start": 0.30000000000000004,
+              "bin_end": 0.4,
+              "count": 200447,
+              "mean_predicted_probability": 0.35249302250476366,
+              "fraction_of_positives": 0.3796664454943202
+            },
+            {
+              "bin_index": 4,
+              "bin_start": 0.4,
+              "bin_end": 0.5,
+              "count": 395540,
+              "mean_predicted_probability": 0.45905705286921616,
+              "fraction_of_positives": 0.4572508469434191
+            },
+            {
+              "bin_index": 5,
+              "bin_start": 0.5,
+              "bin_end": 0.6000000000000001,
+              "count": 725407,
+              "mean_predicted_probability": 0.5434721176432064,
+              "fraction_of_positives": 0.5395164369795163
+            },
+            {
+              "bin_index": 6,
+              "bin_start": 0.6000000000000001,
+              "bin_end": 0.7000000000000001,
+              "count": 344426,
+              "mean_predicted_probability": 0.6448827344718774,
+              "fraction_of_positives": 0.6467310830192843
+            },
+            {
+              "bin_index": 7,
+              "bin_start": 0.7000000000000001,
+              "bin_end": 0.8,
+              "count": 226018,
+              "mean_predicted_probability": 0.7480827658702104,
+              "fraction_of_positives": 0.7824421063809077
+            },
+            {
+              "bin_index": 8,
+              "bin_start": 0.8,
+              "bin_end": 0.9,
+              "count": 226093,
+              "mean_predicted_probability": 0.8539238792617228,
+              "fraction_of_positives": 0.9034335428341435
+            },
+            {
+              "bin_index": 9,
+              "bin_start": 0.9,
+              "bin_end": 1.0,
+              "count": 403152,
+              "mean_predicted_probability": 0.9495228907695806,
+              "fraction_of_positives": 0.9837902329642417
+            }
+          ]
+        },
+        "roc_auc": 0.8588283989316167
+      },
+      "valid": {
+        "accuracy": 0.7544807510115402,
+        "precision": 0.7255323191138001,
+        "recall": 0.7810743981519114,
+        "f1_score": 0.7522795604151382,
+        "brier_score": 0.15569022176698738,
+        "logloss": 0.46473890490277153,
+        "threshold": 0.5,
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              304976,
+              112686
+            ],
+            [
+              83491,
+              297876
+            ]
+          ],
+          "tn": 304976,
+          "fp": 112686,
+          "fn": 83491,
+          "tp": 297876
+        },
+        "calibration_curve": {
+          "n_bins": 10,
+          "strategy": "uniform",
+          "bins": [
+            {
+              "bin_index": 0,
+              "bin_start": 0.0,
+              "bin_end": 0.1,
+              "count": 186390,
+              "mean_predicted_probability": 0.01998240579308056,
+              "fraction_of_positives": 0.048511186222436824
+            },
+            {
+              "bin_index": 1,
+              "bin_start": 0.1,
+              "bin_end": 0.2,
+              "count": 40787,
+              "mean_predicted_probability": 0.14875303878187388,
+              "fraction_of_positives": 0.22987716674430578
+            },
+            {
+              "bin_index": 2,
+              "bin_start": 0.2,
+              "bin_end": 0.30000000000000004,
+              "count": 36615,
+              "mean_predicted_probability": 0.2495452232472675,
+              "fraction_of_positives": 0.3040830260822067
+            },
+            {
+              "bin_index": 3,
+              "bin_start": 0.30000000000000004,
+              "bin_end": 0.4,
+              "count": 41270,
+              "mean_predicted_probability": 0.3524209967046897,
+              "fraction_of_positives": 0.3844196753089411
+            },
+            {
+              "bin_index": 4,
+              "bin_start": 0.4,
+              "bin_end": 0.5,
+              "count": 83405,
+              "mean_predicted_probability": 0.4599494664748076,
+              "fraction_of_positives": 0.45649541394400817
+            },
+            {
+              "bin_index": 5,
+              "bin_start": 0.5,
+              "bin_end": 0.6000000000000001,
+              "count": 155342,
+              "mean_predicted_probability": 0.5432295169830905,
+              "fraction_of_positives": 0.5597970928660633
+            },
+            {
+              "bin_index": 6,
+              "bin_start": 0.6000000000000001,
+              "bin_end": 0.7000000000000001,
+              "count": 74358,
+              "mean_predicted_probability": 0.6450631498678051,
+              "fraction_of_positives": 0.6602517550229968
+            },
+            {
+              "bin_index": 7,
+              "bin_start": 0.7000000000000001,
+              "bin_end": 0.8,
+              "count": 48855,
+              "mean_predicted_probability": 0.7477205797552562,
+              "fraction_of_positives": 0.7565039402312967
+            },
+            {
+              "bin_index": 8,
+              "bin_start": 0.8,
+              "bin_end": 0.9,
+              "count": 45867,
+              "mean_predicted_probability": 0.8527195913215662,
+              "fraction_of_positives": 0.8851679856977783
+            },
+            {
+              "bin_index": 9,
+              "bin_start": 0.9,
+              "bin_end": 1.0,
+              "count": 86140,
+              "mean_predicted_probability": 0.9495863670653192,
+              "fraction_of_positives": 0.9781982818667286
+            }
+          ]
+        },
+        "roc_auc": 0.8537390260500425
+      },
+      "test": {
+        "accuracy": 0.7670181795947806,
+        "precision": 0.74843843265168,
+        "recall": 0.7999186232255342,
+        "f1_score": 0.7733227143484985,
+        "brier_score": 0.15305869751796017,
+        "logloss": 0.4597004385360457,
+        "threshold": 0.5,
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              296197,
+              107048
+            ],
+            [
+              79662,
+              318486
+            ]
+          ],
+          "tn": 296197,
+          "fp": 107048,
+          "fn": 79662,
+          "tp": 318486
+        },
+        "calibration_curve": {
+          "n_bins": 10,
+          "strategy": "uniform",
+          "bins": [
+            {
+              "bin_index": 0,
+              "bin_start": 0.0,
+              "bin_end": 0.1,
+              "count": 171592,
+              "mean_predicted_probability": 0.020448325906350234,
+              "fraction_of_positives": 0.049233064478530465
+            },
+            {
+              "bin_index": 1,
+              "bin_start": 0.1,
+              "bin_end": 0.2,
+              "count": 42808,
+              "mean_predicted_probability": 0.14946410706528876,
+              "fraction_of_positives": 0.2271771631470753
+            },
+            {
+              "bin_index": 2,
+              "bin_start": 0.2,
+              "bin_end": 0.30000000000000004,
+              "count": 39668,
+              "mean_predicted_probability": 0.24884079612684104,
+              "fraction_of_positives": 0.28042754865382674
+            },
+            {
+              "bin_index": 3,
+              "bin_start": 0.30000000000000004,
+              "bin_end": 0.4,
+              "count": 40734,
+              "mean_predicted_probability": 0.3516263704425592,
+              "fraction_of_positives": 0.3492414199440271
+            },
+            {
+              "bin_index": 4,
+              "bin_start": 0.4,
+              "bin_end": 0.5,
+              "count": 81057,
+              "mean_predicted_probability": 0.45922116697277976,
+              "fraction_of_positives": 0.4458467498180293
+            },
+            {
+              "bin_index": 5,
+              "bin_start": 0.5,
+              "bin_end": 0.6000000000000001,
+              "count": 153590,
+              "mean_predicted_probability": 0.5428694868714123,
+              "fraction_of_positives": 0.5708639885409207
+            },
+            {
+              "bin_index": 6,
+              "bin_start": 0.6000000000000001,
+              "bin_end": 0.7000000000000001,
+              "count": 76920,
+              "mean_predicted_probability": 0.6456748548548357,
+              "fraction_of_positives": 0.7128055122204888
+            },
+            {
+              "bin_index": 7,
+              "bin_start": 0.7000000000000001,
+              "bin_end": 0.8,
+              "count": 55406,
+              "mean_predicted_probability": 0.747978502754674,
+              "fraction_of_positives": 0.8007977475363679
+            },
+            {
+              "bin_index": 8,
+              "bin_start": 0.8,
+              "bin_end": 0.9,
+              "count": 49772,
+              "mean_predicted_probability": 0.852926123208587,
+              "fraction_of_positives": 0.8859599774973881
+            },
+            {
+              "bin_index": 9,
+              "bin_start": 0.9,
+              "bin_end": 1.0,
+              "count": 89846,
+              "mean_predicted_probability": 0.9493161278581098,
+              "fraction_of_positives": 0.9740333459475102
+            }
+          ]
+        },
+        "roc_auc": 0.8618626491676313
+      }
+    }
+  ],
+  "best_trial": {
+    "trial_index": 1,
+    "params": {
+      "batch_size": 256,
+      "lstm_units": 128,
+      "dense_units": 32,
+      "dropout": 0.2,
+      "learning_rate": 0.0005
+    },
+    "epochs_ran": 5,
+    "best_val_loss": 0.464738907491478,
+    "train": {
+      "accuracy": 0.7549101217787847,
+      "precision": 0.7229992686079032,
+      "recall": 0.7845908590491513,
+      "f1_score": 0.7525369221282436,
+      "brier_score": 0.15215134308649456,
+      "logloss": 0.4511540939647718,
+      "threshold": 0.5,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            1427661,
+            533253
+          ],
+          [
+            382130,
+            1391843
+          ]
+        ],
+        "tn": 1427661,
+        "fp": 533253,
+        "fn": 382130,
+        "tp": 1391843
+      },
+      "calibration_curve": {
+        "n_bins": 10,
+        "strategy": "uniform",
+        "bins": [
+          {
+            "bin_index": 0,
+            "bin_start": 0.0,
+            "bin_end": 0.1,
+            "count": 852845,
+            "mean_predicted_probability": 0.02040105323805496,
+            "fraction_of_positives": 0.03895784110829049
+          },
+          {
+            "bin_index": 1,
+            "bin_start": 0.1,
+            "bin_end": 0.2,
+            "count": 187303,
+            "mean_predicted_probability": 0.1489996864141422,
+            "fraction_of_positives": 0.21550108647485625
+          },
+          {
+            "bin_index": 2,
+            "bin_start": 0.2,
+            "bin_end": 0.30000000000000004,
+            "count": 173656,
+            "mean_predicted_probability": 0.24992295229101205,
+            "fraction_of_positives": 0.2970067259409407
+          },
+          {
+            "bin_index": 3,
+            "bin_start": 0.30000000000000004,
+            "bin_end": 0.4,
+            "count": 200447,
+            "mean_predicted_probability": 0.35249302250476366,
+            "fraction_of_positives": 0.3796664454943202
+          },
+          {
+            "bin_index": 4,
+            "bin_start": 0.4,
+            "bin_end": 0.5,
+            "count": 395540,
+            "mean_predicted_probability": 0.45905705286921616,
+            "fraction_of_positives": 0.4572508469434191
+          },
+          {
+            "bin_index": 5,
+            "bin_start": 0.5,
+            "bin_end": 0.6000000000000001,
+            "count": 725407,
+            "mean_predicted_probability": 0.5434721176432064,
+            "fraction_of_positives": 0.5395164369795163
+          },
+          {
+            "bin_index": 6,
+            "bin_start": 0.6000000000000001,
+            "bin_end": 0.7000000000000001,
+            "count": 344426,
+            "mean_predicted_probability": 0.6448827344718774,
+            "fraction_of_positives": 0.6467310830192843
+          },
+          {
+            "bin_index": 7,
+            "bin_start": 0.7000000000000001,
+            "bin_end": 0.8,
+            "count": 226018,
+            "mean_predicted_probability": 0.7480827658702104,
+            "fraction_of_positives": 0.7824421063809077
+          },
+          {
+            "bin_index": 8,
+            "bin_start": 0.8,
+            "bin_end": 0.9,
+            "count": 226093,
+            "mean_predicted_probability": 0.8539238792617228,
+            "fraction_of_positives": 0.9034335428341435
+          },
+          {
+            "bin_index": 9,
+            "bin_start": 0.9,
+            "bin_end": 1.0,
+            "count": 403152,
+            "mean_predicted_probability": 0.9495228907695806,
+            "fraction_of_positives": 0.9837902329642417
+          }
+        ]
+      },
+      "roc_auc": 0.8588283989316167
+    },
+    "valid": {
+      "accuracy": 0.7544807510115402,
+      "precision": 0.7255323191138001,
+      "recall": 0.7810743981519114,
+      "f1_score": 0.7522795604151382,
+      "brier_score": 0.15569022176698738,
+      "logloss": 0.46473890490277153,
+      "threshold": 0.5,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            304976,
+            112686
+          ],
+          [
+            83491,
+            297876
+          ]
+        ],
+        "tn": 304976,
+        "fp": 112686,
+        "fn": 83491,
+        "tp": 297876
+      },
+      "calibration_curve": {
+        "n_bins": 10,
+        "strategy": "uniform",
+        "bins": [
+          {
+            "bin_index": 0,
+            "bin_start": 0.0,
+            "bin_end": 0.1,
+            "count": 186390,
+            "mean_predicted_probability": 0.01998240579308056,
+            "fraction_of_positives": 0.048511186222436824
+          },
+          {
+            "bin_index": 1,
+            "bin_start": 0.1,
+            "bin_end": 0.2,
+            "count": 40787,
+            "mean_predicted_probability": 0.14875303878187388,
+            "fraction_of_positives": 0.22987716674430578
+          },
+          {
+            "bin_index": 2,
+            "bin_start": 0.2,
+            "bin_end": 0.30000000000000004,
+            "count": 36615,
+            "mean_predicted_probability": 0.2495452232472675,
+            "fraction_of_positives": 0.3040830260822067
+          },
+          {
+            "bin_index": 3,
+            "bin_start": 0.30000000000000004,
+            "bin_end": 0.4,
+            "count": 41270,
+            "mean_predicted_probability": 0.3524209967046897,
+            "fraction_of_positives": 0.3844196753089411
+          },
+          {
+            "bin_index": 4,
+            "bin_start": 0.4,
+            "bin_end": 0.5,
+            "count": 83405,
+            "mean_predicted_probability": 0.4599494664748076,
+            "fraction_of_positives": 0.45649541394400817
+          },
+          {
+            "bin_index": 5,
+            "bin_start": 0.5,
+            "bin_end": 0.6000000000000001,
+            "count": 155342,
+            "mean_predicted_probability": 0.5432295169830905,
+            "fraction_of_positives": 0.5597970928660633
+          },
+          {
+            "bin_index": 6,
+            "bin_start": 0.6000000000000001,
+            "bin_end": 0.7000000000000001,
+            "count": 74358,
+            "mean_predicted_probability": 0.6450631498678051,
+            "fraction_of_positives": 0.6602517550229968
+          },
+          {
+            "bin_index": 7,
+            "bin_start": 0.7000000000000001,
+            "bin_end": 0.8,
+            "count": 48855,
+            "mean_predicted_probability": 0.7477205797552562,
+            "fraction_of_positives": 0.7565039402312967
+          },
+          {
+            "bin_index": 8,
+            "bin_start": 0.8,
+            "bin_end": 0.9,
+            "count": 45867,
+            "mean_predicted_probability": 0.8527195913215662,
+            "fraction_of_positives": 0.8851679856977783
+          },
+          {
+            "bin_index": 9,
+            "bin_start": 0.9,
+            "bin_end": 1.0,
+            "count": 86140,
+            "mean_predicted_probability": 0.9495863670653192,
+            "fraction_of_positives": 0.9781982818667286
+          }
+        ]
+      },
+      "roc_auc": 0.8537390260500425
+    },
+    "test": {
+      "accuracy": 0.7670181795947806,
+      "precision": 0.74843843265168,
+      "recall": 0.7999186232255342,
+      "f1_score": 0.7733227143484985,
+      "brier_score": 0.15305869751796017,
+      "logloss": 0.4597004385360457,
+      "threshold": 0.5,
+      "confusion_matrix": {
+        "labels": [
+          0,
+          1
+        ],
+        "matrix": [
+          [
+            296197,
+            107048
+          ],
+          [
+            79662,
+            318486
+          ]
+        ],
+        "tn": 296197,
+        "fp": 107048,
+        "fn": 79662,
+        "tp": 318486
+      },
+      "calibration_curve": {
+        "n_bins": 10,
+        "strategy": "uniform",
+        "bins": [
+          {
+            "bin_index": 0,
+            "bin_start": 0.0,
+            "bin_end": 0.1,
+            "count": 171592,
+            "mean_predicted_probability": 0.020448325906350234,
+            "fraction_of_positives": 0.049233064478530465
+          },
+          {
+            "bin_index": 1,
+            "bin_start": 0.1,
+            "bin_end": 0.2,
+            "count": 42808,
+            "mean_predicted_probability": 0.14946410706528876,
+            "fraction_of_positives": 0.2271771631470753
+          },
+          {
+            "bin_index": 2,
+            "bin_start": 0.2,
+            "bin_end": 0.30000000000000004,
+            "count": 39668,
+            "mean_predicted_probability": 0.24884079612684104,
+            "fraction_of_positives": 0.28042754865382674
+          },
+          {
+            "bin_index": 3,
+            "bin_start": 0.30000000000000004,
+            "bin_end": 0.4,
+            "count": 40734,
+            "mean_predicted_probability": 0.3516263704425592,
+            "fraction_of_positives": 0.3492414199440271
+          },
+          {
+            "bin_index": 4,
+            "bin_start": 0.4,
+            "bin_end": 0.5,
+            "count": 81057,
+            "mean_predicted_probability": 0.45922116697277976,
+            "fraction_of_positives": 0.4458467498180293
+          },
+          {
+            "bin_index": 5,
+            "bin_start": 0.5,
+            "bin_end": 0.6000000000000001,
+            "count": 153590,
+            "mean_predicted_probability": 0.5428694868714123,
+            "fraction_of_positives": 0.5708639885409207
+          },
+          {
+            "bin_index": 6,
+            "bin_start": 0.6000000000000001,
+            "bin_end": 0.7000000000000001,
+            "count": 76920,
+            "mean_predicted_probability": 0.6456748548548357,
+            "fraction_of_positives": 0.7128055122204888
+          },
+          {
+            "bin_index": 7,
+            "bin_start": 0.7000000000000001,
+            "bin_end": 0.8,
+            "count": 55406,
+            "mean_predicted_probability": 0.747978502754674,
+            "fraction_of_positives": 0.8007977475363679
+          },
+          {
+            "bin_index": 8,
+            "bin_start": 0.8,
+            "bin_end": 0.9,
+            "count": 49772,
+            "mean_predicted_probability": 0.852926123208587,
+            "fraction_of_positives": 0.8859599774973881
+          },
+          {
+            "bin_index": 9,
+            "bin_start": 0.9,
+            "bin_end": 1.0,
+            "count": 89846,
+            "mean_predicted_probability": 0.9493161278581098,
+            "fraction_of_positives": 0.9740333459475102
+          }
+        ]
+      },
+      "roc_auc": 0.8618626491676313
+    }
+  },
+  "plot_artifacts": {
+    "train": {
+      "confusion_matrix_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_train_confusion_matrix.png",
+      "calibration_curve_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_train_calibration_curve.png"
+    },
+    "valid": {
+      "confusion_matrix_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_valid_confusion_matrix.png",
+      "calibration_curve_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_valid_calibration_curve.png"
+    },
+    "test": {
+      "confusion_matrix_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_test_confusion_matrix.png",
+      "calibration_curve_plot": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\lstm_test_calibration_curve.png"
+    }
+  },
+  "local_round_explainability": {
+    "metrics": {
+      "fidelity_to_lstm": {
+        "mae": 0.0005220386916570527,
+        "rmse": 0.0009801254177715126,
+        "r2": 0.9999888297117641,
+        "pearson_corr": 0.9999946274990262
+      },
+      "ridge_vs_true_labels": {
+        "accuracy": 0.38848920863309355,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "brier_score": 0.2699912381810956,
+        "logloss": 0.7112768087679526,
+        "threshold": 0.5,
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              54,
+              85
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "tn": 54,
+          "fp": 85,
+          "fn": 0,
+          "tp": 0
+        },
+        "calibration_curve": {
+          "n_bins": 10,
+          "strategy": "uniform",
+          "bins": [
+            {
+              "bin_index": 0,
+              "bin_start": 0.0,
+              "bin_end": 0.1,
+              "count": 40,
+              "mean_predicted_probability": 0.00891198292374611,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 1,
+              "bin_start": 0.1,
+              "bin_end": 0.2,
+              "count": 0,
+              "mean_predicted_probability": null,
+              "fraction_of_positives": null
+            },
+            {
+              "bin_index": 2,
+              "bin_start": 0.2,
+              "bin_end": 0.30000000000000004,
+              "count": 1,
+              "mean_predicted_probability": 0.28684958815574646,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 3,
+              "bin_start": 0.30000000000000004,
+              "bin_end": 0.4,
+              "count": 5,
+              "mean_predicted_probability": 0.35363027453422546,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 4,
+              "bin_start": 0.4,
+              "bin_end": 0.5,
+              "count": 8,
+              "mean_predicted_probability": 0.4882374107837677,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 5,
+              "bin_start": 0.5,
+              "bin_end": 0.6000000000000001,
+              "count": 54,
+              "mean_predicted_probability": 0.5305338104565939,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 6,
+              "bin_start": 0.6000000000000001,
+              "bin_end": 0.7000000000000001,
+              "count": 0,
+              "mean_predicted_probability": null,
+              "fraction_of_positives": null
+            },
+            {
+              "bin_index": 7,
+              "bin_start": 0.7000000000000001,
+              "bin_end": 0.8,
+              "count": 21,
+              "mean_predicted_probability": 0.7821771247046334,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 8,
+              "bin_start": 0.8,
+              "bin_end": 0.9,
+              "count": 9,
+              "mean_predicted_probability": 0.8155986136860318,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 9,
+              "bin_start": 0.9,
+              "bin_end": 1.0,
+              "count": 1,
+              "mean_predicted_probability": 0.9089258909225464,
+              "fraction_of_positives": 0.0
+            }
+          ]
+        },
+        "roc_auc": null
+      },
+      "lstm_vs_true_labels": {
+        "accuracy": 0.38848920863309355,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1_score": 0.0,
+        "brier_score": 0.27010434578712894,
+        "logloss": 0.7116992409214765,
+        "threshold": 0.5,
+        "confusion_matrix": {
+          "labels": [
+            0,
+            1
+          ],
+          "matrix": [
+            [
+              54,
+              85
+            ],
+            [
+              0,
+              0
+            ]
+          ],
+          "tn": 54,
+          "fp": 85,
+          "fn": 0,
+          "tp": 0
+        },
+        "calibration_curve": {
+          "n_bins": 10,
+          "strategy": "uniform",
+          "bins": [
+            {
+              "bin_index": 0,
+              "bin_start": 0.0,
+              "bin_end": 0.1,
+              "count": 40,
+              "mean_predicted_probability": 0.008678159094415605,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 1,
+              "bin_start": 0.1,
+              "bin_end": 0.2,
+              "count": 0,
+              "mean_predicted_probability": null,
+              "fraction_of_positives": null
+            },
+            {
+              "bin_index": 2,
+              "bin_start": 0.2,
+              "bin_end": 0.30000000000000004,
+              "count": 1,
+              "mean_predicted_probability": 0.28651806712150574,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 3,
+              "bin_start": 0.30000000000000004,
+              "bin_end": 0.4,
+              "count": 5,
+              "mean_predicted_probability": 0.3532900035381317,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 4,
+              "bin_start": 0.4,
+              "bin_end": 0.5,
+              "count": 8,
+              "mean_predicted_probability": 0.4882201626896858,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 5,
+              "bin_start": 0.5,
+              "bin_end": 0.6000000000000001,
+              "count": 54,
+              "mean_predicted_probability": 0.5305359970640253,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 6,
+              "bin_start": 0.6000000000000001,
+              "bin_end": 0.7000000000000001,
+              "count": 0,
+              "mean_predicted_probability": null,
+              "fraction_of_positives": null
+            },
+            {
+              "bin_index": 7,
+              "bin_start": 0.7000000000000001,
+              "bin_end": 0.8,
+              "count": 21,
+              "mean_predicted_probability": 0.7824527081989107,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 8,
+              "bin_start": 0.8,
+              "bin_end": 0.9,
+              "count": 9,
+              "mean_predicted_probability": 0.8158731526798673,
+              "fraction_of_positives": 0.0
+            },
+            {
+              "bin_index": 9,
+              "bin_start": 0.9,
+              "bin_end": 1.0,
+              "count": 1,
+              "mean_predicted_probability": 0.9120814204216003,
+              "fraction_of_positives": 0.0
+            }
+          ]
+        },
+        "roc_auc": null
+      },
+      "selection": {
+        "csv_path": "processed_full\\iem_chengdu\\iem-chengdu-2025-heroic-vs-natus-vincere-bo3-P_vZ7pAIyzYcLTUjDHhSUR\\heroic-vs-natus-vincere-m2-ancient.csv",
+        "round_num": 21,
+        "score": 0.6590844988822937,
+        "row_count": 139,
+        "selection_mode": "auto_max_probability_jump",
+        "split": "test",
+        "alpha": 10.0,
+        "cv_folds": 5
+      }
+    },
+    "reports": {
+      "local_round_ridge_coefficients": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\local_round_ridge_coefficients.csv",
+      "local_round_predictions": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\local_round_predictions.csv",
+      "local_round_explainability_summary": "artifacts\\modellfutasok\\lstm_sequence_full_cuda_final\\local_round_explainability_summary.md"
+    }
+  },
+  "feature_count": 531,
+  "features": [
+    "round_num",
+    "seconds_in_round",
+    "bomb_planted",
+    "bomb_events_last_5s",
+    "T_alive",
+    "T_hp_sum",
+    "T_armor_sum",
+    "T_money_sum",
+    "T_start_balance_sum",
+    "T_cash_spent_round_sum",
+    "T_equip_value_sum",
+    "T_round_start_equip_sum",
+    "T_helmet_count",
+    "T_defuser_count",
+    "T_scoped_count",
+    "T_walking_count",
+    "T_defusing_count",
+    "T_bomb_zone_count",
+    "T_flashed_players",
+    "T_flash_duration_sum",
+    "T_flash_alpha_mean",
+    "T_burning_players",
+    "T_duck_amount_mean",
+    "T_shots_fired_sum",
+    "T_velocity_mean",
+    "T_smoke_inv",
+    "T_flash_inv",
+    "T_he_inv",
+    "T_molly_inv",
+    "T_utility_inv",
+    "T_bomb_carrier_alive",
+    "T_unique_places",
+    "T_macro_A",
+    "T_macro_B",
+    "T_macro_MID",
+    "T_macro_OTHER",
+    "T_mean_X",
+    "T_mean_Y",
+    "T_spread_xy",
+    "T_place_BRIDGE",
+    "T_place_RUINS",
+    "T_place_TSPAWN",
+    "T_place_UPSTAIRS",
+    "T_place_KITCHEN",
+    "T_place_MIDDLE",
+    "T_place_UNKNOWN",
+    "T_place_BOMBSITEB",
+    "T_place_BALCONY",
+    "T_place_QUAD",
+    "T_place_BACKALLEY",
+    "T_place_PIT",
+    "T_place_SECONDMID",
+    "T_place_CTSPAWN",
+    "T_place_LOWERMID",
+    "T_place_TRAMP",
+    "T_place_TOPOFMID",
+    "T_place_ARCH",
+    "T_place_LIBRARY",
+    "T_place_APARTMENTS",
+    "T_place_GRAVEYARD",
+    "T_place_UNDERPASS",
+    "T_place_BANANA",
+    "T_place_BOMBSITEA",
+    "CT_alive",
+    "CT_hp_sum",
+    "CT_armor_sum",
+    "CT_money_sum",
+    "CT_start_balance_sum",
+    "CT_cash_spent_round_sum",
+    "CT_equip_value_sum",
+    "CT_round_start_equip_sum",
+    "CT_helmet_count",
+    "CT_defuser_count",
+    "CT_scoped_count",
+    "CT_walking_count",
+    "CT_defusing_count",
+    "CT_bomb_zone_count",
+    "CT_flashed_players",
+    "CT_flash_duration_sum",
+    "CT_flash_alpha_mean",
+    "CT_burning_players",
+    "CT_duck_amount_mean",
+    "CT_shots_fired_sum",
+    "CT_velocity_mean",
+    "CT_smoke_inv",
+    "CT_flash_inv",
+    "CT_he_inv",
+    "CT_molly_inv",
+    "CT_utility_inv",
+    "CT_bomb_carrier_alive",
+    "CT_unique_places",
+    "CT_macro_A",
+    "CT_macro_B",
+    "CT_macro_MID",
+    "CT_macro_OTHER",
+    "CT_mean_X",
+    "CT_mean_Y",
+    "CT_spread_xy",
+    "CT_place_BRIDGE",
+    "CT_place_RUINS",
+    "CT_place_TSPAWN",
+    "CT_place_UPSTAIRS",
+    "CT_place_KITCHEN",
+    "CT_place_MIDDLE",
+    "CT_place_UNKNOWN",
+    "CT_place_BOMBSITEB",
+    "CT_place_BALCONY",
+    "CT_place_QUAD",
+    "CT_place_BACKALLEY",
+    "CT_place_PIT",
+    "CT_place_SECONDMID",
+    "CT_place_CTSPAWN",
+    "CT_place_LOWERMID",
+    "CT_place_TRAMP",
+    "CT_place_TOPOFMID",
+    "CT_place_ARCH",
+    "CT_place_LIBRARY",
+    "CT_place_APARTMENTS",
+    "CT_place_GRAVEYARD",
+    "CT_place_UNDERPASS",
+    "CT_place_BANANA",
+    "CT_place_BOMBSITEA",
+    "alive_diff",
+    "hp_diff",
+    "armor_diff",
+    "money_diff",
+    "equip_diff",
+    "utility_inv_diff",
+    "flash_inv_diff",
+    "smoke_inv_diff",
+    "molly_inv_diff",
+    "spread_diff",
+    "centroid_distance_xy",
+    "T_closest_enemy_dist",
+    "CT_closest_enemy_dist",
+    "closest_enemy_dist_diff",
+    "T_damage_last_5s",
+    "CT_damage_last_5s",
+    "T_utility_damage_last_5s",
+    "CT_utility_damage_last_5s",
+    "T_kills_last_3s",
+    "CT_kills_last_3s",
+    "T_smokes_last_5s",
+    "CT_smokes_last_5s",
+    "T_flashes_last_5s",
+    "CT_flashes_last_5s",
+    "T_he_last_5s",
+    "CT_he_last_5s",
+    "T_mollies_last_5s",
+    "CT_mollies_last_5s",
+    "T1__alive",
+    "T1__hp",
+    "T1__armor",
+    "T1__has_helmet",
+    "T1__has_defuser",
+    "T1__is_scoped",
+    "T1__is_walking",
+    "T1__duck_amount",
+    "T1__flash_duration",
+    "T1__shots_fired",
+    "T1__X",
+    "T1__Y",
+    "T1__smoke",
+    "T1__flash",
+    "T1__he",
+    "T1__molly",
+    "T1__utility_total",
+    "T1__has_bomb",
+    "T2__alive",
+    "T2__hp",
+    "T2__armor",
+    "T2__has_helmet",
+    "T2__has_defuser",
+    "T2__is_scoped",
+    "T2__is_walking",
+    "T2__duck_amount",
+    "T2__flash_duration",
+    "T2__shots_fired",
+    "T2__X",
+    "T2__Y",
+    "T2__smoke",
+    "T2__flash",
+    "T2__he",
+    "T2__molly",
+    "T2__utility_total",
+    "T2__has_bomb",
+    "T3__alive",
+    "T3__hp",
+    "T3__armor",
+    "T3__has_helmet",
+    "T3__has_defuser",
+    "T3__is_scoped",
+    "T3__is_walking",
+    "T3__duck_amount",
+    "T3__flash_duration",
+    "T3__shots_fired",
+    "T3__X",
+    "T3__Y",
+    "T3__smoke",
+    "T3__flash",
+    "T3__he",
+    "T3__molly",
+    "T3__utility_total",
+    "T3__has_bomb",
+    "T4__alive",
+    "T4__hp",
+    "T4__armor",
+    "T4__has_helmet",
+    "T4__has_defuser",
+    "T4__is_scoped",
+    "T4__is_walking",
+    "T4__duck_amount",
+    "T4__flash_duration",
+    "T4__shots_fired",
+    "T4__X",
+    "T4__Y",
+    "T4__smoke",
+    "T4__flash",
+    "T4__he",
+    "T4__molly",
+    "T4__utility_total",
+    "T4__has_bomb",
+    "T5__alive",
+    "T5__hp",
+    "T5__armor",
+    "T5__has_helmet",
+    "T5__has_defuser",
+    "T5__is_scoped",
+    "T5__is_walking",
+    "T5__duck_amount",
+    "T5__flash_duration",
+    "T5__shots_fired",
+    "T5__X",
+    "T5__Y",
+    "T5__smoke",
+    "T5__flash",
+    "T5__he",
+    "T5__molly",
+    "T5__utility_total",
+    "T5__has_bomb",
+    "CT1__alive",
+    "CT1__hp",
+    "CT1__armor",
+    "CT1__has_helmet",
+    "CT1__has_defuser",
+    "CT1__is_scoped",
+    "CT1__is_walking",
+    "CT1__duck_amount",
+    "CT1__flash_duration",
+    "CT1__shots_fired",
+    "CT1__X",
+    "CT1__Y",
+    "CT1__smoke",
+    "CT1__flash",
+    "CT1__he",
+    "CT1__molly",
+    "CT1__utility_total",
+    "CT1__has_bomb",
+    "CT2__alive",
+    "CT2__hp",
+    "CT2__armor",
+    "CT2__has_helmet",
+    "CT2__has_defuser",
+    "CT2__is_scoped",
+    "CT2__is_walking",
+    "CT2__duck_amount",
+    "CT2__flash_duration",
+    "CT2__shots_fired",
+    "CT2__X",
+    "CT2__Y",
+    "CT2__smoke",
+    "CT2__flash",
+    "CT2__he",
+    "CT2__molly",
+    "CT2__utility_total",
+    "CT2__has_bomb",
+    "CT3__alive",
+    "CT3__hp",
+    "CT3__armor",
+    "CT3__has_helmet",
+    "CT3__has_defuser",
+    "CT3__is_scoped",
+    "CT3__is_walking",
+    "CT3__duck_amount",
+    "CT3__flash_duration",
+    "CT3__shots_fired",
+    "CT3__X",
+    "CT3__Y",
+    "CT3__smoke",
+    "CT3__flash",
+    "CT3__he",
+    "CT3__molly",
+    "CT3__utility_total",
+    "CT3__has_bomb",
+    "CT4__alive",
+    "CT4__hp",
+    "CT4__armor",
+    "CT4__has_helmet",
+    "CT4__has_defuser",
+    "CT4__is_scoped",
+    "CT4__is_walking",
+    "CT4__duck_amount",
+    "CT4__flash_duration",
+    "CT4__shots_fired",
+    "CT4__X",
+    "CT4__Y",
+    "CT4__smoke",
+    "CT4__flash",
+    "CT4__he",
+    "CT4__molly",
+    "CT4__utility_total",
+    "CT4__has_bomb",
+    "CT5__alive",
+    "CT5__hp",
+    "CT5__armor",
+    "CT5__has_helmet",
+    "CT5__has_defuser",
+    "CT5__is_scoped",
+    "CT5__is_walking",
+    "CT5__duck_amount",
+    "CT5__flash_duration",
+    "CT5__shots_fired",
+    "CT5__X",
+    "CT5__Y",
+    "CT5__smoke",
+    "CT5__flash",
+    "CT5__he",
+    "CT5__molly",
+    "CT5__utility_total",
+    "CT5__has_bomb",
+    "damage_diff_last_5s",
+    "utility_damage_diff_last_5s",
+    "kill_diff_last_3s",
+    "T_A_site_active_smokes",
+    "T_A_site_active_infernos",
+    "T_A_site_smokes_last_5s",
+    "T_A_site_flashes_last_5s",
+    "T_A_site_he_last_5s",
+    "T_A_site_mollies_last_5s",
+    "CT_A_site_active_smokes",
+    "CT_A_site_active_infernos",
+    "CT_A_site_smokes_last_5s",
+    "CT_A_site_flashes_last_5s",
+    "CT_A_site_he_last_5s",
+    "CT_A_site_mollies_last_5s",
+    "T_B_site_active_smokes",
+    "T_B_site_active_infernos",
+    "T_B_site_smokes_last_5s",
+    "T_B_site_flashes_last_5s",
+    "T_B_site_he_last_5s",
+    "T_B_site_mollies_last_5s",
+    "CT_B_site_active_smokes",
+    "CT_B_site_active_infernos",
+    "CT_B_site_smokes_last_5s",
+    "CT_B_site_flashes_last_5s",
+    "CT_B_site_he_last_5s",
+    "CT_B_site_mollies_last_5s",
+    "T_active_smokes",
+    "CT_active_smokes",
+    "T_active_infernos",
+    "CT_active_infernos",
+    "active_smokes_total",
+    "active_infernos_total",
+    "T_place_DECK",
+    "CT_place_DECK",
+    "T_place_PALACEINTERIOR",
+    "T_place_CATWALK",
+    "T_place_TRUCK",
+    "T_place_STAIRS",
+    "T_place_SHOP",
+    "T_place_JUNGLE",
+    "T_place_SCAFFOLDING",
+    "T_place_HOUSE",
+    "T_place_LADDER",
+    "T_place_CONNECTOR",
+    "T_place_SIDEALLEY",
+    "T_place_PALACEALLEY",
+    "T_place_SNIPERSNEST",
+    "CT_place_PALACEINTERIOR",
+    "CT_place_CATWALK",
+    "CT_place_TRUCK",
+    "CT_place_STAIRS",
+    "CT_place_SHOP",
+    "CT_place_JUNGLE",
+    "CT_place_SCAFFOLDING",
+    "CT_place_HOUSE",
+    "CT_place_LADDER",
+    "CT_place_CONNECTOR",
+    "CT_place_SIDEALLEY",
+    "CT_place_PALACEALLEY",
+    "CT_place_SNIPERSNEST",
+    "T_place_ROOF",
+    "T_place_RAFTERS",
+    "T_place_SECRET",
+    "T_place_SQUEAKY",
+    "T_place_HUTROOF",
+    "T_place_CONTROL",
+    "T_place_VENTS",
+    "T_place_SILO",
+    "T_place_OUTSIDE",
+    "T_place_HUT",
+    "T_place_MINI",
+    "T_place_LOBBY",
+    "T_place_RAMP",
+    "T_place_DECON",
+    "T_place_HELL",
+    "T_place_TROPHY",
+    "T_place_VENDING",
+    "T_place_CRANE",
+    "T_place_LOCKERROOM",
+    "T_place_HEAVEN",
+    "T_place_GARAGE",
+    "T_place_OBSERVATION",
+    "T_place_ADMIN",
+    "T_place_TUNNELS",
+    "CT_place_ROOF",
+    "CT_place_RAFTERS",
+    "CT_place_SECRET",
+    "CT_place_SQUEAKY",
+    "CT_place_HUTROOF",
+    "CT_place_CONTROL",
+    "CT_place_VENTS",
+    "CT_place_SILO",
+    "CT_place_OUTSIDE",
+    "CT_place_HUT",
+    "CT_place_MINI",
+    "CT_place_LOBBY",
+    "CT_place_RAMP",
+    "CT_place_DECON",
+    "CT_place_HELL",
+    "CT_place_TROPHY",
+    "CT_place_VENDING",
+    "CT_place_CRANE",
+    "CT_place_LOCKERROOM",
+    "CT_place_HEAVEN",
+    "CT_place_GARAGE",
+    "CT_place_OBSERVATION",
+    "CT_place_ADMIN",
+    "CT_place_TUNNELS",
+    "T_place_TUNNEL",
+    "T_place_MAINHALL",
+    "T_place_WATER",
+    "T_place_SIDEHALL",
+    "T_place_ALLEY",
+    "T_place_TSIDELOWER",
+    "T_place_SIDEENTRANCE",
+    "T_place_TSIDEUPPER",
+    "CT_place_TUNNEL",
+    "CT_place_MAINHALL",
+    "CT_place_WATER",
+    "CT_place_SIDEHALL",
+    "CT_place_ALLEY",
+    "CT_place_TSIDELOWER",
+    "CT_place_SIDEENTRANCE",
+    "CT_place_TSIDEUPPER",
+    "T_place_SIDE",
+    "T_place_HOLE",
+    "T_place_MIDDOORS",
+    "T_place_LOWERTUNNEL",
+    "T_place_LONGDOORS",
+    "T_place_OUTSIDETUNNEL",
+    "T_place_LONGA",
+    "T_place_TUNNELSTAIRS",
+    "T_place_SHORTSTAIRS",
+    "T_place_UNDERA",
+    "T_place_UPPERTUNNEL",
+    "T_place_BDOORS",
+    "T_place_EXTENDEDA",
+    "T_place_ARAMP",
+    "T_place_OUTSIDELONG",
+    "CT_place_SIDE",
+    "CT_place_HOLE",
+    "CT_place_MIDDOORS",
+    "CT_place_LOWERTUNNEL",
+    "CT_place_LONGDOORS",
+    "CT_place_OUTSIDETUNNEL",
+    "CT_place_LONGA",
+    "CT_place_TUNNELSTAIRS",
+    "CT_place_SHORTSTAIRS",
+    "CT_place_UNDERA",
+    "CT_place_UPPERTUNNEL",
+    "CT_place_BDOORS",
+    "CT_place_EXTENDEDA",
+    "CT_place_ARAMP",
+    "CT_place_OUTSIDELONG",
+    "T_place_RESTROOM",
+    "T_place_LOWERPARK",
+    "T_place_STORAGEROOM",
+    "T_place_BACKOFA",
+    "T_place_CANAL",
+    "T_place_WALKWAY",
+    "T_place_CONSTRUCTION",
+    "T_place_PLAYGROUND",
+    "T_place_PIPE",
+    "T_place_UPPERPARK",
+    "T_place_FOUNTAIN",
+    "T_place_TSTAIRS",
+    "CT_place_RESTROOM",
+    "CT_place_LOWERPARK",
+    "CT_place_STORAGEROOM",
+    "CT_place_BACKOFA",
+    "CT_place_CANAL",
+    "CT_place_WALKWAY",
+    "CT_place_CONSTRUCTION",
+    "CT_place_PLAYGROUND",
+    "CT_place_PIPE",
+    "CT_place_UPPERPARK",
+    "CT_place_FOUNTAIN",
+    "CT_place_TSTAIRS",
+    "T_place_DUMPSTER",
+    "T_place_LONGDOG",
+    "T_place_BACKOFB",
+    "T_place_TMAIN",
+    "T_place_ELECTRICALBOX",
+    "T_place_IVY",
+    "T_place_ENTRANCE",
+    "CT_place_DUMPSTER",
+    "CT_place_LONGDOG",
+    "CT_place_BACKOFB",
+    "CT_place_TMAIN",
+    "CT_place_ELECTRICALBOX",
+    "CT_place_IVY",
+    "CT_place_ENTRANCE",
+    "T_place_BRICKS",
+    "T_place_STREET",
+    "T_place_MAIN",
+    "T_place_CTSIDEUPPER",
+    "CT_place_BRICKS",
+    "CT_place_STREET",
+    "CT_place_MAIN",
+    "CT_place_CTSIDEUPPER"
+  ],
+  "dropped_features": [
+    "tick",
+    "T1__name",
+    "T1__steamid",
+    "T1__place",
+    "T1__primary_weapon",
+    "T1__secondary_weapon",
+    "T2__name",
+    "T2__steamid",
+    "T2__place",
+    "T2__primary_weapon",
+    "T2__secondary_weapon",
+    "T3__name",
+    "T3__steamid",
+    "T3__place",
+    "T3__primary_weapon",
+    "T3__secondary_weapon",
+    "T4__name",
+    "T4__steamid",
+    "T4__place",
+    "T4__primary_weapon",
+    "T4__secondary_weapon",
+    "T5__name",
+    "T5__steamid",
+    "T5__place",
+    "T5__primary_weapon",
+    "T5__secondary_weapon",
+    "CT1__name",
+    "CT1__steamid",
+    "CT1__place",
+    "CT1__primary_weapon",
+    "CT1__secondary_weapon",
+    "CT2__name",
+    "CT2__steamid",
+    "CT2__place",
+    "CT2__primary_weapon",
+    "CT2__secondary_weapon",
+    "CT3__name",
+    "CT3__steamid",
+    "CT3__place",
+    "CT3__primary_weapon",
+    "CT3__secondary_weapon",
+    "CT4__name",
+    "CT4__steamid",
+    "CT4__place",
+    "CT4__primary_weapon",
+    "CT4__secondary_weapon",
+    "CT5__name",
+    "CT5__steamid",
+    "CT5__place",
+    "CT5__primary_weapon",
+    "CT5__secondary_weapon"
+  ],
+  "sampling": {
+    "manifest_path": null,
+    "include_partial_csvs": false,
+    "sample_csv_ratio": 1.0,
+    "row_stride": 1,
+    "window_sample_ratio": 1.0
+  },
+  "splits": [
+    {
+      "split": "train",
+      "match_count": 877,
+      "row_count": 3734887,
+      "map_rows": {
+        "inferno": 714619,
+        "mirage": 589271,
+        "nuke": 565291,
+        "ancient": 500061,
+        "dust2": 645642,
+        "overpass": 190063,
+        "train": 289647,
+        "anubis": 240293
+      }
+    },
+    {
+      "split": "valid",
+      "match_count": 226,
+      "row_count": 799029,
+      "map_rows": {
+        "overpass": 40692,
+        "dust2": 137661,
+        "nuke": 120933,
+        "inferno": 152824,
+        "anubis": 51406,
+        "mirage": 126537,
+        "ancient": 107087,
+        "train": 61889
+      }
+    },
+    {
+      "split": "test",
+      "match_count": 265,
+      "row_count": 801393,
+      "map_rows": {
+        "nuke": 120891,
+        "inferno": 152653,
+        "ancient": 107229,
+        "dust2": 138157,
+        "mirage": 126780,
+        "overpass": 40818,
+        "anubis": 51827,
+        "train": 63038
+      }
+    }
+  ],
+  "sampled_splits": [
+    {
+      "split": "train",
+      "csv_count": 877,
+      "map_csv_counts": {
+        "inferno": 151,
+        "mirage": 140,
+        "nuke": 135,
+        "ancient": 126,
+        "dust2": 152,
+        "overpass": 44,
+        "train": 70,
+        "anubis": 59
+      }
+    },
+    {
+      "split": "valid",
+      "csv_count": 226,
+      "map_csv_counts": {
+        "overpass": 9,
+        "dust2": 37,
+        "nuke": 36,
+        "inferno": 44,
+        "anubis": 12,
+        "mirage": 37,
+        "ancient": 32,
+        "train": 19
+      }
+    },
+    {
+      "split": "test",
+      "csv_count": 265,
+      "map_csv_counts": {
+        "nuke": 38,
+        "inferno": 50,
+        "ancient": 39,
+        "dust2": 47,
+        "mirage": 44,
+        "overpass": 11,
+        "anubis": 17,
+        "train": 19
+      }
+    }
+  ],
+  "sequence_counts": {
+    "train": 3734887,
+    "valid": 799029,
+    "test": 801393
+  }
+}

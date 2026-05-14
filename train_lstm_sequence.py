@@ -20,6 +20,7 @@ from train_xgboost import (
     build_split_manifest,
     choose_feature_columns,
     collect_csv_metadata,
+    is_utility_column,
     sample_manifest_rows,
     save_evaluation_plots,
     summarize_manifest_rows,
@@ -1152,6 +1153,7 @@ def write_local_round_reports(
     round_df: pd.DataFrame,
     ridge_model: Ridge,
     flat_feature_names: Sequence[str],
+    x_round_flat: Optional[np.ndarray] = None,
 ) -> Dict[str, str]:
     coef_df = pd.DataFrame(
         {
@@ -1160,6 +1162,8 @@ def write_local_round_reports(
             "abs_coefficient": np.abs(ridge_model.coef_.astype(float)),
         }
     ).sort_values("abs_coefficient", ascending=False)
+    coef_df["base_feature"] = coef_df["feature"].str.replace(r"^lag_\d+__", "", regex=True)
+    coef_df["is_utility"] = coef_df["base_feature"].map(is_utility_column)
     coef_path = output_dir / "local_round_ridge_coefficients.csv"
     coef_df.to_csv(coef_path, index=False)
 
@@ -1186,16 +1190,104 @@ def write_local_round_reports(
         summary_lines.append(
             f"- `{row['feature']}`: coefficient `{row['coefficient']:.6f}`, |coef| `{row['abs_coefficient']:.6f}`"
         )
+    summary_lines.extend(["", "## Top 10 utility ridge features", ""])
+    utility_top = coef_df[coef_df["is_utility"]].head(10)
+    if utility_top.empty:
+        summary_lines.append("- No utility features in the local top list.")
+    else:
+        for _, row in utility_top.iterrows():
+            direction = "raises CT win probability" if row["coefficient"] > 0 else "lowers CT win probability"
+            summary_lines.append(
+                f"- `{row['feature']}`: coefficient `{row['coefficient']:.6f}` ({direction})"
+            )
+    summary_lines.extend(["", "## Top 10 non-utility ridge features", ""])
+    non_utility_top = coef_df[~coef_df["is_utility"]].head(10)
+    for _, row in non_utility_top.iterrows():
+        direction = "raises CT win probability" if row["coefficient"] > 0 else "lowers CT win probability"
+        summary_lines.append(
+            f"- `{row['feature']}`: coefficient `{row['coefficient']:.6f}` ({direction})"
+        )
+
+    contribution_path = None
+    if x_round_flat is not None and len(round_df) == len(x_round_flat):
+        coef_values = ridge_model.coef_.astype(float)
+        contribution_rows = []
+        ordered_jump_indices = (
+            round_df["delta_from_prev"].abs().sort_values(ascending=False).index.tolist()
+        )
+        for row_index in ordered_jump_indices:
+            position = int(round_df.index.get_loc(row_index))
+            if position == 0:
+                continue
+            feature_delta = x_round_flat[position] - x_round_flat[position - 1]
+            contributions = coef_values * feature_delta
+            top_contrib_indices = np.argsort(np.abs(contributions))[::-1][:20]
+            for rank, feature_index in enumerate(top_contrib_indices, start=1):
+                feature_name = flat_feature_names[int(feature_index)]
+                base_feature = feature_name.split("__", 1)[1] if "__" in feature_name else feature_name
+                contribution_rows.append(
+                    {
+                        "tick": int(round_df.loc[row_index, "tick"]),
+                        "seconds_in_round": round_df.loc[row_index, "seconds_in_round"],
+                        "lstm_delta_from_prev": float(round_df.loc[row_index, "delta_from_prev"]),
+                        "rank": rank,
+                        "feature": feature_name,
+                        "base_feature": base_feature,
+                        "is_utility": bool(is_utility_column(base_feature)),
+                        "feature_delta_scaled": float(feature_delta[int(feature_index)]),
+                        "coefficient": float(coef_values[int(feature_index)]),
+                        "ridge_delta_contribution": float(contributions[int(feature_index)]),
+                    }
+                )
+        contribution_df = pd.DataFrame(contribution_rows)
+        contribution_path = output_dir / "local_round_jump_contributions.csv"
+        contribution_df.to_csv(contribution_path, index=False)
+
+        summary_lines.extend(["", "## Largest Jump Contribution Breakdown", ""])
+        for row_index in ordered_jump_indices[:5]:
+            position = int(round_df.index.get_loc(row_index))
+            if position == 0:
+                continue
+            tick = int(round_df.loc[row_index, "tick"])
+            seconds_value = round_df.loc[row_index, "seconds_in_round"]
+            seconds_text = "NA" if pd.isna(seconds_value) else f"{float(seconds_value):.2f}"
+            lstm_delta = float(round_df.loc[row_index, "delta_from_prev"])
+            jump_df = contribution_df[contribution_df["tick"] == tick].copy()
+            summary_lines.append("")
+            summary_lines.append(
+                f"### tick `{tick}`, seconds `{seconds_text}`, LSTM delta `{lstm_delta:+.4f}`"
+            )
+            summary_lines.append("")
+            summary_lines.append("Top all feature movements:")
+            for _, contrib_row in jump_df.head(5).iterrows():
+                summary_lines.append(
+                    f"- `{contrib_row['feature']}`: contribution "
+                    f"`{contrib_row['ridge_delta_contribution']:+.6f}`"
+                )
+            summary_lines.append("")
+            summary_lines.append("Top utility-only movements:")
+            utility_jump_df = jump_df[jump_df["is_utility"]].head(5)
+            if utility_jump_df.empty:
+                summary_lines.append("- No utility movement among the top local contributors.")
+            else:
+                for _, contrib_row in utility_jump_df.iterrows():
+                    summary_lines.append(
+                        f"- `{contrib_row['feature']}`: contribution "
+                        f"`{contrib_row['ridge_delta_contribution']:+.6f}`"
+                    )
     summary_path = output_dir / "local_round_explainability_summary.md"
     summary_path.write_text("\n".join(summary_lines) + "\n", encoding="utf-8")
     timeline_path = output_dir / "local_round_predictions.csv"
     round_df.to_csv(timeline_path, index=False)
 
-    return {
+    reports = {
         "local_round_ridge_coefficients": str(coef_path),
         "local_round_predictions": str(timeline_path),
         "local_round_explainability_summary": str(summary_path),
     }
+    if contribution_path is not None:
+        reports["local_round_jump_contributions"] = str(contribution_path)
+    return reports
 
 
 def main() -> None:
@@ -1451,6 +1543,7 @@ def main() -> None:
         round_df=local_round_df,
         ridge_model=local_ridge_model,
         flat_feature_names=flat_feature_names,
+        x_round_flat=x_local_flat,
     )
     log_progress("Lokalis ridge explainability kesz")
 
