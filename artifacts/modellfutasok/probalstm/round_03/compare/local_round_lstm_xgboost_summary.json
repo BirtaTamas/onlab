@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full\\esl_pro_league_season_21\\esl-pro-league-season-21-vitality-vs-the-mongolz-bo3-7VmOOQFfF_Xgx4vOG4cYIY\\vitality-vs-the-mongolz-m1-anubis.csv",
+  "round_num": 6,
+  "row_count": 144,
+  "lstm_run_dir": "artifacts\\modellfutasok\\probalstm\\round_03\\lstm",
+  "xgboost_run_dir": "artifacts\\modellfutasok\\xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 144,
+    "positive_count": 144,
+    "negative_count": 0,
+    "mean_probability": 0.3356093275360763,
+    "first_probability": 0.3942507207393646,
+    "last_probability": 0.9397621154785156,
+    "min_probability": 0.0752847790718078,
+    "max_probability": 0.9724735021591188,
+    "accuracy_at_0_5": 0.16666666666666666,
+    "brier_score": 0.5141889753522455,
+    "mean_abs_error": 0.6643906724639237,
+    "median_abs_error": 0.794242687523365,
+    "logloss": 1.3750042260786683
+  },
+  "xgboost": {
+    "row_count": 144,
+    "positive_count": 144,
+    "negative_count": 0,
+    "mean_probability": 0.4663436073395941,
+    "first_probability": 0.48857390880584717,
+    "last_probability": 0.9785546660423279,
+    "min_probability": 0.2502732276916504,
+    "max_probability": 0.994351863861084,
+    "accuracy_at_0_5": 0.2152777777777778,
+    "brier_score": 0.3355992519959022,
+    "mean_abs_error": 0.5336563926604059,
+    "median_abs_error": 0.6075866222381592,
+    "logloss": 0.8559900001945958
+  },
+  "closer_counts": {
+    "lstm": 0,
+    "xgboost": 144,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

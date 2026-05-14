@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full\\blast_austin_major_stage_1\\blasttv-austin-major-2025-stage-1-flyquest-vs-fluxo-ancient-YrTVvYzgDXauKEykMAFJPX\\flyquest-vs-fluxo-ancient.csv",
+  "round_num": 2,
+  "row_count": 121,
+  "lstm_run_dir": "artifacts\\modellfutasok\\probalstm\\round_08\\lstm",
+  "xgboost_run_dir": "artifacts\\modellfutasok\\xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 121,
+    "positive_count": 121,
+    "negative_count": 0,
+    "mean_probability": 0.9403776290002933,
+    "first_probability": 0.8817586302757263,
+    "last_probability": 0.976082682609558,
+    "min_probability": 0.8817586302757263,
+    "max_probability": 0.9768944382667542,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.003717555270108577,
+    "mean_abs_error": 0.05962237099970667,
+    "median_abs_error": 0.060487210750579834,
+    "logloss": 0.06156625506473585
+  },
+  "xgboost": {
+    "row_count": 121,
+    "positive_count": 121,
+    "negative_count": 0,
+    "mean_probability": 0.9781812872768434,
+    "first_probability": 0.9799188375473022,
+    "last_probability": 0.9980120658874512,
+    "min_probability": 0.9686793088912964,
+    "max_probability": 0.9980120658874512,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0004983009220116665,
+    "mean_abs_error": 0.021818712723156636,
+    "median_abs_error": 0.02091163396835327,
+    "logloss": 0.022071865020244486
+  },
+  "closer_counts": {
+    "lstm": 0,
+    "xgboost": 121,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

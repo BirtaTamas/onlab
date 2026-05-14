@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full\\esl_pro_league_season_22\\esl-pro-league-season-22-the-mongolz-vs-natus-vincere-bo3-PG4ywdeF4kSxWHc10zCBZ3\\the-mongolz-vs-natus-vincere-m1-nuke.csv",
+  "round_num": 7,
+  "row_count": 180,
+  "lstm_run_dir": "artifacts\\modellfutasok\\probalstm\\round_04\\lstm",
+  "xgboost_run_dir": "artifacts\\modellfutasok\\xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 180,
+    "positive_count": 0,
+    "negative_count": 180,
+    "mean_probability": 0.24466634824897887,
+    "first_probability": 0.4166411459445953,
+    "last_probability": 0.0052389116026461,
+    "min_probability": 0.0038789173122495,
+    "max_probability": 0.5309330224990845,
+    "accuracy_at_0_5": 0.85,
+    "brier_score": 0.10039220142866681,
+    "mean_abs_error": 0.24466634824897887,
+    "median_abs_error": 0.1511783674359321,
+    "logloss": 0.3188014457861538
+  },
+  "xgboost": {
+    "row_count": 180,
+    "positive_count": 0,
+    "negative_count": 180,
+    "mean_probability": 0.3687046879902482,
+    "first_probability": 0.526803195476532,
+    "last_probability": 0.048549000173807144,
+    "min_probability": 0.048549000173807144,
+    "max_probability": 0.6080150008201599,
+    "accuracy_at_0_5": 0.5944444444444444,
+    "brier_score": 0.1666892351893104,
+    "mean_abs_error": 0.3687046879902482,
+    "median_abs_error": 0.3172172009944916,
+    "logloss": 0.49952885030455324
+  },
+  "closer_counts": {
+    "lstm": 178,
+    "xgboost": 2,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}
