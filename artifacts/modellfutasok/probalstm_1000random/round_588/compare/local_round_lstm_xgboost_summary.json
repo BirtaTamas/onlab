@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-passion-ua-vs-spirit-bo3-WimU0hRkNcqhh3KAjCozBx/passion-ua-vs-spirit-m2-mirage.csv",
+  "round_num": 1,
+  "row_count": 147,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_588/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 147,
+    "positive_count": 0,
+    "negative_count": 147,
+    "mean_probability": 0.256544734820166,
+    "first_probability": 0.5005444884300232,
+    "last_probability": 0.0138157559558749,
+    "min_probability": 0.0108406944200396,
+    "max_probability": 0.7123389840126038,
+    "accuracy_at_0_5": 0.6190476190476191,
+    "brier_score": 0.12576558609856603,
+    "mean_abs_error": 0.256544734820166,
+    "median_abs_error": 0.137866124510765,
+    "logloss": 0.3587030624147359
+  },
+  "xgboost": {
+    "row_count": 147,
+    "positive_count": 0,
+    "negative_count": 147,
+    "mean_probability": 0.31870247986243694,
+    "first_probability": 0.5142658352851868,
+    "last_probability": 0.028033630922436714,
+    "min_probability": 0.01936672255396843,
+    "max_probability": 0.8034383058547974,
+    "accuracy_at_0_5": 0.5238095238095238,
+    "brier_score": 0.17155581073123397,
+    "mean_abs_error": 0.31870247986243694,
+    "median_abs_error": 0.26647400856018066,
+    "logloss": 0.4781215927768349
+  },
+  "closer_counts": {
+    "lstm": 147,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

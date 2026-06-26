@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1_finals/blast-bounty-2025-season-1-finals-eternal-fire-vs-spirit-bo5-7H36TpK_LYGHtCXpF3Cgdr/eternal-fire-vs-spirit-m3-dust2.csv",
+  "round_num": 5,
+  "row_count": 163,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_652/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 163,
+    "positive_count": 163,
+    "negative_count": 0,
+    "mean_probability": 0.5824127056481648,
+    "first_probability": 0.5854355096817017,
+    "last_probability": 0.8905084133148193,
+    "min_probability": 0.2886607050895691,
+    "max_probability": 0.8945336937904358,
+    "accuracy_at_0_5": 0.7361963190184049,
+    "brier_score": 0.19316749527351632,
+    "mean_abs_error": 0.41758729435183517,
+    "median_abs_error": 0.45742470026016235,
+    "logloss": 0.5668357832759185
+  },
+  "xgboost": {
+    "row_count": 163,
+    "positive_count": 163,
+    "negative_count": 0,
+    "mean_probability": 0.5612248579051597,
+    "first_probability": 0.49643006920814514,
+    "last_probability": 0.8646082878112793,
+    "min_probability": 0.1820301115512848,
+    "max_probability": 0.8721750974655151,
+    "accuracy_at_0_5": 0.3619631901840491,
+    "brier_score": 0.21300238116188383,
+    "mean_abs_error": 0.4387751420948403,
+    "median_abs_error": 0.516486793756485,
+    "logloss": 0.6110647088740493
+  },
+  "closer_counts": {
+    "lstm": 106,
+    "xgboost": 57,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

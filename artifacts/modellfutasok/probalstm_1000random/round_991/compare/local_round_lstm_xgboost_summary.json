@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-furia-vs-aurora-bo3-0icw3xvkvOZhHsCT2PEavZ/furia-vs-aurora-m1-inferno.csv",
+  "round_num": 11,
+  "row_count": 192,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_991/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 192,
+    "positive_count": 192,
+    "negative_count": 0,
+    "mean_probability": 0.6523982250752548,
+    "first_probability": 0.5235686302185059,
+    "last_probability": 0.9875727891921996,
+    "min_probability": 0.4661917090415954,
+    "max_probability": 0.9886483550071716,
+    "accuracy_at_0_5": 0.9739583333333334,
+    "brier_score": 0.13900460299799794,
+    "mean_abs_error": 0.34760177492474514,
+    "median_abs_error": 0.35768336057662964,
+    "logloss": 0.44640237437985575
+  },
+  "xgboost": {
+    "row_count": 192,
+    "positive_count": 192,
+    "negative_count": 0,
+    "mean_probability": 0.6345372581854463,
+    "first_probability": 0.5191687941551208,
+    "last_probability": 0.9974448680877686,
+    "min_probability": 0.5011493563652039,
+    "max_probability": 0.9977709054946899,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.153415988242057,
+    "mean_abs_error": 0.36546274181455374,
+    "median_abs_error": 0.37329018115997314,
+    "logloss": 0.4761993971093262
+  },
+  "closer_counts": {
+    "lstm": 120,
+    "xgboost": 72,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

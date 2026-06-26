@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-rare-atom-vs-astralis-bo3-2mbRF781jI0kkV-FX6ZCr7/rare-atom-vs-astralis-m1-ancient.csv",
+  "round_num": 2,
+  "row_count": 244,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_897/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 244,
+    "positive_count": 244,
+    "negative_count": 0,
+    "mean_probability": 0.8631055323315449,
+    "first_probability": 0.8157880306243896,
+    "last_probability": 0.975444495677948,
+    "min_probability": 0.5789902806282043,
+    "max_probability": 0.975444495677948,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.024622090695934996,
+    "mean_abs_error": 0.13689446766845514,
+    "median_abs_error": 0.1306740641593933,
+    "logloss": 0.15153800164936537
+  },
+  "xgboost": {
+    "row_count": 244,
+    "positive_count": 244,
+    "negative_count": 0,
+    "mean_probability": 0.9064842701935377,
+    "first_probability": 0.8941420316696167,
+    "last_probability": 0.9884144067764282,
+    "min_probability": 0.7057156562805176,
+    "max_probability": 0.9884144067764282,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.011766878806258232,
+    "mean_abs_error": 0.09351572980646228,
+    "median_abs_error": 0.08891820907592773,
+    "logloss": 0.1001313662475127
+  },
+  "closer_counts": {
+    "lstm": 34,
+    "xgboost": 210,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-falcons-vs-astralis-bo3-AOc9ksnKaf2n3lWssI4XgX/falcons-vs-astralis-m2-mirage.csv",
+  "round_num": 16,
+  "row_count": 170,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_521/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 170,
+    "positive_count": 170,
+    "negative_count": 0,
+    "mean_probability": 0.8411635647801792,
+    "first_probability": 0.6300469040870667,
+    "last_probability": 0.9772509932518004,
+    "min_probability": 0.585314154624939,
+    "max_probability": 0.9772509932518004,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.03915380921881963,
+    "mean_abs_error": 0.1588364352198208,
+    "median_abs_error": 0.11188986897468567,
+    "logloss": 0.1840998325032923
+  },
+  "xgboost": {
+    "row_count": 170,
+    "positive_count": 170,
+    "negative_count": 0,
+    "mean_probability": 0.847780585639617,
+    "first_probability": 0.5698535442352295,
+    "last_probability": 0.996324360370636,
+    "min_probability": 0.5514925122261047,
+    "max_probability": 0.9963274598121643,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.046702806680454775,
+    "mean_abs_error": 0.15221941436038297,
+    "median_abs_error": 0.07767456769943237,
+    "logloss": 0.1849602839741579
+  },
+  "closer_counts": {
+    "lstm": 56,
+    "xgboost": 114,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

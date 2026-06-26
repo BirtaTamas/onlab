@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-liquid-vs-furia-bo3-oYHD2J45okzf6eapD2F9CM/liquid-vs-furia-m1-mirage.csv",
+  "round_num": 12,
+  "row_count": 182,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_123/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 182,
+    "positive_count": 182,
+    "negative_count": 0,
+    "mean_probability": 0.6774824612088256,
+    "first_probability": 0.5272713303565979,
+    "last_probability": 0.9877069592475892,
+    "min_probability": 0.5124281048774719,
+    "max_probability": 0.9877660274505616,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.13145813922065194,
+    "mean_abs_error": 0.3225175387911744,
+    "median_abs_error": 0.4450351595878601,
+    "logloss": 0.41717251310657805
+  },
+  "xgboost": {
+    "row_count": 182,
+    "positive_count": 182,
+    "negative_count": 0,
+    "mean_probability": 0.6930187655674233,
+    "first_probability": 0.524846613407135,
+    "last_probability": 0.9969897270202637,
+    "min_probability": 0.5125836730003357,
+    "max_probability": 0.9969946146011353,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.13276516002245262,
+    "mean_abs_error": 0.3069812344325768,
+    "median_abs_error": 0.45900291204452515,
+    "logloss": 0.4056528058726841
+  },
+  "closer_counts": {
+    "lstm": 94,
+    "xgboost": 88,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "xgboost"
+}

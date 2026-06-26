@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-mouz-vs-virtuspro-bo3-RgsQGjmI__aLZMP1KntvtG/mouz-vs-virtus-pro-m2-mirage.csv",
+  "round_num": 4,
+  "row_count": 255,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_316/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 255,
+    "positive_count": 0,
+    "negative_count": 255,
+    "mean_probability": 0.3936190766154551,
+    "first_probability": 0.4866520464420318,
+    "last_probability": 0.5549907684326172,
+    "min_probability": 0.0248233042657375,
+    "max_probability": 0.8075640797615051,
+    "accuracy_at_0_5": 0.6313725490196078,
+    "brier_score": 0.1795516643159768,
+    "mean_abs_error": 0.3936190766154551,
+    "median_abs_error": 0.4716639220714569,
+    "logloss": 0.5346032551769078
+  },
+  "xgboost": {
+    "row_count": 255,
+    "positive_count": 0,
+    "negative_count": 255,
+    "mean_probability": 0.5455097286140218,
+    "first_probability": 0.5563880205154419,
+    "last_probability": 0.6499266624450684,
+    "min_probability": 0.2743949592113495,
+    "max_probability": 0.9495236873626709,
+    "accuracy_at_0_5": 0.19215686274509805,
+    "brier_score": 0.31198886409456694,
+    "mean_abs_error": 0.5455097286140218,
+    "median_abs_error": 0.5711570978164673,
+    "logloss": 0.8341795378980918
+  },
+  "closer_counts": {
+    "lstm": 250,
+    "xgboost": 5,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

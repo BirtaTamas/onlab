@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-nrg-vs-vitality-bo3-7fVRmFXct71SEzAlz8IKvC/nrg-vs-vitality-m2-dust2.csv",
+  "round_num": 3,
+  "row_count": 116,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_574/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 116,
+    "positive_count": 116,
+    "negative_count": 0,
+    "mean_probability": 0.9326255968932448,
+    "first_probability": 0.8815922141075134,
+    "last_probability": 0.9735788106918336,
+    "min_probability": 0.8467533588409424,
+    "max_probability": 0.9772183895111084,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.005556391264306504,
+    "mean_abs_error": 0.06737440310675523,
+    "median_abs_error": 0.060204982757568415,
+    "logloss": 0.07035330753938022
+  },
+  "xgboost": {
+    "row_count": 116,
+    "positive_count": 116,
+    "negative_count": 0,
+    "mean_probability": 0.9609724781636534,
+    "first_probability": 0.9387959241867065,
+    "last_probability": 0.9853872060775757,
+    "min_probability": 0.9372451305389404,
+    "max_probability": 0.9914979338645935,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0017720092476931932,
+    "mean_abs_error": 0.03902752183634659,
+    "median_abs_error": 0.04431992769241333,
+    "logloss": 0.03994386088056196
+  },
+  "closer_counts": {
+    "lstm": 0,
+    "xgboost": 116,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

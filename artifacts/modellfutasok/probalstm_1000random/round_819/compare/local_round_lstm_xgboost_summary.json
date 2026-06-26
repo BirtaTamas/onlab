@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/fissure_playground_2/fissure-playground-2-falcons-vs-legacy-bo3-ryWGopRV1OfbL288nR6Rql/falcons-vs-legacy-m1-inferno.csv",
+  "round_num": 10,
+  "row_count": 156,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_819/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 156,
+    "positive_count": 156,
+    "negative_count": 0,
+    "mean_probability": 0.7147872501458877,
+    "first_probability": 0.5332794785499573,
+    "last_probability": 0.94345623254776,
+    "min_probability": 0.5245280861854553,
+    "max_probability": 0.970292329788208,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.09858478475332469,
+    "mean_abs_error": 0.28521274985411227,
+    "median_abs_error": 0.3285173773765564,
+    "logloss": 0.35167519140709025
+  },
+  "xgboost": {
+    "row_count": 156,
+    "positive_count": 156,
+    "negative_count": 0,
+    "mean_probability": 0.7617396313028458,
+    "first_probability": 0.5008171796798706,
+    "last_probability": 0.977152943611145,
+    "min_probability": 0.4932670593261719,
+    "max_probability": 0.9868727922439575,
+    "accuracy_at_0_5": 0.8910256410256411,
+    "brier_score": 0.07726686948703988,
+    "mean_abs_error": 0.23826036869715422,
+    "median_abs_error": 0.2691548764705658,
+    "logloss": 0.29088495296544753
+  },
+  "closer_counts": {
+    "lstm": 23,
+    "xgboost": 133,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

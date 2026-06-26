@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-aurora-vs-astralis-bo3-EH-le-_LuObR5nGefXVoZY/aurora-vs-astralis-m3-overpass.csv",
+  "round_num": 5,
+  "row_count": 276,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_858/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 276,
+    "positive_count": 0,
+    "negative_count": 276,
+    "mean_probability": 0.28137782892925944,
+    "first_probability": 0.5921046137809753,
+    "last_probability": 0.0053876996971666,
+    "min_probability": 0.0016644677380099,
+    "max_probability": 0.7481554746627808,
+    "accuracy_at_0_5": 0.6521739130434783,
+    "brier_score": 0.14133331918825218,
+    "mean_abs_error": 0.28137782892925944,
+    "median_abs_error": 0.2772417664527893,
+    "logloss": 0.39941721883459236
+  },
+  "xgboost": {
+    "row_count": 276,
+    "positive_count": 0,
+    "negative_count": 276,
+    "mean_probability": 0.3313526353339894,
+    "first_probability": 0.5911730527877808,
+    "last_probability": 0.009474116377532482,
+    "min_probability": 0.009103037416934967,
+    "max_probability": 0.7561420202255249,
+    "accuracy_at_0_5": 0.5942028985507246,
+    "brier_score": 0.1721749393061259,
+    "mean_abs_error": 0.3313526353339894,
+    "median_abs_error": 0.3402048200368881,
+    "logloss": 0.48040294666673844
+  },
+  "closer_counts": {
+    "lstm": 250,
+    "xgboost": 26,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

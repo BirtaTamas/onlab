@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_cologne/iem-cologne-2025-the-mongolz-vs-3dmax-bo3-NhOpC3bR-AJd86c-60IeuJ/the-mongolz-vs-3dmax-m1-nuke.csv",
+  "round_num": 4,
+  "row_count": 230,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_179/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 230,
+    "positive_count": 230,
+    "negative_count": 0,
+    "mean_probability": 0.5424017779205157,
+    "first_probability": 0.4999874830245971,
+    "last_probability": 0.9545119404792786,
+    "min_probability": 0.3250288367271423,
+    "max_probability": 0.9639657139778136,
+    "accuracy_at_0_5": 0.6434782608695652,
+    "brier_score": 0.2353240313986262,
+    "mean_abs_error": 0.45759822207948436,
+    "median_abs_error": 0.4938240647315979,
+    "logloss": 0.6472597071877478
+  },
+  "xgboost": {
+    "row_count": 230,
+    "positive_count": 230,
+    "negative_count": 0,
+    "mean_probability": 0.5952158572881118,
+    "first_probability": 0.540669322013855,
+    "last_probability": 0.9776440262794495,
+    "min_probability": 0.5028331279754639,
+    "max_probability": 0.9776440262794495,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.18526307199365322,
+    "mean_abs_error": 0.4047841427118882,
+    "median_abs_error": 0.4609096050262451,
+    "logloss": 0.5422860230091308
+  },
+  "closer_counts": {
+    "lstm": 7,
+    "xgboost": 223,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

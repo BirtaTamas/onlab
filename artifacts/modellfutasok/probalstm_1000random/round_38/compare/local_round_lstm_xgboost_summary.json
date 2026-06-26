@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21/esl-pro-league-season-21-spirit-vs-saw-bo3-_1uD70D_aUzOV8qHt5kBr9/spirit-vs-saw-m1-dust2.csv",
+  "round_num": 4,
+  "row_count": 300,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_38/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 300,
+    "positive_count": 0,
+    "negative_count": 300,
+    "mean_probability": 0.2704121755226515,
+    "first_probability": 0.488640695810318,
+    "last_probability": 0.0118541261181235,
+    "min_probability": 0.0024915577378124,
+    "max_probability": 0.6975327134132385,
+    "accuracy_at_0_5": 0.9666666666666667,
+    "brier_score": 0.11046651016269443,
+    "mean_abs_error": 0.2704121755226515,
+    "median_abs_error": 0.3812323063611984,
+    "logloss": 0.34966830022656525
+  },
+  "xgboost": {
+    "row_count": 300,
+    "positive_count": 0,
+    "negative_count": 300,
+    "mean_probability": 0.3628431799635291,
+    "first_probability": 0.5345609784126282,
+    "last_probability": 0.007311888970434666,
+    "min_probability": 0.006330340169370174,
+    "max_probability": 0.8233417272567749,
+    "accuracy_at_0_5": 0.39666666666666667,
+    "brier_score": 0.19205983480227617,
+    "mean_abs_error": 0.3628431799635291,
+    "median_abs_error": 0.5239551663398743,
+    "logloss": 0.5227066283775388
+  },
+  "closer_counts": {
+    "lstm": 266,
+    "xgboost": 34,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

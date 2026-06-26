@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_open_lisbon/blast-open-lisbon-2025-mouz-vs-falcons-bo3-xBECUqZMcQ8GCwi-GUyz8e/mouz-vs-falcons-m1-train.csv",
+  "round_num": 21,
+  "row_count": 233,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_314/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 233,
+    "positive_count": 233,
+    "negative_count": 0,
+    "mean_probability": 0.483721260636917,
+    "first_probability": 0.4614528715610504,
+    "last_probability": 0.4735652506351471,
+    "min_probability": 0.0366782508790493,
+    "max_probability": 0.841237485408783,
+    "accuracy_at_0_5": 0.48068669527896996,
+    "brier_score": 0.2954590384006007,
+    "mean_abs_error": 0.516278739363083,
+    "median_abs_error": 0.5046052634716034,
+    "logloss": 0.8105148667555289
+  },
+  "xgboost": {
+    "row_count": 233,
+    "positive_count": 233,
+    "negative_count": 0,
+    "mean_probability": 0.6023589103390731,
+    "first_probability": 0.5481770038604736,
+    "last_probability": 0.6928001046180725,
+    "min_probability": 0.1977776437997818,
+    "max_probability": 0.9174603819847107,
+    "accuracy_at_0_5": 0.8841201716738197,
+    "brier_score": 0.18001939533886552,
+    "mean_abs_error": 0.3976410896609269,
+    "median_abs_error": 0.4250451922416687,
+    "logloss": 0.545489957939665
+  },
+  "closer_counts": {
+    "lstm": 15,
+    "xgboost": 218,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

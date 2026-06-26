@@ -1,0 +1,255 @@
+{
+  "source_lstm_run_dir": "artifacts/modellfutasok/lstm_sequence_full_cuda_final",
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-aurora-vs-falcons-bo3-5oHSxtVT-5F3Op7ZcgBMjW/aurora-vs-falcons-m2-train.csv",
+  "round_num": 22,
+  "row_count": 254,
+  "device": "cpu",
+  "ridge_selection": {
+    "alpha": 0.1,
+    "cv_folds": 5
+  },
+  "fidelity_to_lstm": {
+    "mae": 9.270675304367786e-05,
+    "rmse": 0.000120464188521353,
+    "r2": 0.9999998056805282,
+    "pearson_corr": 0.9999999029155958
+  },
+  "lstm_vs_true_labels": {
+    "accuracy": 0.4448818897637795,
+    "precision": 1.0,
+    "recall": 0.4448818897637795,
+    "f1_score": 0.6158038147138964,
+    "brier_score": 0.37239320074764476,
+    "logloss": 1.0035277191451075,
+    "threshold": 0.5,
+    "confusion_matrix": {
+      "labels": [
+        0,
+        1
+      ],
+      "matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          141,
+          113
+        ]
+      ],
+      "tn": 0,
+      "fp": 0,
+      "fn": 141,
+      "tp": 113
+    },
+    "calibration_curve": {
+      "n_bins": 10,
+      "strategy": "uniform",
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_start": 0.0,
+          "bin_end": 0.1,
+          "count": 8,
+          "mean_predicted_probability": 0.07917271181941032,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 1,
+          "bin_start": 0.1,
+          "bin_end": 0.2,
+          "count": 48,
+          "mean_predicted_probability": 0.1568048975119988,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 2,
+          "bin_start": 0.2,
+          "bin_end": 0.30000000000000004,
+          "count": 54,
+          "mean_predicted_probability": 0.24483138653967115,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 3,
+          "bin_start": 0.30000000000000004,
+          "bin_end": 0.4,
+          "count": 23,
+          "mean_predicted_probability": 0.34346696864003723,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 4,
+          "bin_start": 0.4,
+          "bin_end": 0.5,
+          "count": 8,
+          "mean_predicted_probability": 0.43140020594000816,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 5,
+          "bin_start": 0.5,
+          "bin_end": 0.6000000000000001,
+          "count": 11,
+          "mean_predicted_probability": 0.5543378537351434,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 6,
+          "bin_start": 0.6000000000000001,
+          "bin_end": 0.7000000000000001,
+          "count": 54,
+          "mean_predicted_probability": 0.6396964269655722,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 7,
+          "bin_start": 0.7000000000000001,
+          "bin_end": 0.8,
+          "count": 10,
+          "mean_predicted_probability": 0.7326092064380646,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 8,
+          "bin_start": 0.8,
+          "bin_end": 0.9,
+          "count": 9,
+          "mean_predicted_probability": 0.8562988307740953,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 9,
+          "bin_start": 0.9,
+          "bin_end": 1.0,
+          "count": 29,
+          "mean_predicted_probability": 0.931157790381333,
+          "fraction_of_positives": 1.0
+        }
+      ]
+    },
+    "roc_auc": null
+  },
+  "ridge_vs_true_labels": {
+    "accuracy": 0.4448818897637795,
+    "precision": 1.0,
+    "recall": 0.4448818897637795,
+    "f1_score": 0.6158038147138964,
+    "brier_score": 0.37239167360846986,
+    "logloss": 1.0035140815512777,
+    "threshold": 0.5,
+    "confusion_matrix": {
+      "labels": [
+        0,
+        1
+      ],
+      "matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          141,
+          113
+        ]
+      ],
+      "tn": 0,
+      "fp": 0,
+      "fn": 141,
+      "tp": 113
+    },
+    "calibration_curve": {
+      "n_bins": 10,
+      "strategy": "uniform",
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_start": 0.0,
+          "bin_end": 0.1,
+          "count": 8,
+          "mean_predicted_probability": 0.07919618487358093,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 1,
+          "bin_start": 0.1,
+          "bin_end": 0.2,
+          "count": 48,
+          "mean_predicted_probability": 0.15681407507508993,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 2,
+          "bin_start": 0.2,
+          "bin_end": 0.30000000000000004,
+          "count": 54,
+          "mean_predicted_probability": 0.24481918221270596,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 3,
+          "bin_start": 0.30000000000000004,
+          "bin_end": 0.4,
+          "count": 23,
+          "mean_predicted_probability": 0.34347817172174866,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 4,
+          "bin_start": 0.4,
+          "bin_end": 0.5,
+          "count": 8,
+          "mean_predicted_probability": 0.431407630443573,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 5,
+          "bin_start": 0.5,
+          "bin_end": 0.6000000000000001,
+          "count": 11,
+          "mean_predicted_probability": 0.5543439442461188,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 6,
+          "bin_start": 0.6000000000000001,
+          "bin_end": 0.7000000000000001,
+          "count": 54,
+          "mean_predicted_probability": 0.6396924058596293,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 7,
+          "bin_start": 0.7000000000000001,
+          "bin_end": 0.8,
+          "count": 10,
+          "mean_predicted_probability": 0.7326016128063202,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 8,
+          "bin_start": 0.8,
+          "bin_end": 0.9,
+          "count": 9,
+          "mean_predicted_probability": 0.8562932146920098,
+          "fraction_of_positives": 1.0
+        },
+        {
+          "bin_index": 9,
+          "bin_start": 0.9,
+          "bin_end": 1.0,
+          "count": 29,
+          "mean_predicted_probability": 0.9311549355243814,
+          "fraction_of_positives": 1.0
+        }
+      ]
+    },
+    "roc_auc": null
+  },
+  "reports": {
+    "local_round_ridge_coefficients": "artifacts/modellfutasok/probalstm_1000random/round_546/lstm/local_round_ridge_coefficients.csv",
+    "local_round_predictions": "artifacts/modellfutasok/probalstm_1000random/round_546/lstm/local_round_predictions.csv",
+    "local_round_explainability_summary": "artifacts/modellfutasok/probalstm_1000random/round_546/lstm/local_round_explainability_summary.md",
+    "local_round_jump_contributions": "artifacts/modellfutasok/probalstm_1000random/round_546/lstm/local_round_jump_contributions.csv"
+  }
+}

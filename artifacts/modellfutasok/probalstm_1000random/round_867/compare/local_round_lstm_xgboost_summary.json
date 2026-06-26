@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_austin_major_stage_1/blasttv-austin-major-2025-stage-1-chinggis-warriors-vs-lynn-vision-bo3-6KVULP2-Gxo12lI67V9ZfV/chinggis-warriors-vs-lynn-vision-m3-ancient.csv",
+  "round_num": 7,
+  "row_count": 158,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_867/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 158,
+    "positive_count": 158,
+    "negative_count": 0,
+    "mean_probability": 0.7216707558571538,
+    "first_probability": 0.592959463596344,
+    "last_probability": 0.9731541275978088,
+    "min_probability": 0.5132895708084106,
+    "max_probability": 0.9778910875320436,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.1158005440537548,
+    "mean_abs_error": 0.2783292441428462,
+    "median_abs_error": 0.39766719937324524,
+    "logloss": 0.3617447497596462
+  },
+  "xgboost": {
+    "row_count": 158,
+    "positive_count": 158,
+    "negative_count": 0,
+    "mean_probability": 0.7382743418971195,
+    "first_probability": 0.5762487053871155,
+    "last_probability": 0.996501088142395,
+    "min_probability": 0.5612444281578064,
+    "max_probability": 0.9965378046035767,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.10874017499476371,
+    "mean_abs_error": 0.26172565810288057,
+    "median_abs_error": 0.41771411895751953,
+    "logloss": 0.33880044088120714
+  },
+  "closer_counts": {
+    "lstm": 33,
+    "xgboost": 125,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

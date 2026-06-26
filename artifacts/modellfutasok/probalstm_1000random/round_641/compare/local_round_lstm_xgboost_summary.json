@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_cologne/iem-cologne-2025-ninjas-in-pyjamas-vs-natus-vincere-bo3-NyGFAYn592Hu0YfljTVG0N/ninjas-in-pyjamas-vs-natus-vincere-m3-train.csv",
+  "round_num": 6,
+  "row_count": 216,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_641/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 216,
+    "positive_count": 216,
+    "negative_count": 0,
+    "mean_probability": 0.7545060182887094,
+    "first_probability": 0.6482399106025696,
+    "last_probability": 0.8418879508972168,
+    "min_probability": 0.4823178350925445,
+    "max_probability": 0.9629318714141846,
+    "accuracy_at_0_5": 0.9953703703703703,
+    "brier_score": 0.08224075788918189,
+    "mean_abs_error": 0.2454939817112905,
+    "median_abs_error": 0.19503504037857056,
+    "logloss": 0.3017688642679142
+  },
+  "xgboost": {
+    "row_count": 216,
+    "positive_count": 216,
+    "negative_count": 0,
+    "mean_probability": 0.7723724608895955,
+    "first_probability": 0.6054453253746033,
+    "last_probability": 0.8844738006591797,
+    "min_probability": 0.44786813855171204,
+    "max_probability": 0.9797646999359131,
+    "accuracy_at_0_5": 0.9722222222222222,
+    "brier_score": 0.07819429963917314,
+    "mean_abs_error": 0.22762753911040448,
+    "median_abs_error": 0.13764441013336182,
+    "logloss": 0.28149729226239645
+  },
+  "closer_counts": {
+    "lstm": 55,
+    "xgboost": 161,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

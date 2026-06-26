@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_cologne_stage_1/iem-cologne-2025-stage-1-flyquest-vs-furia-bo3-kDRQKndVW9qgvAgGZjUFS9/flyquest-vs-furia-m1-inferno.csv",
+  "round_num": 11,
+  "row_count": 201,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_594/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 201,
+    "positive_count": 201,
+    "negative_count": 0,
+    "mean_probability": 0.6851883999150784,
+    "first_probability": 0.6051278114318848,
+    "last_probability": 0.9877923130989076,
+    "min_probability": 0.5679369568824768,
+    "max_probability": 0.9878087043762208,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.11252967317436006,
+    "mean_abs_error": 0.3148116000849216,
+    "median_abs_error": 0.3441789746284485,
+    "logloss": 0.39052639107098475
+  },
+  "xgboost": {
+    "row_count": 201,
+    "positive_count": 201,
+    "negative_count": 0,
+    "mean_probability": 0.636883352081574,
+    "first_probability": 0.5796389579772949,
+    "last_probability": 0.9989792704582214,
+    "min_probability": 0.4162724018096924,
+    "max_probability": 0.9989820122718811,
+    "accuracy_at_0_5": 0.9800995024875622,
+    "brier_score": 0.15199946468659545,
+    "mean_abs_error": 0.36311664791842596,
+    "median_abs_error": 0.41645997762680054,
+    "logloss": 0.471534487924057
+  },
+  "closer_counts": {
+    "lstm": 156,
+    "xgboost": 45,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

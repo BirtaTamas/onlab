@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-heroic-vs-aurora-bo3-0XrprgXu_t-aBJHUPpJYb4/heroic-vs-aurora-m1-overpass.csv",
+  "round_num": 11,
+  "row_count": 109,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_57/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 109,
+    "positive_count": 109,
+    "negative_count": 0,
+    "mean_probability": 0.7657841345585814,
+    "first_probability": 0.6480211019515991,
+    "last_probability": 0.979073405265808,
+    "min_probability": 0.61163729429245,
+    "max_probability": 0.979073405265808,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.06643207896876419,
+    "mean_abs_error": 0.23421586544141856,
+    "median_abs_error": 0.23367315530776978,
+    "logloss": 0.27647156541153395
+  },
+  "xgboost": {
+    "row_count": 109,
+    "positive_count": 109,
+    "negative_count": 0,
+    "mean_probability": 0.7234456123562034,
+    "first_probability": 0.580758810043335,
+    "last_probability": 0.9972392320632935,
+    "min_probability": 0.5399625897407532,
+    "max_probability": 0.9972611665725708,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.09975198293335683,
+    "mean_abs_error": 0.2765543876437966,
+    "median_abs_error": 0.23782634735107422,
+    "logloss": 0.3461157527792182
+  },
+  "closer_counts": {
+    "lstm": 77,
+    "xgboost": 32,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

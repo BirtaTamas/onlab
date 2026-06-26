@@ -3,8 +3,10 @@
 .conda-pkgs-clean/
 __pycache__/
 *.pyc
+.mplconfig/
 
 .conda-lstm-clean/
 .conda-pkgs-clean/
 __pycache__/
 *.pyc
+.mplconfig/

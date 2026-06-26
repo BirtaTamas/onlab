@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2_finals/blast-bounty-2025-season-2-finals-vitality-vs-the-mongolz-bo3-JVS9HKMAkaZTRHkoiRSMP6/vitality-vs-the-mongolz-m1-mirage.csv",
+  "round_num": 6,
+  "row_count": 223,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_677/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 223,
+    "positive_count": 0,
+    "negative_count": 223,
+    "mean_probability": 0.4712292240940936,
+    "first_probability": 0.3670831620693207,
+    "last_probability": 0.2836143970489502,
+    "min_probability": 0.082878254354,
+    "max_probability": 0.7668313384056091,
+    "accuracy_at_0_5": 0.726457399103139,
+    "brier_score": 0.23866862395072977,
+    "mean_abs_error": 0.4712292240940936,
+    "median_abs_error": 0.4542895257472992,
+    "logloss": 0.6715754986577701
+  },
+  "xgboost": {
+    "row_count": 223,
+    "positive_count": 0,
+    "negative_count": 223,
+    "mean_probability": 0.5178920774983719,
+    "first_probability": 0.4401184916496277,
+    "last_probability": 0.30893245339393616,
+    "min_probability": 0.25857865810394287,
+    "max_probability": 0.7897525429725647,
+    "accuracy_at_0_5": 0.7354260089686099,
+    "brier_score": 0.2861776305719343,
+    "mean_abs_error": 0.5178920774983719,
+    "median_abs_error": 0.49218395352363586,
+    "logloss": 0.7800469614404604
+  },
+  "closer_counts": {
+    "lstm": 178,
+    "xgboost": 45,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

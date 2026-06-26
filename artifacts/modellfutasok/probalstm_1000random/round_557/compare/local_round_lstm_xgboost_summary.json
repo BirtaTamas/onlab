@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-falcons-vs-vitality-bo3-948Z-JwufPJ8ROXkhPE5QF/falcons-vs-vitality-m2-nuke.csv",
+  "round_num": 4,
+  "row_count": 250,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_557/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 250,
+    "positive_count": 0,
+    "negative_count": 250,
+    "mean_probability": 0.3370090184472501,
+    "first_probability": 0.499646782875061,
+    "last_probability": 0.2259540408849716,
+    "min_probability": 0.0032640376593917,
+    "max_probability": 0.8934302926063538,
+    "accuracy_at_0_5": 0.624,
+    "brier_score": 0.20282690335608125,
+    "mean_abs_error": 0.3370090184472501,
+    "median_abs_error": 0.4441568106412887,
+    "logloss": 0.5461820280983244
+  },
+  "xgboost": {
+    "row_count": 250,
+    "positive_count": 0,
+    "negative_count": 250,
+    "mean_probability": 0.4374289422631264,
+    "first_probability": 0.5844393968582153,
+    "last_probability": 0.28555798530578613,
+    "min_probability": 0.01360972411930561,
+    "max_probability": 0.8690886497497559,
+    "accuracy_at_0_5": 0.452,
+    "brier_score": 0.29689562311236817,
+    "mean_abs_error": 0.4374289422631264,
+    "median_abs_error": 0.5491754412651062,
+    "logloss": 0.7943353087261446
+  },
+  "closer_counts": {
+    "lstm": 247,
+    "xgboost": 3,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

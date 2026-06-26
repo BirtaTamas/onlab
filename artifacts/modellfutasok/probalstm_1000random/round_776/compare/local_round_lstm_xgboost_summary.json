@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1_finals/blast-bounty-2025-season-1-finals-natus-vincere-vs-spirit-bo3-cW0x-KCT4cbPLaZUAvb08Z/natus-vincere-vs-spirit-m2-ancient.csv",
+  "round_num": 7,
+  "row_count": 108,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_776/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 108,
+    "positive_count": 0,
+    "negative_count": 108,
+    "mean_probability": 0.008942229003878258,
+    "first_probability": 0.0656058266758918,
+    "last_probability": 0.0014877674402669,
+    "min_probability": 0.0009872094960883,
+    "max_probability": 0.0656058266758918,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.00020724736695046467,
+    "mean_abs_error": 0.008942229003878258,
+    "median_abs_error": 0.0013300618738866501,
+    "logloss": 0.009048088524599275
+  },
+  "xgboost": {
+    "row_count": 108,
+    "positive_count": 0,
+    "negative_count": 108,
+    "mean_probability": 0.03574722104585143,
+    "first_probability": 0.1027635931968689,
+    "last_probability": 0.0027567793149501085,
+    "min_probability": 0.0022835221607238054,
+    "max_probability": 0.10490012913942337,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.003342901029912821,
+    "mean_abs_error": 0.03574722104585143,
+    "median_abs_error": 0.0025459742173552513,
+    "logloss": 0.03753825107073617
+  },
+  "closer_counts": {
+    "lstm": 108,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

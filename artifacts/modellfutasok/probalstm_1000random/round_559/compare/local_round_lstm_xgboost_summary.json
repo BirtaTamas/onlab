@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-falcons-vs-natus-vincere-bo3-z3OpWwYDPa33wwfDY8_B1Q/falcons-vs-natus-vincere-m1-nuke.csv",
+  "round_num": 1,
+  "row_count": 126,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_559/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 126,
+    "positive_count": 126,
+    "negative_count": 0,
+    "mean_probability": 0.6037954715272736,
+    "first_probability": 0.5132383704185486,
+    "last_probability": 0.9677680730819702,
+    "min_probability": 0.1955585926771164,
+    "max_probability": 0.9685155749320984,
+    "accuracy_at_0_5": 0.7301587301587301,
+    "brier_score": 0.19858369471632292,
+    "mean_abs_error": 0.3962045284727263,
+    "median_abs_error": 0.48615291714668274,
+    "logloss": 0.5602393882738305
+  },
+  "xgboost": {
+    "row_count": 126,
+    "positive_count": 126,
+    "negative_count": 0,
+    "mean_probability": 0.6877873435853019,
+    "first_probability": 0.5368869304656982,
+    "last_probability": 0.9934618473052979,
+    "min_probability": 0.35659587383270264,
+    "max_probability": 0.9934618473052979,
+    "accuracy_at_0_5": 0.9126984126984127,
+    "brier_score": 0.13642706135397553,
+    "mean_abs_error": 0.31221265641469803,
+    "median_abs_error": 0.3809362053871155,
+    "logloss": 0.41446016989942136
+  },
+  "closer_counts": {
+    "lstm": 2,
+    "xgboost": 124,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

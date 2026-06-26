@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-astralis-vs-gamerlegion-bo3-8K-MOEPC1meC7FXyBc8fA2/astralis-vs-gamerlegion-m1-nuke.csv",
+  "round_num": 10,
+  "row_count": 179,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_269/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 179,
+    "positive_count": 179,
+    "negative_count": 0,
+    "mean_probability": 0.5564099564399133,
+    "first_probability": 0.6474779844284058,
+    "last_probability": 0.9771890640258788,
+    "min_probability": 0.1816972941160202,
+    "max_probability": 0.9819276332855223,
+    "accuracy_at_0_5": 0.7094972067039106,
+    "brier_score": 0.2398987881566489,
+    "mean_abs_error": 0.4435900435600867,
+    "median_abs_error": 0.4224339723587036,
+    "logloss": 0.6678474684337806
+  },
+  "xgboost": {
+    "row_count": 179,
+    "positive_count": 179,
+    "negative_count": 0,
+    "mean_probability": 0.5565975514870116,
+    "first_probability": 0.6111797094345093,
+    "last_probability": 0.9903414249420166,
+    "min_probability": 0.26353248953819275,
+    "max_probability": 0.9907997250556946,
+    "accuracy_at_0_5": 0.6815642458100558,
+    "brier_score": 0.23164972618726326,
+    "mean_abs_error": 0.4434024485129884,
+    "median_abs_error": 0.4153133034706116,
+    "logloss": 0.6460490670594577
+  },
+  "closer_counts": {
+    "lstm": 78,
+    "xgboost": 101,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

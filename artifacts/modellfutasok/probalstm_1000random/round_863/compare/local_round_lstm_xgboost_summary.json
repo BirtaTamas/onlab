@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-the-huns-vs-ninja-bo3-8zmdVWrC356tnVH1OFLf2Y/the-huns-vs-ninja-m1-ancient.csv",
+  "round_num": 16,
+  "row_count": 163,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_863/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 163,
+    "positive_count": 0,
+    "negative_count": 163,
+    "mean_probability": 0.2666023395501328,
+    "first_probability": 0.4924268722534179,
+    "last_probability": 0.1516330689191818,
+    "min_probability": 0.0036523893941193,
+    "max_probability": 0.9306593537330629,
+    "accuracy_at_0_5": 0.7423312883435583,
+    "brier_score": 0.14785038928363162,
+    "mean_abs_error": 0.2666023395501328,
+    "median_abs_error": 0.0785002708435058,
+    "logloss": 0.4113228153763781
+  },
+  "xgboost": {
+    "row_count": 163,
+    "positive_count": 0,
+    "negative_count": 163,
+    "mean_probability": 0.36381410743378423,
+    "first_probability": 0.4802984297275543,
+    "last_probability": 0.29423782229423523,
+    "min_probability": 0.027872104197740555,
+    "max_probability": 0.9378060102462769,
+    "accuracy_at_0_5": 0.6993865030674846,
+    "brier_score": 0.19019217728277799,
+    "mean_abs_error": 0.36381410743378423,
+    "median_abs_error": 0.2836452126502991,
+    "logloss": 0.5537696639072296
+  },
+  "closer_counts": {
+    "lstm": 143,
+    "xgboost": 20,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

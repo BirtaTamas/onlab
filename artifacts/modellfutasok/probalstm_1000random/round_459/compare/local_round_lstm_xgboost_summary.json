@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2_finals/blast-bounty-2025-season-2-finals-the-mongolz-vs-aurora-bo3-BL3Rcvf733R8cy7TtLY5HE/the-mongolz-vs-aurora-m1-dust2.csv",
+  "round_num": 22,
+  "row_count": 255,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_459/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 255,
+    "positive_count": 0,
+    "negative_count": 255,
+    "mean_probability": 0.3376054715691591,
+    "first_probability": 0.6442014575004578,
+    "last_probability": 0.0009388889884576,
+    "min_probability": 0.000735598092433,
+    "max_probability": 0.6655962467193604,
+    "accuracy_at_0_5": 0.4588235294117647,
+    "brier_score": 0.19996622302461886,
+    "mean_abs_error": 0.3376054715691591,
+    "median_abs_error": 0.5731412172317505,
+    "logloss": 0.5141084039354405
+  },
+  "xgboost": {
+    "row_count": 255,
+    "positive_count": 0,
+    "negative_count": 255,
+    "mean_probability": 0.3057634215573689,
+    "first_probability": 0.5516772270202637,
+    "last_probability": 0.002728882012888789,
+    "min_probability": 0.002396725118160248,
+    "max_probability": 0.5647172331809998,
+    "accuracy_at_0_5": 0.4588235294117647,
+    "brier_score": 0.1607675586770963,
+    "mean_abs_error": 0.3057634215573689,
+    "median_abs_error": 0.5338762998580933,
+    "logloss": 0.43573550927207344
+  },
+  "closer_counts": {
+    "lstm": 115,
+    "xgboost": 140,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

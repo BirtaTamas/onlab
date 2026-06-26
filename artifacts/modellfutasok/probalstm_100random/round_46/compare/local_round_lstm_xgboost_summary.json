@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-furia-vs-pain-bo3-BGpRMXEt8xpbRAS7KbpPH6/furia-vs-pain-m2-overpass.csv",
+  "round_num": 27,
+  "row_count": 223,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_100random/round_46/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 223,
+    "positive_count": 223,
+    "negative_count": 0,
+    "mean_probability": 0.55461929703858,
+    "first_probability": 0.6233051419258118,
+    "last_probability": 0.2617253959178924,
+    "min_probability": 0.0144051322713494,
+    "max_probability": 0.9525677561759948,
+    "accuracy_at_0_5": 0.6905829596412556,
+    "brier_score": 0.30080821627443266,
+    "mean_abs_error": 0.44538070296142,
+    "median_abs_error": 0.3841203451156616,
+    "logloss": 1.1037302367194417
+  },
+  "xgboost": {
+    "row_count": 223,
+    "positive_count": 223,
+    "negative_count": 0,
+    "mean_probability": 0.6057796013863097,
+    "first_probability": 0.6496492028236389,
+    "last_probability": 0.6833725571632385,
+    "min_probability": 0.154854416847229,
+    "max_probability": 0.9242854714393616,
+    "accuracy_at_0_5": 0.7623318385650224,
+    "brier_score": 0.215060976807399,
+    "mean_abs_error": 0.39422039861369024,
+    "median_abs_error": 0.3166274428367615,
+    "logloss": 0.6356578512468246
+  },
+  "closer_counts": {
+    "lstm": 108,
+    "xgboost": 115,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

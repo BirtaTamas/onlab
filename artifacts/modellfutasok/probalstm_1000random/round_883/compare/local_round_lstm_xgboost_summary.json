@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_open_london_finals/blast-open-london-2025-finals-furia-vs-g2-bo3-QMek4tXQesgbTlulfGKOmD/furia-vs-g2-m1-inferno.csv",
+  "round_num": 12,
+  "row_count": 167,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_883/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 167,
+    "positive_count": 0,
+    "negative_count": 167,
+    "mean_probability": 0.4941947063735078,
+    "first_probability": 0.6993904709815979,
+    "last_probability": 0.0167629346251487,
+    "min_probability": 0.0027138094883412,
+    "max_probability": 0.7507944703102112,
+    "accuracy_at_0_5": 0.3652694610778443,
+    "brier_score": 0.3183337736155227,
+    "mean_abs_error": 0.4941947063735078,
+    "median_abs_error": 0.6764196753501892,
+    "logloss": 0.8143825545163955
+  },
+  "xgboost": {
+    "row_count": 167,
+    "positive_count": 0,
+    "negative_count": 167,
+    "mean_probability": 0.491607443267803,
+    "first_probability": 0.7111787796020508,
+    "last_probability": 0.031517889350652695,
+    "min_probability": 0.011712709441781044,
+    "max_probability": 0.7596001029014587,
+    "accuracy_at_0_5": 0.3652694610778443,
+    "brier_score": 0.3200972901670259,
+    "mean_abs_error": 0.491607443267803,
+    "median_abs_error": 0.6631074547767639,
+    "logloss": 0.817973002756964
+  },
+  "closer_counts": {
+    "lstm": 81,
+    "xgboost": 86,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-faze-vs-aurora-bo3-OcxcOl9bFIHQQ2588nwUWG/faze-vs-aurora-m1-inferno.csv",
+  "round_num": 18,
+  "row_count": 115,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_795/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 115,
+    "positive_count": 115,
+    "negative_count": 0,
+    "mean_probability": 0.6714209794998169,
+    "first_probability": 0.5916785001754761,
+    "last_probability": 0.9638344645500184,
+    "min_probability": 0.5565507411956787,
+    "max_probability": 0.9638344645500184,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.12229960316236799,
+    "mean_abs_error": 0.3285790205001831,
+    "median_abs_error": 0.390163779258728,
+    "logloss": 0.4123454902731487
+  },
+  "xgboost": {
+    "row_count": 115,
+    "positive_count": 115,
+    "negative_count": 0,
+    "mean_probability": 0.6758893888929616,
+    "first_probability": 0.5659365653991699,
+    "last_probability": 0.9863433837890625,
+    "min_probability": 0.5598964095115662,
+    "max_probability": 0.9863433837890625,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.12128685560002234,
+    "mean_abs_error": 0.3241106111070384,
+    "median_abs_error": 0.34358030557632446,
+    "logloss": 0.40751800625298745
+  },
+  "closer_counts": {
+    "lstm": 61,
+    "xgboost": 54,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

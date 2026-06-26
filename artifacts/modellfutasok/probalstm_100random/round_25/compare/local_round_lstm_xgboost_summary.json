@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-furia-vs-falcons-bo5-L7CZVGSHd1AqjKPyYU04lA/furia-vs-falcons-m1-inferno.csv",
+  "round_num": 10,
+  "row_count": 230,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_100random/round_25/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 230,
+    "positive_count": 230,
+    "negative_count": 0,
+    "mean_probability": 0.7012079898429954,
+    "first_probability": 0.4971576035022735,
+    "last_probability": 0.8116124272346497,
+    "min_probability": 0.4837555587291717,
+    "max_probability": 0.9773645997047424,
+    "accuracy_at_0_5": 0.9608695652173913,
+    "brier_score": 0.11075193690578823,
+    "mean_abs_error": 0.29879201015700463,
+    "median_abs_error": 0.3506898581981659,
+    "logloss": 0.3752843234756724
+  },
+  "xgboost": {
+    "row_count": 230,
+    "positive_count": 230,
+    "negative_count": 0,
+    "mean_probability": 0.740891397776811,
+    "first_probability": 0.5119118690490723,
+    "last_probability": 0.9356158375740051,
+    "min_probability": 0.5045077800750732,
+    "max_probability": 0.9949963092803955,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.08783044860803663,
+    "mean_abs_error": 0.259108602223189,
+    "median_abs_error": 0.30159056186676025,
+    "logloss": 0.31798336573035996
+  },
+  "closer_counts": {
+    "lstm": 35,
+    "xgboost": 195,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

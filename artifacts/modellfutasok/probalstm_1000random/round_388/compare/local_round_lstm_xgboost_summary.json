@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-tyloo-vs-rare-atom-bo3-8GB1HWZtKOlh9_707n2A62/tyloo-vs-rare-atom-m2-inferno.csv",
+  "round_num": 14,
+  "row_count": 167,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_388/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 167,
+    "positive_count": 0,
+    "negative_count": 167,
+    "mean_probability": 0.5001482737144667,
+    "first_probability": 0.6048614382743835,
+    "last_probability": 0.5093724131584167,
+    "min_probability": 0.0133106736466288,
+    "max_probability": 0.7163440585136414,
+    "accuracy_at_0_5": 0.20958083832335328,
+    "brier_score": 0.29049233159318405,
+    "mean_abs_error": 0.5001482737144667,
+    "median_abs_error": 0.5817636847496033,
+    "logloss": 0.7569332584199868
+  },
+  "xgboost": {
+    "row_count": 167,
+    "positive_count": 0,
+    "negative_count": 167,
+    "mean_probability": 0.5014488045795413,
+    "first_probability": 0.6494923233985901,
+    "last_probability": 0.4387626647949219,
+    "min_probability": 0.022105587646365166,
+    "max_probability": 0.7357361912727356,
+    "accuracy_at_0_5": 0.24550898203592814,
+    "brier_score": 0.2881963290935306,
+    "mean_abs_error": 0.5014488045795413,
+    "median_abs_error": 0.5985234379768372,
+    "logloss": 0.7538849763522345
+  },
+  "closer_counts": {
+    "lstm": 106,
+    "xgboost": 61,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

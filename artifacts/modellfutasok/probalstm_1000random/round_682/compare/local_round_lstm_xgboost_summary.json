@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-astralis-vs-fluxo-bo3-sWQe-jgKNP3vaioXQrjxgB/astralis-vs-fluxo-m3-nuke.csv",
+  "round_num": 4,
+  "row_count": 233,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_682/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 233,
+    "positive_count": 0,
+    "negative_count": 233,
+    "mean_probability": 0.1813182224876291,
+    "first_probability": 0.4828567206859588,
+    "last_probability": 0.0012758206576108,
+    "min_probability": 0.0012412328505888,
+    "max_probability": 0.5147221088409424,
+    "accuracy_at_0_5": 0.9313304721030042,
+    "brier_score": 0.08084476970812628,
+    "mean_abs_error": 0.1813182224876291,
+    "median_abs_error": 0.0110167609527707,
+    "logloss": 0.24161812616111175
+  },
+  "xgboost": {
+    "row_count": 233,
+    "positive_count": 0,
+    "negative_count": 233,
+    "mean_probability": 0.1789007733821821,
+    "first_probability": 0.5371325612068176,
+    "last_probability": 0.0022182664833962917,
+    "min_probability": 0.0019294554367661476,
+    "max_probability": 0.5409274101257324,
+    "accuracy_at_0_5": 0.8197424892703863,
+    "brier_score": 0.07439915892521651,
+    "mean_abs_error": 0.1789007733821821,
+    "median_abs_error": 0.018903642892837524,
+    "logloss": 0.2346143214341648
+  },
+  "closer_counts": {
+    "lstm": 191,
+    "xgboost": 42,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

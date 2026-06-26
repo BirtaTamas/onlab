@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_1/blast-rivals-2025-season-1-mouz-vs-pain-bo3-Ao8EIC0rxvFkpkJ5bGImFu/mouz-vs-pain-m1-nuke.csv",
+  "round_num": 12,
+  "row_count": 145,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_100random/round_91/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 145,
+    "positive_count": 0,
+    "negative_count": 145,
+    "mean_probability": 0.4870268794226235,
+    "first_probability": 0.4524763226509094,
+    "last_probability": 0.0262752398848533,
+    "min_probability": 0.0262752398848533,
+    "max_probability": 0.7839957475662231,
+    "accuracy_at_0_5": 0.5103448275862069,
+    "brier_score": 0.2519597481684995,
+    "mean_abs_error": 0.4870268794226235,
+    "median_abs_error": 0.4963587522506714,
+    "logloss": 0.6945826610611618
+  },
+  "xgboost": {
+    "row_count": 145,
+    "positive_count": 0,
+    "negative_count": 145,
+    "mean_probability": 0.5943330393526061,
+    "first_probability": 0.49430331587791443,
+    "last_probability": 0.03692374750971794,
+    "min_probability": 0.03650559484958649,
+    "max_probability": 0.9071156978607178,
+    "accuracy_at_0_5": 0.3448275862068966,
+    "brier_score": 0.37779189801890806,
+    "mean_abs_error": 0.5943330393526061,
+    "median_abs_error": 0.6114739179611206,
+    "logloss": 0.9769921846975851
+  },
+  "closer_counts": {
+    "lstm": 140,
+    "xgboost": 5,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

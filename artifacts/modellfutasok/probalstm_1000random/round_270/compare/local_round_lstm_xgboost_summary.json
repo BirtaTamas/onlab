@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-furia-vs-vitality-bo3-ZNzuF_vw0WBzn8QEbGrbgj/furia-vs-vitality-m1-overpass.csv",
+  "round_num": 11,
+  "row_count": 190,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_270/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 190,
+    "positive_count": 190,
+    "negative_count": 0,
+    "mean_probability": 0.7863192072040156,
+    "first_probability": 0.6606518030166626,
+    "last_probability": 0.7698361873626709,
+    "min_probability": 0.4794508218765259,
+    "max_probability": 0.9667847156524658,
+    "accuracy_at_0_5": 0.9947368421052631,
+    "brier_score": 0.053316107300681245,
+    "mean_abs_error": 0.21368079279598437,
+    "median_abs_error": 0.23045507073402405,
+    "logloss": 0.24672172964376757
+  },
+  "xgboost": {
+    "row_count": 190,
+    "positive_count": 190,
+    "negative_count": 0,
+    "mean_probability": 0.7866193338444358,
+    "first_probability": 0.6462110877037048,
+    "last_probability": 0.9482007622718811,
+    "min_probability": 0.6229130029678345,
+    "max_probability": 0.9910650849342346,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.05893866985863626,
+    "mean_abs_error": 0.21338066615556417,
+    "median_abs_error": 0.1786268949508667,
+    "logloss": 0.25095704863951557
+  },
+  "closer_counts": {
+    "lstm": 93,
+    "xgboost": 97,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

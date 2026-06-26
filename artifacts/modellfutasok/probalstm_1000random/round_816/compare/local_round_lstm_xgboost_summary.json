@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/fissure_playground_2/fissure-playground-2-falcons-vs-pain-bo3-6mWraId8pA69o5etX6dmBT/falcons-vs-pain-m1-inferno.csv",
+  "round_num": 3,
+  "row_count": 124,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_816/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 124,
+    "positive_count": 124,
+    "negative_count": 0,
+    "mean_probability": 0.8303307487118629,
+    "first_probability": 0.7033057808876038,
+    "last_probability": 0.975307047367096,
+    "min_probability": 0.6896741986274719,
+    "max_probability": 0.975307047367096,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.03711926229065394,
+    "mean_abs_error": 0.16966925128813712,
+    "median_abs_error": 0.17582884430885315,
+    "logloss": 0.19198519349888396
+  },
+  "xgboost": {
+    "row_count": 124,
+    "positive_count": 124,
+    "negative_count": 0,
+    "mean_probability": 0.8182940108160819,
+    "first_probability": 0.7003093361854553,
+    "last_probability": 0.9960854053497314,
+    "min_probability": 0.6843088865280151,
+    "max_probability": 0.9960854053497314,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.047959876041113673,
+    "mean_abs_error": 0.18170598918391812,
+    "median_abs_error": 0.17186623811721802,
+    "logloss": 0.21175524685363684
+  },
+  "closer_counts": {
+    "lstm": 66,
+    "xgboost": 58,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

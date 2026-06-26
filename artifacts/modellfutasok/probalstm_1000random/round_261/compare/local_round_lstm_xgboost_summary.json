@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_open_lisbon/blast-open-lisbon-2025-spirit-vs-the-huns-bo3-TWIJIxJZifB3vPv3OUvjVr/spirit-vs-the-huns-m2-dust2.csv",
+  "round_num": 7,
+  "row_count": 224,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_261/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 224,
+    "positive_count": 0,
+    "negative_count": 224,
+    "mean_probability": 0.2672231278515288,
+    "first_probability": 0.3745734989643097,
+    "last_probability": 0.024829214438796,
+    "min_probability": 0.0202538333833217,
+    "max_probability": 0.6226179003715515,
+    "accuracy_at_0_5": 0.8660714285714286,
+    "brier_score": 0.09550571188543923,
+    "mean_abs_error": 0.2672231278515288,
+    "median_abs_error": 0.22987180203199387,
+    "logloss": 0.3384881792790237
+  },
+  "xgboost": {
+    "row_count": 224,
+    "positive_count": 0,
+    "negative_count": 224,
+    "mean_probability": 0.4203041928953358,
+    "first_probability": 0.48820602893829346,
+    "last_probability": 0.06276547163724899,
+    "min_probability": 0.03197158873081207,
+    "max_probability": 0.6387839317321777,
+    "accuracy_at_0_5": 0.8348214285714286,
+    "brier_score": 0.19523301528097664,
+    "mean_abs_error": 0.4203041928953358,
+    "median_abs_error": 0.4560159742832184,
+    "logloss": 0.5680919649831552
+  },
+  "closer_counts": {
+    "lstm": 182,
+    "xgboost": 42,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

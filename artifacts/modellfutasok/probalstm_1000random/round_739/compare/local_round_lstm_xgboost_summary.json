@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2_finals/blast-bounty-2025-season-2-finals-spirit-vs-virtuspro-bo3-NVE3FTuEWJ64hP6AT-Vo9S/spirit-vs-virtus-pro-m2-overpass.csv",
+  "round_num": 10,
+  "row_count": 172,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_739/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 172,
+    "positive_count": 172,
+    "negative_count": 0,
+    "mean_probability": 0.6700262915949489,
+    "first_probability": 0.6558439135551453,
+    "last_probability": 0.9288360476493835,
+    "min_probability": 0.1552886217832565,
+    "max_probability": 0.9288360476493835,
+    "accuracy_at_0_5": 0.9127906976744186,
+    "brier_score": 0.12517014528477796,
+    "mean_abs_error": 0.32997370840505114,
+    "median_abs_error": 0.3082579970359802,
+    "logloss": 0.4294436311581186
+  },
+  "xgboost": {
+    "row_count": 172,
+    "positive_count": 172,
+    "negative_count": 0,
+    "mean_probability": 0.6004547156220259,
+    "first_probability": 0.6198891997337341,
+    "last_probability": 0.9851823449134827,
+    "min_probability": 0.3493531346321106,
+    "max_probability": 0.9851823449134827,
+    "accuracy_at_0_5": 0.9011627906976745,
+    "brier_score": 0.1705211295931559,
+    "mean_abs_error": 0.39954528437797415,
+    "median_abs_error": 0.41444122791290283,
+    "logloss": 0.5256546327077433
+  },
+  "closer_counts": {
+    "lstm": 146,
+    "xgboost": 26,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

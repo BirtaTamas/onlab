@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1_finals/blast-bounty-2025-season-1-finals-g2-vs-betboom-bo3-pCfbtiY01aL_JW2Hy1pnZ6/g2-vs-betboom-m1-anubis.csv",
+  "round_num": 8,
+  "row_count": 221,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_167/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 221,
+    "positive_count": 0,
+    "negative_count": 221,
+    "mean_probability": 0.3411136232063646,
+    "first_probability": 0.2286720126867294,
+    "last_probability": 0.0042321016080677,
+    "min_probability": 0.0042321016080677,
+    "max_probability": 0.8160409331321716,
+    "accuracy_at_0_5": 0.5429864253393665,
+    "brier_score": 0.1661554299543145,
+    "mean_abs_error": 0.3411136232063646,
+    "median_abs_error": 0.2165121287107467,
+    "logloss": 0.47993669882646034
+  },
+  "xgboost": {
+    "row_count": 221,
+    "positive_count": 0,
+    "negative_count": 221,
+    "mean_probability": 0.38167973379794157,
+    "first_probability": 0.34179723262786865,
+    "last_probability": 0.02829020284116268,
+    "min_probability": 0.013551627285778522,
+    "max_probability": 0.7154703736305237,
+    "accuracy_at_0_5": 0.5927601809954751,
+    "brier_score": 0.17218781686079992,
+    "mean_abs_error": 0.38167973379794157,
+    "median_abs_error": 0.33772963285446167,
+    "logloss": 0.5145504851014231
+  },
+  "closer_counts": {
+    "lstm": 127,
+    "xgboost": 94,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

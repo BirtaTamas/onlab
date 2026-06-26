@@ -43,6 +43,11 @@ def load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def normalize_manifest_csv_path(csv_path: str) -> Path:
+    normalized = str(csv_path).replace("\\", "/")
+    return Path(normalized)
+
+
 def pick_rounds(manifest_path: Path, count: int, min_rows: int, seed: int) -> pd.DataFrame:
     manifest = pd.read_csv(manifest_path)
     test_manifest = manifest[manifest["split"] == "test"].copy()
@@ -55,10 +60,11 @@ def pick_rounds(manifest_path: Path, count: int, min_rows: int, seed: int) -> pd
 
     candidates = []
     for csv_path in csv_paths:
+        csv_path_obj = normalize_manifest_csv_path(str(csv_path))
         try:
-            df = pd.read_csv(csv_path, usecols=["round_num"])
+            df = pd.read_csv(csv_path_obj, usecols=["round_num"])
         except Exception as exc:
-            print(f"CSV kihagyva ({csv_path}): {exc}", flush=True)
+            print(f"CSV kihagyva ({csv_path_obj}): {exc}", flush=True)
             continue
         round_counts = df["round_num"].value_counts().reset_index()
         round_counts.columns = ["round_num", "rows"]
@@ -66,13 +72,11 @@ def pick_rounds(manifest_path: Path, count: int, min_rows: int, seed: int) -> pd
         for _, row in round_counts.iterrows():
             candidates.append(
                 {
-                    "csv_path": str(csv_path),
+                    "csv_path": str(csv_path_obj),
                     "round_num": int(row["round_num"]),
                     "rows": int(row["rows"]),
                 }
             )
-        if len(candidates) >= count * 6:
-            break
 
     if len(candidates) < count:
         raise ValueError(f"Csak {len(candidates)} alkalmas roundot talaltam, kert: {count}")
@@ -129,6 +133,55 @@ def cohort_summary(df: pd.DataFrame, mask: pd.Series) -> dict[str, object]:
     }
 
 
+def canonical_feature_family(base_feature: str) -> str:
+    text = str(base_feature)
+    if "__" in text:
+        text = text.split("__", 1)[1]
+
+    if text.endswith("__flash_duration"):
+        return "flash_duration"
+    if text.endswith("__duck_amount"):
+        return "duck_amount"
+    if text.endswith("__utility_total"):
+        return "utility_total"
+    if text.endswith("__flash"):
+        return "flash_inventory"
+    if text.endswith("__smoke"):
+        return "smoke_inventory"
+    if text.endswith("__he"):
+        return "he_inventory"
+    if text.endswith("__molly"):
+        return "molly_inventory"
+
+    prefixes = ("T_", "CT_")
+    for prefix in prefixes:
+        if text.startswith(prefix):
+            rest = text[len(prefix):]
+            shared_names = {
+                "flash_duration_sum",
+                "flash_alpha_mean",
+                "flashed_players",
+                "smokes_last_5s",
+                "flashes_last_5s",
+                "he_last_5s",
+                "mollies_last_5s",
+                "utility_damage_last_5s",
+                "active_smokes",
+                "active_infernos",
+                "utility_inv",
+                "smoke_inv",
+                "flash_inv",
+                "he_inv",
+                "molly_inv",
+                "kills_last_3s",
+                "damage_last_5s",
+            }
+            if rest in shared_names:
+                return rest
+
+    return text
+
+
 def summarize_ridge_features(coef_paths: list[Path], top_n: int = 10) -> pd.DataFrame:
     rows = []
     for idx, path in enumerate(coef_paths, start=1):
@@ -141,6 +194,9 @@ def summarize_ridge_features(coef_paths: list[Path], top_n: int = 10) -> pd.Data
                     "suite_round_index": idx,
                     "feature": row["feature"],
                     "base_feature": row.get("base_feature", str(row["feature"]).split("__", 1)[-1]),
+                    "feature_family": canonical_feature_family(
+                        row.get("base_feature", str(row["feature"]).split("__", 1)[-1])
+                    ),
                     "is_utility": bool(row.get("is_utility", False)),
                     "abs_coefficient": float(row["abs_coefficient"]),
                 }
@@ -148,14 +204,15 @@ def summarize_ridge_features(coef_paths: list[Path], top_n: int = 10) -> pd.Data
     if not rows:
         return pd.DataFrame()
     feature_df = pd.DataFrame(rows)
+    unique_presence = feature_df.drop_duplicates(["suite_round_index", "feature_family", "is_utility"]).copy()
     return (
-        feature_df.groupby(["base_feature", "is_utility"], as_index=False)
+        unique_presence.groupby(["feature_family", "is_utility"], as_index=False)
         .agg(
-            top10_count=("base_feature", "size"),
+            round_presence_count=("feature_family", "size"),
             mean_abs_coefficient=("abs_coefficient", "mean"),
             max_abs_coefficient=("abs_coefficient", "max"),
         )
-        .sort_values(["top10_count", "mean_abs_coefficient"], ascending=False)
+        .sort_values(["round_presence_count", "mean_abs_coefficient"], ascending=False)
     )
 
 
@@ -246,10 +303,10 @@ def write_final_report(
     if ridge_feature_summary.empty:
         lines.append("- No ridge feature summary was produced.")
     else:
-        lines.extend(["| feature | utility | top10_count | mean_abs_coef | max_abs_coef |", "|---|---:|---:|---:|---:|"])
+        lines.extend(["| feature csalad | utility | round_presence | mean_abs_coef | max_abs_coef |", "|---|---:|---:|---:|---:|"])
         for _, row in ridge_feature_summary.head(20).iterrows():
             lines.append(
-                f"| `{row['base_feature']}` | {bool(row['is_utility'])} | {int(row['top10_count'])} | "
+                f"| `{row['feature_family']}` | {bool(row['is_utility'])} | {int(row['round_presence_count'])} | "
                 f"{float(row['mean_abs_coefficient']):.6f} | {float(row['max_abs_coefficient']):.6f} |"
             )
 
@@ -400,6 +457,14 @@ def main() -> None:
         comparison_rows=comparison_rows,
         utility_df=utility_df,
         ridge_feature_summary=ridge_feature_summary,
+    )
+    run_command(
+        [
+            sys.executable,
+            "plot_lstm_feature_importance_report.py",
+            "--suite-dir",
+            str(args.output_dir),
+        ]
     )
     print(f"Suite kesz: {args.output_dir / 'final_conclusion.md'}")
 

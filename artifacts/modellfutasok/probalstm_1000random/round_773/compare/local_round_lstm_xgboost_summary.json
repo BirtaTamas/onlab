@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-lynn-vision-vs-ninja-bo3-zpPbzx1DSQhVYC3-qoelpd/lynn-vision-vs-ninja-m2-inferno.csv",
+  "round_num": 14,
+  "row_count": 185,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_773/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 185,
+    "positive_count": 185,
+    "negative_count": 0,
+    "mean_probability": 0.748200918371613,
+    "first_probability": 0.5506576299667358,
+    "last_probability": 0.8918217420578003,
+    "min_probability": 0.1206527054309845,
+    "max_probability": 0.9412916898727416,
+    "accuracy_at_0_5": 0.8918918918918919,
+    "brier_score": 0.10704499268106475,
+    "mean_abs_error": 0.25179908162838704,
+    "median_abs_error": 0.15295904874801636,
+    "logloss": 0.35482134232601076
+  },
+  "xgboost": {
+    "row_count": 185,
+    "positive_count": 185,
+    "negative_count": 0,
+    "mean_probability": 0.817012884004696,
+    "first_probability": 0.552832305431366,
+    "last_probability": 0.9600431323051453,
+    "min_probability": 0.37239569425582886,
+    "max_probability": 0.9625692367553711,
+    "accuracy_at_0_5": 0.8972972972972973,
+    "brier_score": 0.076687283522782,
+    "mean_abs_error": 0.182987115995304,
+    "median_abs_error": 0.0728006362915039,
+    "logloss": 0.24429022162909722
+  },
+  "closer_counts": {
+    "lstm": 23,
+    "xgboost": 162,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

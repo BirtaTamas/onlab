@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-aurora-vs-falcons-bo3-5oHSxtVT-5F3Op7ZcgBMjW/aurora-vs-falcons-m2-train.csv",
+  "round_num": 6,
+  "row_count": 174,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_820/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 174,
+    "positive_count": 174,
+    "negative_count": 0,
+    "mean_probability": 0.3350560678404638,
+    "first_probability": 0.4323593378067016,
+    "last_probability": 0.948095440864563,
+    "min_probability": 0.0940539538860321,
+    "max_probability": 0.948095440864563,
+    "accuracy_at_0_5": 0.14367816091954022,
+    "brier_score": 0.482676346440465,
+    "mean_abs_error": 0.6649439321595362,
+    "median_abs_error": 0.7212978005409241,
+    "logloss": 1.2344318271285224
+  },
+  "xgboost": {
+    "row_count": 174,
+    "positive_count": 174,
+    "negative_count": 0,
+    "mean_probability": 0.3873695793679391,
+    "first_probability": 0.521043598651886,
+    "last_probability": 0.9789637327194214,
+    "min_probability": 0.22799652814865112,
+    "max_probability": 0.9789637327194214,
+    "accuracy_at_0_5": 0.27011494252873564,
+    "brier_score": 0.4112222017961718,
+    "mean_abs_error": 0.612630420632061,
+    "median_abs_error": 0.7069301307201385,
+    "logloss": 1.0383469305232649
+  },
+  "closer_counts": {
+    "lstm": 50,
+    "xgboost": 124,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

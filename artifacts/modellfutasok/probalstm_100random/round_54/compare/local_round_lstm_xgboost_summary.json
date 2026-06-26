@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-vitality-vs-tyloo-bo3-WTYOidpO-mHqROoLZlA7Li/vitality-vs-tyloo-m1-overpass.csv",
+  "round_num": 9,
+  "row_count": 198,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_100random/round_54/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 198,
+    "positive_count": 0,
+    "negative_count": 198,
+    "mean_probability": 0.36767307035989516,
+    "first_probability": 0.6151414513587952,
+    "last_probability": 0.001964176306501,
+    "min_probability": 0.0017885265406221,
+    "max_probability": 0.8352782130241394,
+    "accuracy_at_0_5": 0.4797979797979798,
+    "brier_score": 0.25147389688754757,
+    "mean_abs_error": 0.36767307035989516,
+    "median_abs_error": 0.5932425260543823,
+    "logloss": 0.6338918661413735
+  },
+  "xgboost": {
+    "row_count": 198,
+    "positive_count": 0,
+    "negative_count": 198,
+    "mean_probability": 0.3760228330890338,
+    "first_probability": 0.5887307524681091,
+    "last_probability": 0.018896320834755898,
+    "min_probability": 0.016225241124629974,
+    "max_probability": 0.8249903917312622,
+    "accuracy_at_0_5": 0.4797979797979798,
+    "brier_score": 0.2436820964922402,
+    "mean_abs_error": 0.3760228330890338,
+    "median_abs_error": 0.5419439673423767,
+    "logloss": 0.6380438630108015
+  },
+  "closer_counts": {
+    "lstm": 127,
+    "xgboost": 71,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "lstm"
+}

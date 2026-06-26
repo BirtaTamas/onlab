@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21/esl-pro-league-season-21-gamerlegion-vs-tyloo-bo3-0g9mXt3FIxC8XzjXNUjRL7/gamerlegion-vs-tyloo-m1-ancient-p3.csv",
+  "round_num": 3,
+  "row_count": 232,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_922/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 232,
+    "positive_count": 232,
+    "negative_count": 0,
+    "mean_probability": 0.670026966081611,
+    "first_probability": 0.5898687839508057,
+    "last_probability": 0.9845656752586364,
+    "min_probability": 0.354782372713089,
+    "max_probability": 0.9853544235229492,
+    "accuracy_at_0_5": 0.9439655172413793,
+    "brier_score": 0.13154026067799374,
+    "mean_abs_error": 0.32997303391838895,
+    "median_abs_error": 0.3968941867351532,
+    "logloss": 0.4249211417831139
+  },
+  "xgboost": {
+    "row_count": 232,
+    "positive_count": 232,
+    "negative_count": 0,
+    "mean_probability": 0.6412033794512009,
+    "first_probability": 0.5480606555938721,
+    "last_probability": 0.9974274039268494,
+    "min_probability": 0.4185715615749359,
+    "max_probability": 0.9974274039268494,
+    "accuracy_at_0_5": 0.9439655172413793,
+    "brier_score": 0.1589889223572827,
+    "mean_abs_error": 0.35879662054879913,
+    "median_abs_error": 0.45205390453338623,
+    "logloss": 0.47767363568068133
+  },
+  "closer_counts": {
+    "lstm": 162,
+    "xgboost": 70,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

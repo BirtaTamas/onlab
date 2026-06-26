@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-vitality-vs-gamerlegion-bo3-HfAhqHTEhpe_HlObeToa76/vitality-vs-gamerlegion-m2-dust2.csv",
+  "round_num": 3,
+  "row_count": 144,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_609/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 144,
+    "positive_count": 0,
+    "negative_count": 144,
+    "mean_probability": 0.029039231226811808,
+    "first_probability": 0.1381159424781799,
+    "last_probability": 0.0015930109657347,
+    "min_probability": 0.0012046437477692,
+    "max_probability": 0.1413587927818298,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.002731152476329161,
+    "mean_abs_error": 0.029039231226811808,
+    "median_abs_error": 0.0034312352072447,
+    "logloss": 0.030519939560241807
+  },
+  "xgboost": {
+    "row_count": 144,
+    "positive_count": 0,
+    "negative_count": 144,
+    "mean_probability": 0.04532987444124754,
+    "first_probability": 0.16480812430381775,
+    "last_probability": 0.0030635464936494827,
+    "min_probability": 0.0030635464936494827,
+    "max_probability": 0.1726401001214981,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.006291009326210693,
+    "mean_abs_error": 0.04532987444124754,
+    "median_abs_error": 0.0052926247008144855,
+    "logloss": 0.04886772237961104
+  },
+  "closer_counts": {
+    "lstm": 141,
+    "xgboost": 3,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

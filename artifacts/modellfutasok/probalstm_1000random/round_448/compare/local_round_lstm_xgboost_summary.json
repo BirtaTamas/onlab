@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_katowice/iem-katowice-2025-the-mongolz-vs-natus-vincere-bo3-C0GZxMhpGHBr28LeyjgICZ/the-mongolz-vs-natus-vincere-m1-mirage.csv",
+  "round_num": 2,
+  "row_count": 194,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_448/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 194,
+    "positive_count": 0,
+    "negative_count": 194,
+    "mean_probability": 0.04257099355238524,
+    "first_probability": 0.3866989612579345,
+    "last_probability": 0.0013344009639695,
+    "min_probability": 0.0008024635608308,
+    "max_probability": 0.3962904512882232,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.01183337503932138,
+    "mean_abs_error": 0.04257099355238524,
+    "median_abs_error": 0.00230087642557915,
+    "logloss": 0.05032784280376749
+  },
+  "xgboost": {
+    "row_count": 194,
+    "positive_count": 0,
+    "negative_count": 194,
+    "mean_probability": 0.061781173627151506,
+    "first_probability": 0.28049084544181824,
+    "last_probability": 0.009045740589499474,
+    "min_probability": 0.006382300518453121,
+    "max_probability": 0.2949400544166565,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.010578948528458802,
+    "mean_abs_error": 0.061781173627151506,
+    "median_abs_error": 0.03913133218884468,
+    "logloss": 0.06816379612979877
+  },
+  "closer_counts": {
+    "lstm": 180,
+    "xgboost": 14,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "lstm"
+}

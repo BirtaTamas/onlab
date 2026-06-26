@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1/blast-bounty-2025-season-1-eternal-fire-vs-falcons-bo3-Bm3FkXiO5h_cvpKxUnOmaW/eternal-fire-vs-falcons-m1-inferno.csv",
+  "round_num": 19,
+  "row_count": 213,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_37/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 213,
+    "positive_count": 213,
+    "negative_count": 0,
+    "mean_probability": 0.565123458283608,
+    "first_probability": 0.5173845291137695,
+    "last_probability": 0.96032053232193,
+    "min_probability": 0.4566984474658966,
+    "max_probability": 0.96032053232193,
+    "accuracy_at_0_5": 0.9014084507042254,
+    "brier_score": 0.1988982938731247,
+    "mean_abs_error": 0.43487654171639206,
+    "median_abs_error": 0.45893245935440063,
+    "logloss": 0.5828434828821724
+  },
+  "xgboost": {
+    "row_count": 213,
+    "positive_count": 213,
+    "negative_count": 0,
+    "mean_probability": 0.5558361965166011,
+    "first_probability": 0.5516707301139832,
+    "last_probability": 0.9950443506240845,
+    "min_probability": 0.4135512709617615,
+    "max_probability": 0.9950443506240845,
+    "accuracy_at_0_5": 0.9248826291079812,
+    "brier_score": 0.2117291426848727,
+    "mean_abs_error": 0.44416380348339884,
+    "median_abs_error": 0.4841342568397522,
+    "logloss": 0.6044817908812495
+  },
+  "closer_counts": {
+    "lstm": 133,
+    "xgboost": 80,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

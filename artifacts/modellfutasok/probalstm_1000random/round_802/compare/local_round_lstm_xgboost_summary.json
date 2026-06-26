@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1/blast-bounty-2025-season-1-astralis-vs-wildcard-bo3-qSXX__H_dx2QMbEuGWf0Qb/astralis-vs-wildcard-m2-mirage.csv",
+  "round_num": 5,
+  "row_count": 173,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_802/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 173,
+    "positive_count": 173,
+    "negative_count": 0,
+    "mean_probability": 0.607080172768907,
+    "first_probability": 0.515594482421875,
+    "last_probability": 0.8787330389022827,
+    "min_probability": 0.2434359490871429,
+    "max_probability": 0.9661240577697754,
+    "accuracy_at_0_5": 0.8901734104046243,
+    "brier_score": 0.1757244931567454,
+    "mean_abs_error": 0.3929198272310929,
+    "median_abs_error": 0.44709306955337524,
+    "logloss": 0.5262942356687083
+  },
+  "xgboost": {
+    "row_count": 173,
+    "positive_count": 173,
+    "negative_count": 0,
+    "mean_probability": 0.5601440995414823,
+    "first_probability": 0.4888738691806793,
+    "last_probability": 0.9416710138320923,
+    "min_probability": 0.28013840317726135,
+    "max_probability": 0.9843223690986633,
+    "accuracy_at_0_5": 0.2947976878612717,
+    "brier_score": 0.22442063761921027,
+    "mean_abs_error": 0.4398559004585178,
+    "median_abs_error": 0.5154699981212616,
+    "logloss": 0.619548548158598
+  },
+  "closer_counts": {
+    "lstm": 134,
+    "xgboost": 39,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

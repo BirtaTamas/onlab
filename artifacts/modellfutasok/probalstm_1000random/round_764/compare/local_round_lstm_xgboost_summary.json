@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-spirit-vs-faze-bo3-1414ljxN3FRmXv6-03KYFL/spirit-vs-faze-m2-mirage.csv",
+  "round_num": 1,
+  "row_count": 150,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_764/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 150,
+    "positive_count": 0,
+    "negative_count": 150,
+    "mean_probability": 0.34530895688881474,
+    "first_probability": 0.5054576992988586,
+    "last_probability": 0.4588303565979004,
+    "min_probability": 0.0069278106093406,
+    "max_probability": 0.5445300936698914,
+    "accuracy_at_0_5": 0.68,
+    "brier_score": 0.15266564220285542,
+    "mean_abs_error": 0.34530895688881474,
+    "median_abs_error": 0.4529225826263428,
+    "logloss": 0.4603388675947876
+  },
+  "xgboost": {
+    "row_count": 150,
+    "positive_count": 0,
+    "negative_count": 150,
+    "mean_probability": 0.4418303156395753,
+    "first_probability": 0.5096819400787354,
+    "last_probability": 0.6568764448165894,
+    "min_probability": 0.052997805178165436,
+    "max_probability": 0.7485551834106445,
+    "accuracy_at_0_5": 0.4533333333333333,
+    "brier_score": 0.23326903633125093,
+    "mean_abs_error": 0.4418303156395753,
+    "median_abs_error": 0.5096819400787354,
+    "logloss": 0.6422699594159689
+  },
+  "closer_counts": {
+    "lstm": 147,
+    "xgboost": 3,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

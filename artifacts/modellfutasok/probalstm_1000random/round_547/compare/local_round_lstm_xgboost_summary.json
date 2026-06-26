@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-spirit-vs-heroic-bo3-NSK1XoxyhXK-sIe0204dzp/spirit-vs-heroic-m3-mirage.csv",
+  "round_num": 17,
+  "row_count": 160,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_547/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 160,
+    "positive_count": 0,
+    "negative_count": 160,
+    "mean_probability": 0.3776308320986573,
+    "first_probability": 0.4643281400203705,
+    "last_probability": 0.0087868431583046,
+    "min_probability": 0.0087868431583046,
+    "max_probability": 0.4870557487010956,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.1543049222826141,
+    "mean_abs_error": 0.3776308320986573,
+    "median_abs_error": 0.40126775205135345,
+    "logloss": 0.48633572125608404
+  },
+  "xgboost": {
+    "row_count": 160,
+    "positive_count": 0,
+    "negative_count": 160,
+    "mean_probability": 0.5199402149999515,
+    "first_probability": 0.5424700975418091,
+    "last_probability": 0.03935517743229866,
+    "min_probability": 0.038067277520895004,
+    "max_probability": 0.5759718418121338,
+    "accuracy_at_0_5": 0.08125,
+    "brier_score": 0.28556798323517707,
+    "mean_abs_error": 0.5199402149999515,
+    "median_abs_error": 0.5551661252975464,
+    "logloss": 0.7557292789955317
+  },
+  "closer_counts": {
+    "lstm": 160,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

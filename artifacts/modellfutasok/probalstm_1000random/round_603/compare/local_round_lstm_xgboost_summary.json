@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-astralis-vs-natus-vincere-bo3-4-6Sb81TUo41h9OxcK0xKz/astralis-vs-natus-vincere-m3-nuke.csv",
+  "round_num": 2,
+  "row_count": 134,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_603/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 134,
+    "positive_count": 0,
+    "negative_count": 134,
+    "mean_probability": 0.113029553786914,
+    "first_probability": 0.3257529735565185,
+    "last_probability": 0.0028535923920571,
+    "min_probability": 0.001695740269497,
+    "max_probability": 0.4158703088760376,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.034265285638231495,
+    "mean_abs_error": 0.113029553786914,
+    "median_abs_error": 0.0265051815658807,
+    "logloss": 0.1355918627651939
+  },
+  "xgboost": {
+    "row_count": 134,
+    "positive_count": 0,
+    "negative_count": 134,
+    "mean_probability": 0.13244756890822257,
+    "first_probability": 0.349043607711792,
+    "last_probability": 0.00958592351526022,
+    "min_probability": 0.004654975142329931,
+    "max_probability": 0.40668970346450806,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.04035916345686613,
+    "mean_abs_error": 0.13244756890822257,
+    "median_abs_error": 0.04415840655565262,
+    "logloss": 0.15926042614811933
+  },
+  "closer_counts": {
+    "lstm": 126,
+    "xgboost": 8,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

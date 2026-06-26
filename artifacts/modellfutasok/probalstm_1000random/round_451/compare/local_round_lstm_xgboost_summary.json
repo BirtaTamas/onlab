@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_1/blast-rivals-2025-season-1-wildcard-vs-spirit-bo3-VLdaQLy-otUvCLBOl-LFGy/wildcard-vs-spirit-m2-dust2.csv",
+  "round_num": 9,
+  "row_count": 251,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_451/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 251,
+    "positive_count": 0,
+    "negative_count": 251,
+    "mean_probability": 0.20378200984207462,
+    "first_probability": 0.4713670909404754,
+    "last_probability": 0.6254404187202454,
+    "min_probability": 0.0071223555132746,
+    "max_probability": 0.6838272213935852,
+    "accuracy_at_0_5": 0.9402390438247012,
+    "brier_score": 0.07112690199498202,
+    "mean_abs_error": 0.20378200984207462,
+    "median_abs_error": 0.1310194730758667,
+    "logloss": 0.2569704011119751
+  },
+  "xgboost": {
+    "row_count": 251,
+    "positive_count": 0,
+    "negative_count": 251,
+    "mean_probability": 0.33790895459334924,
+    "first_probability": 0.5312471389770508,
+    "last_probability": 0.7490320205688477,
+    "min_probability": 0.016939837485551834,
+    "max_probability": 0.7963468432426453,
+    "accuracy_at_0_5": 0.7888446215139442,
+    "brier_score": 0.14813273955349304,
+    "mean_abs_error": 0.33790895459334924,
+    "median_abs_error": 0.3732020854949951,
+    "logloss": 0.4606382108551456
+  },
+  "closer_counts": {
+    "lstm": 251,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

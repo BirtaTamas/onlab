@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1/blast-bounty-2025-season-1-eternal-fire-vs-fluxo-bo3-Kqy3ohBVu1ANumI6Qdn26R/eternal-fire-vs-fluxo-m2-dust2.csv",
+  "round_num": 10,
+  "row_count": 204,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_554/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 204,
+    "positive_count": 0,
+    "negative_count": 204,
+    "mean_probability": 0.1997927631817612,
+    "first_probability": 0.4673351645469665,
+    "last_probability": 0.1370473206043243,
+    "min_probability": 0.0227314233779907,
+    "max_probability": 0.4673351645469665,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.05219295178374658,
+    "mean_abs_error": 0.1997927631817612,
+    "median_abs_error": 0.16309776157140732,
+    "logloss": 0.23337590306826506
+  },
+  "xgboost": {
+    "row_count": 204,
+    "positive_count": 0,
+    "negative_count": 204,
+    "mean_probability": 0.36479633213842616,
+    "first_probability": 0.5230439901351929,
+    "last_probability": 0.21403756737709045,
+    "min_probability": 0.0894007608294487,
+    "max_probability": 0.5230439901351929,
+    "accuracy_at_0_5": 0.7990196078431373,
+    "brier_score": 0.14556149246903657,
+    "mean_abs_error": 0.36479633213842616,
+    "median_abs_error": 0.302351638674736,
+    "logloss": 0.46960865654913647
+  },
+  "closer_counts": {
+    "lstm": 204,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

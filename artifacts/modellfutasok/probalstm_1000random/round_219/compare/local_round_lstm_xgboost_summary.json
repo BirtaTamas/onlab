@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21_stage_1/esl-pro-league-season-21-stage-1-eternal-fire-vs-flyquest-bo3-bOv4otMGdpLsO1VdhzI_AV/eternal-fire-vs-flyquest-m1-inferno.csv",
+  "round_num": 10,
+  "row_count": 205,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_219/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 205,
+    "positive_count": 205,
+    "negative_count": 0,
+    "mean_probability": 0.803721657904183,
+    "first_probability": 0.5973523855209351,
+    "last_probability": 0.980346143245697,
+    "min_probability": 0.578599750995636,
+    "max_probability": 0.980346143245697,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.06233666604999093,
+    "mean_abs_error": 0.19627834209581702,
+    "median_abs_error": 0.12456941604614258,
+    "logloss": 0.23834955102269437
+  },
+  "xgboost": {
+    "row_count": 205,
+    "positive_count": 205,
+    "negative_count": 0,
+    "mean_probability": 0.7942244547169383,
+    "first_probability": 0.5036301016807556,
+    "last_probability": 0.996440589427948,
+    "min_probability": 0.4894941449165344,
+    "max_probability": 0.9965415596961975,
+    "accuracy_at_0_5": 0.9804878048780488,
+    "brier_score": 0.09155003763647332,
+    "mean_abs_error": 0.2057755452830617,
+    "median_abs_error": 0.09415954351425171,
+    "logloss": 0.27506990968578515
+  },
+  "closer_counts": {
+    "lstm": 78,
+    "xgboost": 127,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

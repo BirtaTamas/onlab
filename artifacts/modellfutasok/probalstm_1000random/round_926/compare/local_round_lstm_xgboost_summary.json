@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-spirit-vs-vitality-bo3-KtWhzrlsNkWCCS0U9BIlr3/spirit-vs-vitality-m2-nuke.csv",
+  "round_num": 24,
+  "row_count": 235,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_926/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 235,
+    "positive_count": 0,
+    "negative_count": 235,
+    "mean_probability": 0.3386392131289269,
+    "first_probability": 0.4568043053150177,
+    "last_probability": 0.0094224112108349,
+    "min_probability": 0.0022480760235339,
+    "max_probability": 0.6436893939971924,
+    "accuracy_at_0_5": 0.7914893617021277,
+    "brier_score": 0.15683235120637012,
+    "mean_abs_error": 0.3386392131289269,
+    "median_abs_error": 0.4349977374076843,
+    "logloss": 0.4566294562311958
+  },
+  "xgboost": {
+    "row_count": 235,
+    "positive_count": 0,
+    "negative_count": 235,
+    "mean_probability": 0.3595175743459704,
+    "first_probability": 0.5258654356002808,
+    "last_probability": 0.020825093612074852,
+    "min_probability": 0.015578790567815304,
+    "max_probability": 0.7275281548500061,
+    "accuracy_at_0_5": 0.7702127659574468,
+    "brier_score": 0.17166025944163885,
+    "mean_abs_error": 0.3595175743459704,
+    "median_abs_error": 0.4625723361968994,
+    "logloss": 0.49140130058807924
+  },
+  "closer_counts": {
+    "lstm": 166,
+    "xgboost": 69,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

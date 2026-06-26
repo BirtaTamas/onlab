@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-gamerlegion-vs-the-mongolz-bo3-bupFip4WbObttNLCPYz_Zo/gamerlegion-vs-the-mongolz-m2-inferno.csv",
+  "round_num": 1,
+  "row_count": 181,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_689/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 181,
+    "positive_count": 0,
+    "negative_count": 181,
+    "mean_probability": 0.23961016158084514,
+    "first_probability": 0.509768545627594,
+    "last_probability": 0.0805914252996444,
+    "min_probability": 0.0172619055956602,
+    "max_probability": 0.5433757901191711,
+    "accuracy_at_0_5": 0.6353591160220995,
+    "brier_score": 0.10516555492179701,
+    "mean_abs_error": 0.23961016158084514,
+    "median_abs_error": 0.0942762047052383,
+    "logloss": 0.32138117720168646
+  },
+  "xgboost": {
+    "row_count": 181,
+    "positive_count": 0,
+    "negative_count": 181,
+    "mean_probability": 0.2487607124513684,
+    "first_probability": 0.4933698773384094,
+    "last_probability": 0.11967990547418594,
+    "min_probability": 0.024786096066236496,
+    "max_probability": 0.5553898811340332,
+    "accuracy_at_0_5": 0.994475138121547,
+    "brier_score": 0.09662717788745673,
+    "mean_abs_error": 0.2487607124513684,
+    "median_abs_error": 0.14472609758377075,
+    "logloss": 0.32009217449956184
+  },
+  "closer_counts": {
+    "lstm": 101,
+    "xgboost": 80,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

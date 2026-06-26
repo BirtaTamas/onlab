@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21/esl-pro-league-season-21-natus-vincere-vs-tyloo-bo3-u9zlDGjnIy0eSohnO5P-Xx/natus-vincere-vs-tyloo-m3-ancient.csv",
+  "round_num": 18,
+  "row_count": 245,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_60/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 245,
+    "positive_count": 0,
+    "negative_count": 245,
+    "mean_probability": 0.32625658298481486,
+    "first_probability": 0.3806037306785583,
+    "last_probability": 0.0178987439721822,
+    "min_probability": 0.0178046897053718,
+    "max_probability": 0.8321775794029236,
+    "accuracy_at_0_5": 0.9142857142857143,
+    "brier_score": 0.13951204817246446,
+    "mean_abs_error": 0.32625658298481486,
+    "median_abs_error": 0.3375149369239807,
+    "logloss": 0.4446651858535776
+  },
+  "xgboost": {
+    "row_count": 245,
+    "positive_count": 0,
+    "negative_count": 245,
+    "mean_probability": 0.45027760200354516,
+    "first_probability": 0.33083635568618774,
+    "last_probability": 0.05634486302733421,
+    "min_probability": 0.05634486302733421,
+    "max_probability": 0.7509611248970032,
+    "accuracy_at_0_5": 0.5877551020408164,
+    "brier_score": 0.2211695183112526,
+    "mean_abs_error": 0.45027760200354516,
+    "median_abs_error": 0.473371684551239,
+    "logloss": 0.6299481668672269
+  },
+  "closer_counts": {
+    "lstm": 209,
+    "xgboost": 36,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

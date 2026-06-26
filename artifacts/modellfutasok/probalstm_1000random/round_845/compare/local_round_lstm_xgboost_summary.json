@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_austin_major/blasttv-austin-major-2025-legacy-vs-lynn-vision-bo3-80tf5tBYONxHYQuFp0AoSQ/legacy-vs-lynn-vision-m3-nuke.csv",
+  "round_num": 13,
+  "row_count": 110,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_845/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 110,
+    "positive_count": 110,
+    "negative_count": 0,
+    "mean_probability": 0.6213488513773138,
+    "first_probability": 0.514769971370697,
+    "last_probability": 0.6037932634353638,
+    "min_probability": 0.3889133036136627,
+    "max_probability": 0.8531138300895691,
+    "accuracy_at_0_5": 0.9454545454545454,
+    "brier_score": 0.15805962904735055,
+    "mean_abs_error": 0.37865114862268623,
+    "median_abs_error": 0.39245814085006714,
+    "logloss": 0.49445935349864384
+  },
+  "xgboost": {
+    "row_count": 110,
+    "positive_count": 110,
+    "negative_count": 0,
+    "mean_probability": 0.7665950547565114,
+    "first_probability": 0.5469597578048706,
+    "last_probability": 0.8241790533065796,
+    "min_probability": 0.5249045491218567,
+    "max_probability": 0.9748690724372864,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.07639756141243326,
+    "mean_abs_error": 0.23340494524348865,
+    "median_abs_error": 0.1758209466934204,
+    "logloss": 0.28663668437326023
+  },
+  "closer_counts": {
+    "lstm": 0,
+    "xgboost": 110,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

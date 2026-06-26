@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21_stage_1/esl-pro-league-season-21-stage-1-heroic-vs-nemiga-bo3-HBPh0RFmxqP1tE9QMaq3nA/heroic-vs-nemiga-m2-mirage.csv",
+  "round_num": 14,
+  "row_count": 164,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_849/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 164,
+    "positive_count": 164,
+    "negative_count": 0,
+    "mean_probability": 0.4690882857525494,
+    "first_probability": 0.2335725277662277,
+    "last_probability": 0.97260183095932,
+    "min_probability": 0.0992384627461433,
+    "max_probability": 0.97260183095932,
+    "accuracy_at_0_5": 0.4329268292682927,
+    "brier_score": 0.35951575975604644,
+    "mean_abs_error": 0.5309117142474507,
+    "median_abs_error": 0.6126880645751953,
+    "logloss": 0.9667178106454803
+  },
+  "xgboost": {
+    "row_count": 164,
+    "positive_count": 164,
+    "negative_count": 0,
+    "mean_probability": 0.4994908474930903,
+    "first_probability": 0.31391051411628723,
+    "last_probability": 0.990139901638031,
+    "min_probability": 0.2665957510471344,
+    "max_probability": 0.990139901638031,
+    "accuracy_at_0_5": 0.4329268292682927,
+    "brier_score": 0.30197900623078777,
+    "mean_abs_error": 0.5005091525069097,
+    "median_abs_error": 0.5786182284355164,
+    "logloss": 0.7975675701617251
+  },
+  "closer_counts": {
+    "lstm": 51,
+    "xgboost": 113,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

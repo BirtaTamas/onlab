@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_chengdu/iem-chengdu-2025-spirit-vs-the-mongolz-bo3-Ep_2Z5_t0VWYbCORdH0Tlg/spirit-vs-the-mongolz-m3-mirage.csv",
+  "round_num": 19,
+  "row_count": 182,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_923/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 182,
+    "positive_count": 182,
+    "negative_count": 0,
+    "mean_probability": 0.8842418691614172,
+    "first_probability": 0.6695530414581299,
+    "last_probability": 0.9848698377609252,
+    "min_probability": 0.6695530414581299,
+    "max_probability": 0.9849900603294371,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.02535438739505242,
+    "mean_abs_error": 0.1157581308385828,
+    "median_abs_error": 0.05131152272224421,
+    "logloss": 0.13117053890758384
+  },
+  "xgboost": {
+    "row_count": 182,
+    "positive_count": 182,
+    "negative_count": 0,
+    "mean_probability": 0.8653134022440229,
+    "first_probability": 0.6525900363922119,
+    "last_probability": 0.9974268078804016,
+    "min_probability": 0.6424640417098999,
+    "max_probability": 0.997434675693512,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.040724478130748816,
+    "mean_abs_error": 0.13468659775597708,
+    "median_abs_error": 0.057356566190719604,
+    "logloss": 0.1609611366163253
+  },
+  "closer_counts": {
+    "lstm": 73,
+    "xgboost": 109,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

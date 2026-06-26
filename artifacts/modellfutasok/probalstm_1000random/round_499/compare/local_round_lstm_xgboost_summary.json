@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21/esl-pro-league-season-21-falcons-vs-3dmax-bo3-XHM3Ovc8L9TfLFTYQFrGdT/falcons-vs-3dmax-m3-dust2.csv",
+  "round_num": 5,
+  "row_count": 277,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_499/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 277,
+    "positive_count": 0,
+    "negative_count": 277,
+    "mean_probability": 0.16842089055882703,
+    "first_probability": 0.4976221024990082,
+    "last_probability": 0.0006224728422239,
+    "min_probability": 0.0006217058980837,
+    "max_probability": 0.5264517664909363,
+    "accuracy_at_0_5": 0.9891696750902527,
+    "brier_score": 0.051885635979406104,
+    "mean_abs_error": 0.16842089055882703,
+    "median_abs_error": 0.1595560014247894,
+    "logloss": 0.2028313401313677
+  },
+  "xgboost": {
+    "row_count": 277,
+    "positive_count": 0,
+    "negative_count": 277,
+    "mean_probability": 0.19633612757219196,
+    "first_probability": 0.4584946036338806,
+    "last_probability": 0.002888575429096818,
+    "min_probability": 0.002888575429096818,
+    "max_probability": 0.5276833772659302,
+    "accuracy_at_0_5": 0.9927797833935018,
+    "brier_score": 0.06059392775810319,
+    "mean_abs_error": 0.19633612757219196,
+    "median_abs_error": 0.2700795531272888,
+    "logloss": 0.2360279146777827
+  },
+  "closer_counts": {
+    "lstm": 210,
+    "xgboost": 67,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

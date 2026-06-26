@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_austin_major_stage_2/blasttv-austin-major-2025-stage-2-og-vs-falcons-bo3-Q3yO3LacAwamKdCbguw7-l/og-vs-falcons-m1-dust2.csv",
+  "round_num": 9,
+  "row_count": 283,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_267/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 283,
+    "positive_count": 0,
+    "negative_count": 283,
+    "mean_probability": 0.25283165848912675,
+    "first_probability": 0.4832810163497925,
+    "last_probability": 0.0181594062596559,
+    "min_probability": 0.0018122654873877,
+    "max_probability": 0.4832810163497925,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0962640831374608,
+    "mean_abs_error": 0.25283165848912675,
+    "median_abs_error": 0.3424361646175384,
+    "logloss": 0.3192094068769571
+  },
+  "xgboost": {
+    "row_count": 283,
+    "positive_count": 0,
+    "negative_count": 283,
+    "mean_probability": 0.34377617347169365,
+    "first_probability": 0.5046886801719666,
+    "last_probability": 0.026730867102742195,
+    "min_probability": 0.009433246217668056,
+    "max_probability": 0.5206388235092163,
+    "accuracy_at_0_5": 0.4840989399293286,
+    "brier_score": 0.1660270651487442,
+    "mean_abs_error": 0.34377617347169365,
+    "median_abs_error": 0.5015006065368652,
+    "logloss": 0.472260295807176
+  },
+  "closer_counts": {
+    "lstm": 283,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

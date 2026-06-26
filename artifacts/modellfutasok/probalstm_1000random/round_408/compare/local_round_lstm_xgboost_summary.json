@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-big-vs-furia-bo3-8LyYppfzx0M6KmNUlhRuUi/big-vs-furia-m1-inferno.csv",
+  "round_num": 15,
+  "row_count": 127,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_408/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 127,
+    "positive_count": 0,
+    "negative_count": 127,
+    "mean_probability": 0.12370098522482953,
+    "first_probability": 0.3772871196269989,
+    "last_probability": 0.0020753892604261,
+    "min_probability": 0.0016085238894447,
+    "max_probability": 0.3772871196269989,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.030683360996024478,
+    "mean_abs_error": 0.12370098522482953,
+    "median_abs_error": 0.0607490874826908,
+    "logloss": 0.14304944752887586
+  },
+  "xgboost": {
+    "row_count": 127,
+    "positive_count": 0,
+    "negative_count": 127,
+    "mean_probability": 0.22073726306896746,
+    "first_probability": 0.42195796966552734,
+    "last_probability": 0.012797137722373009,
+    "min_probability": 0.01048276387155056,
+    "max_probability": 0.42195796966552734,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.06961245882612084,
+    "mean_abs_error": 0.22073726306896746,
+    "median_abs_error": 0.22086848318576813,
+    "logloss": 0.2672019158661416
+  },
+  "closer_counts": {
+    "lstm": 127,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_katowice/iem-katowice-2025-falcons-vs-g2-bo3-Xf_UKx9fB2btv0Vy_VBVUC/falcons-vs-g2-m3-mirage.csv",
+  "round_num": 8,
+  "row_count": 140,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_68/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 140,
+    "positive_count": 0,
+    "negative_count": 140,
+    "mean_probability": 0.2636756270816217,
+    "first_probability": 0.6524842977523804,
+    "last_probability": 0.001592933665961,
+    "min_probability": 0.0013109190622344,
+    "max_probability": 0.7176328301429749,
+    "accuracy_at_0_5": 0.6428571428571429,
+    "brier_score": 0.1615606793684385,
+    "mean_abs_error": 0.2636756270816217,
+    "median_abs_error": 0.022254342213273,
+    "logloss": 0.4151004390597514
+  },
+  "xgboost": {
+    "row_count": 140,
+    "positive_count": 0,
+    "negative_count": 140,
+    "mean_probability": 0.28684692906681447,
+    "first_probability": 0.6150259971618652,
+    "last_probability": 0.014440244063735008,
+    "min_probability": 0.004805244971066713,
+    "max_probability": 0.6412329077720642,
+    "accuracy_at_0_5": 0.6357142857142857,
+    "brier_score": 0.1595320873153296,
+    "mean_abs_error": 0.28684692906681447,
+    "median_abs_error": 0.17968042939901352,
+    "logloss": 0.4286845186555369
+  },
+  "closer_counts": {
+    "lstm": 105,
+    "xgboost": 35,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "lstm"
+}

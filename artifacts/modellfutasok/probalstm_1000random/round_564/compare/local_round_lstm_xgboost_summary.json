@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1/blast-bounty-2025-season-1-flyquest-vs-spirit-bo3-NmwBJVzYbgyZgcQrbNESHr/flyquest-vs-spirit-m1-anubis.csv",
+  "round_num": 14,
+  "row_count": 130,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_564/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 130,
+    "positive_count": 0,
+    "negative_count": 130,
+    "mean_probability": 0.022692331129040233,
+    "first_probability": 0.0543802231550216,
+    "last_probability": 0.0262136161327362,
+    "min_probability": 0.0026395944878458,
+    "max_probability": 0.1966166943311691,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0014182224707693447,
+    "mean_abs_error": 0.022692331129040233,
+    "median_abs_error": 0.01873296406120055,
+    "logloss": 0.02346613541701791
+  },
+  "xgboost": {
+    "row_count": 130,
+    "positive_count": 0,
+    "negative_count": 130,
+    "mean_probability": 0.029995498677285817,
+    "first_probability": 0.025603866204619408,
+    "last_probability": 0.08735091984272003,
+    "min_probability": 0.013135894201695919,
+    "max_probability": 0.18546707928180695,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0018330162889198002,
+    "mean_abs_error": 0.029995498677285817,
+    "median_abs_error": 0.0235157273709774,
+    "logloss": 0.03098216034742151
+  },
+  "closer_counts": {
+    "lstm": 108,
+    "xgboost": 22,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

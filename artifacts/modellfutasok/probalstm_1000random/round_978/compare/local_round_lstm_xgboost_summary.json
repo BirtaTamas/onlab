@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-heroic-vs-aurora-bo3-QigxwcikBDdlIOkrYDpY7y/heroic-vs-aurora-m2-dust2.csv",
+  "round_num": 21,
+  "row_count": 140,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_978/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 140,
+    "positive_count": 0,
+    "negative_count": 140,
+    "mean_probability": 0.12942004678770896,
+    "first_probability": 0.5904813408851624,
+    "last_probability": 0.0952982679009437,
+    "min_probability": 0.0108264070004224,
+    "max_probability": 0.6303673386573792,
+    "accuracy_at_0_5": 0.85,
+    "brier_score": 0.057111298256616885,
+    "mean_abs_error": 0.12942004678770896,
+    "median_abs_error": 0.02320830989629025,
+    "logloss": 0.17661788901527314
+  },
+  "xgboost": {
+    "row_count": 140,
+    "positive_count": 0,
+    "negative_count": 140,
+    "mean_probability": 0.12247409297020308,
+    "first_probability": 0.5121161937713623,
+    "last_probability": 0.022971954196691513,
+    "min_probability": 0.008253030478954315,
+    "max_probability": 0.5146355628967285,
+    "accuracy_at_0_5": 0.85,
+    "brier_score": 0.04630471201365143,
+    "mean_abs_error": 0.12247409297020308,
+    "median_abs_error": 0.02248219307512045,
+    "logloss": 0.1572117053328056
+  },
+  "closer_counts": {
+    "lstm": 35,
+    "xgboost": 105,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

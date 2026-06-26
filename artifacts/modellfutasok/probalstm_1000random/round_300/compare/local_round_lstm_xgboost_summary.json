@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_rivals_season_2/blast-rivals-2025-season-2-furia-vs-vitality-bo3-3MYCYJWfx_8le7ueost7BH/furia-vs-vitality-m1-nuke.csv",
+  "round_num": 14,
+  "row_count": 175,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_300/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 175,
+    "positive_count": 175,
+    "negative_count": 0,
+    "mean_probability": 0.6889943293162755,
+    "first_probability": 0.5600804090499878,
+    "last_probability": 0.981226921081543,
+    "min_probability": 0.4840990602970123,
+    "max_probability": 0.9835083484649658,
+    "accuracy_at_0_5": 0.9885714285714285,
+    "brier_score": 0.13189839904434592,
+    "mean_abs_error": 0.31100567068372453,
+    "median_abs_error": 0.41842538118362427,
+    "logloss": 0.4060216152653791
+  },
+  "xgboost": {
+    "row_count": 175,
+    "positive_count": 175,
+    "negative_count": 0,
+    "mean_probability": 0.7630160999298096,
+    "first_probability": 0.6552826762199402,
+    "last_probability": 0.9964975714683533,
+    "min_probability": 0.6284207701683044,
+    "max_probability": 0.996745228767395,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0806242836171421,
+    "mean_abs_error": 0.23698390007019043,
+    "median_abs_error": 0.3474798798561096,
+    "logloss": 0.2901962972330291
+  },
+  "closer_counts": {
+    "lstm": 0,
+    "xgboost": 175,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-furia-vs-fluxo-bo3-cy88FeSpEinhT8XDRxQGHo/furia-vs-fluxo-m2-mirage.csv",
+  "round_num": 10,
+  "row_count": 235,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_144/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 235,
+    "positive_count": 0,
+    "negative_count": 235,
+    "mean_probability": 0.1732873610478449,
+    "first_probability": 0.5244737267494202,
+    "last_probability": 0.005339169409126,
+    "min_probability": 0.0013165709096938,
+    "max_probability": 0.5606218576431274,
+    "accuracy_at_0_5": 0.7659574468085106,
+    "brier_score": 0.07780676137105219,
+    "mean_abs_error": 0.1732873610478449,
+    "median_abs_error": 0.0177441854029893,
+    "logloss": 0.23407146216079833
+  },
+  "xgboost": {
+    "row_count": 235,
+    "positive_count": 0,
+    "negative_count": 235,
+    "mean_probability": 0.1923468990409945,
+    "first_probability": 0.503683865070343,
+    "last_probability": 0.015934862196445465,
+    "min_probability": 0.01044545043259859,
+    "max_probability": 0.5228732228279114,
+    "accuracy_at_0_5": 0.7787234042553192,
+    "brier_score": 0.07582698360760462,
+    "mean_abs_error": 0.1923468990409945,
+    "median_abs_error": 0.11941587924957275,
+    "logloss": 0.24905585837438415
+  },
+  "closer_counts": {
+    "lstm": 159,
+    "xgboost": 76,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "lstm"
+}

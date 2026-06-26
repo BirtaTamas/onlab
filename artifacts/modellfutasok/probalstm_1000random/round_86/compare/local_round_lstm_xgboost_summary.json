@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-flyquest-vs-nomads-bo3-rjDbNQ6hoJ50qwkbItjOHm/flyquest-vs-nomads-m2-mirage.csv",
+  "round_num": 7,
+  "row_count": 112,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_86/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 112,
+    "positive_count": 112,
+    "negative_count": 0,
+    "mean_probability": 0.8943274654448032,
+    "first_probability": 0.6367375254631042,
+    "last_probability": 0.9830026030540466,
+    "min_probability": 0.6226300597190857,
+    "max_probability": 0.9833428859710692,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.025206758142998664,
+    "mean_abs_error": 0.10567253455519676,
+    "median_abs_error": 0.05249622464179998,
+    "logloss": 0.1218153447802339
+  },
+  "xgboost": {
+    "row_count": 112,
+    "positive_count": 112,
+    "negative_count": 0,
+    "mean_probability": 0.8888257273605892,
+    "first_probability": 0.557898223400116,
+    "last_probability": 0.9973360896110535,
+    "min_probability": 0.557898223400116,
+    "max_probability": 0.9973360896110535,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.036389692001767164,
+    "mean_abs_error": 0.11117427263941083,
+    "median_abs_error": 0.04447808861732483,
+    "logloss": 0.1364769015076059
+  },
+  "closer_counts": {
+    "lstm": 31,
+    "xgboost": 81,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

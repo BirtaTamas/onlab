@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_2/blast-bounty-2025-season-2-fnatic-vs-legacy-bo3-XoJZ8zL16kSaGnHRZrLL4s/legacy-vs-fnatic-m1-ancient.csv",
+  "round_num": 4,
+  "row_count": 137,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_924/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 137,
+    "positive_count": 137,
+    "negative_count": 0,
+    "mean_probability": 0.6642671549407235,
+    "first_probability": 0.752791166305542,
+    "last_probability": 0.5087042450904846,
+    "min_probability": 0.5060723423957825,
+    "max_probability": 0.8887271285057068,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.12240163565171142,
+    "mean_abs_error": 0.3357328450592765,
+    "median_abs_error": 0.3052123188972473,
+    "logloss": 0.41999322244562975
+  },
+  "xgboost": {
+    "row_count": 137,
+    "positive_count": 137,
+    "negative_count": 0,
+    "mean_probability": 0.7129348834065625,
+    "first_probability": 0.7190185189247131,
+    "last_probability": 0.8268837928771973,
+    "min_probability": 0.522546112537384,
+    "max_probability": 0.941858172416687,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.08785654245523539,
+    "mean_abs_error": 0.2870651165934375,
+    "median_abs_error": 0.28656071424484253,
+    "logloss": 0.3436470220263814
+  },
+  "closer_counts": {
+    "lstm": 51,
+    "xgboost": 86,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

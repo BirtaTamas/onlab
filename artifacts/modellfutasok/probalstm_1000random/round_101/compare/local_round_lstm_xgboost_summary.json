@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21/esl-pro-league-season-21-mouz-vs-falcons-bo3-yayytstbo8IxTFlUpfbUPR/mouz-vs-falcons-m1-train.csv",
+  "round_num": 3,
+  "row_count": 179,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_101/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 179,
+    "positive_count": 0,
+    "negative_count": 179,
+    "mean_probability": 0.04496474669434584,
+    "first_probability": 0.0544259250164032,
+    "last_probability": 0.0042077624239027,
+    "min_probability": 0.0042077624239027,
+    "max_probability": 0.128762885928154,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.002650549778424034,
+    "mean_abs_error": 0.04496474669434584,
+    "median_abs_error": 0.0449028611183166,
+    "logloss": 0.04635851278574596
+  },
+  "xgboost": {
+    "row_count": 179,
+    "positive_count": 0,
+    "negative_count": 179,
+    "mean_probability": 0.0653212082015569,
+    "first_probability": 0.06194671615958214,
+    "last_probability": 0.005292545538395643,
+    "min_probability": 0.005131247919052839,
+    "max_probability": 0.13992232084274292,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.004871838119699867,
+    "mean_abs_error": 0.0653212082015569,
+    "median_abs_error": 0.06483577936887741,
+    "logloss": 0.06790869275989049
+  },
+  "closer_counts": {
+    "lstm": 168,
+    "xgboost": 11,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

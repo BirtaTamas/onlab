@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/iem_chengdu/iem-chengdu-2025-tyloo-vs-falcons-bo3-MBKGKnSCeuy54EHzS5mmW8/tyloo-vs-falcons-m2-ancient.csv",
+  "round_num": 9,
+  "row_count": 252,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_100random/round_22/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 252,
+    "positive_count": 252,
+    "negative_count": 0,
+    "mean_probability": 0.1883803057264433,
+    "first_probability": 0.2134823948144912,
+    "last_probability": 0.9278355836868286,
+    "min_probability": 0.0027977416757494,
+    "max_probability": 0.9348917603492736,
+    "accuracy_at_0_5": 0.1349206349206349,
+    "brier_score": 0.7265315669959725,
+    "mean_abs_error": 0.8116196942735567,
+    "median_abs_error": 0.8700491189956665,
+    "logloss": 2.8373146439336527
+  },
+  "xgboost": {
+    "row_count": 252,
+    "positive_count": 252,
+    "negative_count": 0,
+    "mean_probability": 0.2886052608105635,
+    "first_probability": 0.2963999807834625,
+    "last_probability": 0.9440134167671204,
+    "min_probability": 0.02561955712735653,
+    "max_probability": 0.9440134167671204,
+    "accuracy_at_0_5": 0.15079365079365079,
+    "brier_score": 0.5731643138800409,
+    "mean_abs_error": 0.7113947391894365,
+    "median_abs_error": 0.7167114019393921,
+    "logloss": 1.6315568933648354
+  },
+  "closer_counts": {
+    "lstm": 2,
+    "xgboost": 250,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

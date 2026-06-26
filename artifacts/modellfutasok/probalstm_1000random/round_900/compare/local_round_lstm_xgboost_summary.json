@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esports_world_cup/esports-world-cup-2025-g2-vs-falcons-bo3-VnJ8NRf6cDNnH9OuqiscGr/g2-vs-falcons-m1-ancient.csv",
+  "round_num": 16,
+  "row_count": 101,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_900/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 101,
+    "positive_count": 101,
+    "negative_count": 0,
+    "mean_probability": 0.5359792681318698,
+    "first_probability": 0.5339157581329346,
+    "last_probability": 0.9217510223388672,
+    "min_probability": 0.2272652089595794,
+    "max_probability": 0.9257327914237976,
+    "accuracy_at_0_5": 0.5643564356435643,
+    "brier_score": 0.24025327967061075,
+    "mean_abs_error": 0.46402073186813014,
+    "median_abs_error": 0.486655592918396,
+    "logloss": 0.6645704474875544
+  },
+  "xgboost": {
+    "row_count": 101,
+    "positive_count": 101,
+    "negative_count": 0,
+    "mean_probability": 0.5936084849999683,
+    "first_probability": 0.4982917606830597,
+    "last_probability": 0.9801145195960999,
+    "min_probability": 0.48766711354255676,
+    "max_probability": 0.9843549728393555,
+    "accuracy_at_0_5": 0.8415841584158416,
+    "brier_score": 0.19036497228535562,
+    "mean_abs_error": 0.40639151500003173,
+    "median_abs_error": 0.48816603422164917,
+    "logloss": 0.551038299588855
+  },
+  "closer_counts": {
+    "lstm": 30,
+    "xgboost": 71,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

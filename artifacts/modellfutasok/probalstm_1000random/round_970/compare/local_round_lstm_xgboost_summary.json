@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-rare-atom-vs-nomads-bo3-2A6RLk5ZJnfAwsBhy_Qbbv/rare-atom-vs-nomads-m1-mirage.csv",
+  "round_num": 13,
+  "row_count": 138,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_970/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 138,
+    "positive_count": 0,
+    "negative_count": 138,
+    "mean_probability": 0.1141315779743203,
+    "first_probability": 0.5049317479133606,
+    "last_probability": 0.0372300706803798,
+    "min_probability": 0.0024140037130564,
+    "max_probability": 0.512528121471405,
+    "accuracy_at_0_5": 0.8840579710144928,
+    "brier_score": 0.048105616812522234,
+    "mean_abs_error": 0.1141315779743203,
+    "median_abs_error": 0.0098030418157577,
+    "logloss": 0.15014474841858522
+  },
+  "xgboost": {
+    "row_count": 138,
+    "positive_count": 0,
+    "negative_count": 138,
+    "mean_probability": 0.16442246957128678,
+    "first_probability": 0.510001540184021,
+    "last_probability": 0.04986036941409111,
+    "min_probability": 0.008408785797655582,
+    "max_probability": 0.5346192717552185,
+    "accuracy_at_0_5": 0.782608695652174,
+    "brier_score": 0.06922627199273595,
+    "mean_abs_error": 0.16442246957128678,
+    "median_abs_error": 0.02658269554376602,
+    "logloss": 0.2176035427145086
+  },
+  "closer_counts": {
+    "lstm": 127,
+    "xgboost": 11,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

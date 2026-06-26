@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_bounty_season_1_finals/blast-bounty-2025-season-1-finals-spirit-vs-heroic-bo3-8PNegF4uXnTykkGvqzloIi/spirit-vs-heroic-m2-nuke.csv",
+  "round_num": 13,
+  "row_count": 139,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_159/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 139,
+    "positive_count": 139,
+    "negative_count": 0,
+    "mean_probability": 0.5177878382743049,
+    "first_probability": 0.5116807818412781,
+    "last_probability": 0.6155669689178467,
+    "min_probability": 0.0268921926617622,
+    "max_probability": 0.8581113219261169,
+    "accuracy_at_0_5": 0.7697841726618705,
+    "brier_score": 0.26645315101394906,
+    "mean_abs_error": 0.4822121617256952,
+    "median_abs_error": 0.48184019327163696,
+    "logloss": 0.7889918519030288
+  },
+  "xgboost": {
+    "row_count": 139,
+    "positive_count": 139,
+    "negative_count": 0,
+    "mean_probability": 0.6950940923939506,
+    "first_probability": 0.4935070872306824,
+    "last_probability": 0.9173492789268494,
+    "min_probability": 0.12959419190883636,
+    "max_probability": 0.9623534679412842,
+    "accuracy_at_0_5": 0.7050359712230215,
+    "brier_score": 0.14626816749863605,
+    "mean_abs_error": 0.3049059076060494,
+    "median_abs_error": 0.30307483673095703,
+    "logloss": 0.4370454611438148
+  },
+  "closer_counts": {
+    "lstm": 34,
+    "xgboost": 105,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}

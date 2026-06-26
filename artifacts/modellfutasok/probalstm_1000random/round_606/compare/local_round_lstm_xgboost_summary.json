@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_21_stage_1/esl-pro-league-season-21-stage-1-lynn-vision-vs-housebets-bo3-GrWDn9AJOxYQcZMXkSI-Tw/lynn-vision-vs-housebets-m1-inferno.csv",
+  "round_num": 9,
+  "row_count": 235,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_606/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 235,
+    "positive_count": 235,
+    "negative_count": 0,
+    "mean_probability": 0.6006539613008499,
+    "first_probability": 0.6565417647361755,
+    "last_probability": 0.8784648776054382,
+    "min_probability": 0.1828706711530685,
+    "max_probability": 0.8926987648010254,
+    "accuracy_at_0_5": 0.8468085106382979,
+    "brier_score": 0.17650460111960162,
+    "mean_abs_error": 0.3993460386991501,
+    "median_abs_error": 0.3538386821746826,
+    "logloss": 0.5412087475555116
+  },
+  "xgboost": {
+    "row_count": 235,
+    "positive_count": 235,
+    "negative_count": 0,
+    "mean_probability": 0.5392862136059619,
+    "first_probability": 0.6353113651275635,
+    "last_probability": 0.8916993141174316,
+    "min_probability": 0.20174117386341095,
+    "max_probability": 0.8916993141174316,
+    "accuracy_at_0_5": 0.6936170212765957,
+    "brier_score": 0.23528013496349834,
+    "mean_abs_error": 0.4607137863940381,
+    "median_abs_error": 0.3974013924598694,
+    "logloss": 0.6675262550683011
+  },
+  "closer_counts": {
+    "lstm": 200,
+    "xgboost": 35,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

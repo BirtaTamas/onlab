@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22_stage_1/esl-pro-league-season-22-stage-1-astralis-vs-ence-bo3-avzZyhQ46OR9GyYE_6NeM7/astralis-vs-ence-m3-overpass.csv",
+  "round_num": 10,
+  "row_count": 151,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_772/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 151,
+    "positive_count": 151,
+    "negative_count": 0,
+    "mean_probability": 0.6626358999321792,
+    "first_probability": 0.6233814358711243,
+    "last_probability": 0.8781655430793762,
+    "min_probability": 0.3786288201808929,
+    "max_probability": 0.9519802331924438,
+    "accuracy_at_0_5": 0.7549668874172185,
+    "brier_score": 0.14106439644202376,
+    "mean_abs_error": 0.33736410006782075,
+    "median_abs_error": 0.3435376286506653,
+    "logloss": 0.44352035711128385
+  },
+  "xgboost": {
+    "row_count": 151,
+    "positive_count": 151,
+    "negative_count": 0,
+    "mean_probability": 0.6390550854979762,
+    "first_probability": 0.614353597164154,
+    "last_probability": 0.9286972284317017,
+    "min_probability": 0.32898905873298645,
+    "max_probability": 0.9863878488540649,
+    "accuracy_at_0_5": 0.6291390728476821,
+    "brier_score": 0.1757552960264349,
+    "mean_abs_error": 0.3609449145020239,
+    "median_abs_error": 0.39165008068084717,
+    "logloss": 0.5055980189230223
+  },
+  "closer_counts": {
+    "lstm": 99,
+    "xgboost": 52,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/asian_champions_league/hero-esports-asian-champions-league-2025-lynn-vision-vs-tyloo-bo3-tXRL8tbpb2Kb27VbUgWfK1/lynn-vision-vs-tyloo-m2-ancient.csv",
+  "round_num": 11,
+  "row_count": 173,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_129/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 173,
+    "positive_count": 173,
+    "negative_count": 0,
+    "mean_probability": 0.7132069819924459,
+    "first_probability": 0.6024665236473083,
+    "last_probability": 0.958685576915741,
+    "min_probability": 0.5949476957321167,
+    "max_probability": 0.958685576915741,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.0901913337619967,
+    "mean_abs_error": 0.2867930180075541,
+    "median_abs_error": 0.30713045597076416,
+    "logloss": 0.3454762324355702
+  },
+  "xgboost": {
+    "row_count": 173,
+    "positive_count": 173,
+    "negative_count": 0,
+    "mean_probability": 0.6598055672783383,
+    "first_probability": 0.5558414459228516,
+    "last_probability": 0.9870710968971252,
+    "min_probability": 0.5199968814849854,
+    "max_probability": 0.9870710968971252,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.1298968210721171,
+    "mean_abs_error": 0.3401944327216617,
+    "median_abs_error": 0.3836634159088135,
+    "logloss": 0.4308661710868238
+  },
+  "closer_counts": {
+    "lstm": 128,
+    "xgboost": 45,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

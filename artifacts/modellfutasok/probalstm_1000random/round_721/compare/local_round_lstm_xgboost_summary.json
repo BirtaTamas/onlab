@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/esl_pro_league_season_22/esl-pro-league-season-22-aurora-vs-faze-bo3-ZgdBOa3Yi0KCkwa_Ap1ef3/aurora-vs-faze-m2-train.csv",
+  "round_num": 10,
+  "row_count": 154,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_721/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 154,
+    "positive_count": 0,
+    "negative_count": 154,
+    "mean_probability": 0.4845740643735104,
+    "first_probability": 0.4535971581935882,
+    "last_probability": 0.0037395216058939,
+    "min_probability": 0.0035681773442775,
+    "max_probability": 0.6460855007171631,
+    "accuracy_at_0_5": 0.3051948051948052,
+    "brier_score": 0.2594662593167233,
+    "mean_abs_error": 0.4845740643735104,
+    "median_abs_error": 0.5494329035282135,
+    "logloss": 0.697504940956271
+  },
+  "xgboost": {
+    "row_count": 154,
+    "positive_count": 0,
+    "negative_count": 154,
+    "mean_probability": 0.6438742757037088,
+    "first_probability": 0.5473504662513733,
+    "last_probability": 0.07352851331233978,
+    "min_probability": 0.06586329638957977,
+    "max_probability": 0.7840903401374817,
+    "accuracy_at_0_5": 0.15584415584415584,
+    "brier_score": 0.4505654887908992,
+    "mean_abs_error": 0.6438742757037088,
+    "median_abs_error": 0.7413558661937714,
+    "logloss": 1.1292373761153531
+  },
+  "closer_counts": {
+    "lstm": 154,
+    "xgboost": 0,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

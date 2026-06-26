@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_open_london/blast-open-london-2025-g2-vs-liquid-bo3-w6HylYj4nF7GNnrWujmZUZ/g2-vs-liquid-m2-inferno.csv",
+  "round_num": 15,
+  "row_count": 164,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_766/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 164,
+    "positive_count": 164,
+    "negative_count": 0,
+    "mean_probability": 0.5706040194121803,
+    "first_probability": 0.5340849161148071,
+    "last_probability": 0.4879845082759857,
+    "min_probability": 0.2614269852638244,
+    "max_probability": 0.8471196293830872,
+    "accuracy_at_0_5": 0.9573170731707317,
+    "brier_score": 0.18731460099532407,
+    "mean_abs_error": 0.42939598058781975,
+    "median_abs_error": 0.4334135055541992,
+    "logloss": 0.5658055453563523
+  },
+  "xgboost": {
+    "row_count": 164,
+    "positive_count": 164,
+    "negative_count": 0,
+    "mean_probability": 0.43627747257308264,
+    "first_probability": 0.4272884130477905,
+    "last_probability": 0.6416935324668884,
+    "min_probability": 0.12592138350009918,
+    "max_probability": 0.8566617965698242,
+    "accuracy_at_0_5": 0.03048780487804878,
+    "brier_score": 0.32222405428904216,
+    "mean_abs_error": 0.5637225274269174,
+    "median_abs_error": 0.5782267451286316,
+    "logloss": 0.8406413569080565
+  },
+  "closer_counts": {
+    "lstm": 161,
+    "xgboost": 3,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "lstm",
+  "winner_by_brier": "lstm",
+  "winner_by_logloss": "lstm"
+}

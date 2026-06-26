@@ -1,0 +1,45 @@
+{
+  "csv_path": "processed_full/blast_open_lisbon/blast-open-lisbon-2025-eternal-fire-vs-natus-vincere-bo3-TFptrqwLQ_nOvi5zixIc9R/eternal-fire-vs-natus-vincere-m2-dust2.csv",
+  "round_num": 10,
+  "row_count": 167,
+  "lstm_run_dir": "artifacts/modellfutasok/probalstm_1000random/round_364/lstm",
+  "xgboost_run_dir": "artifacts/modellfutasok/xgboost_streaming_final_with_utility_100pct",
+  "lstm": {
+    "row_count": 167,
+    "positive_count": 167,
+    "negative_count": 0,
+    "mean_probability": 0.7621777846427735,
+    "first_probability": 0.7655702233314514,
+    "last_probability": 0.979353368282318,
+    "min_probability": 0.6698047518730164,
+    "max_probability": 0.9823931455612184,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.06703811341622924,
+    "mean_abs_error": 0.23782221535722653,
+    "median_abs_error": 0.28192806243896484,
+    "logloss": 0.27961303600721116
+  },
+  "xgboost": {
+    "row_count": 167,
+    "positive_count": 167,
+    "negative_count": 0,
+    "mean_probability": 0.7741279287966426,
+    "first_probability": 0.7441431283950806,
+    "last_probability": 0.9973541498184204,
+    "min_probability": 0.6665569543838501,
+    "max_probability": 0.9981644749641418,
+    "accuracy_at_0_5": 1.0,
+    "brier_score": 0.06207990725367028,
+    "mean_abs_error": 0.22587207120335745,
+    "median_abs_error": 0.2779827117919922,
+    "logloss": 0.2641611101761639
+  },
+  "closer_counts": {
+    "lstm": 47,
+    "xgboost": 120,
+    "tie": 0
+  },
+  "winner_by_mean_abs_error": "xgboost",
+  "winner_by_brier": "xgboost",
+  "winner_by_logloss": "xgboost"
+}
